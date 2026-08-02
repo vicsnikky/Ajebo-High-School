@@ -1,0 +1,6 @@
+{
+  "name": "Ajebo Community High School",
+  "description": "Official School Portal & Infrastructure Development Platform for Ajebo Community High School, Obafemi Owode LGA, Ogun State.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
