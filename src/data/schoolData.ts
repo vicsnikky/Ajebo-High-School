@@ -1,4 +1,4 @@
-import { AlumniProfile, AdminLeader, BuildingSubProject, DonorRecord, HistoryEvent, SchoolEvent, GalleryItem, ForumPost } from '../types';
+import { AlumniProfile, AdminLeader, BuildingSubProject, DonorRecord, HistoryEvent, SchoolEvent, GalleryItem, ForumPost, ExcoMember } from '../types';
 
 export const SCHOOL_INFO = {
   name: "Ajebo Community High School",
@@ -443,3 +443,115 @@ export const INITIAL_FORUM_POSTS: ForumPost[] = [
     ]
   }
 ];
+
+export const EXCO_MEMBERS: ExcoMember[] = [
+  {
+    no: "01",
+    pos: "President",
+    name: "Engr. Adebayo Joseph Joda",
+    raw: "07087106906",
+    formatted: "0708 710 6906",
+    wa: "2347087106906",
+    showContact: true
+  },
+  {
+    no: "02",
+    pos: "Vice President",
+    name: "Racheal Ike",
+    showContact: false
+  },
+  {
+    no: "03",
+    pos: "General Secretary",
+    name: "Awojobi Babatunde Saheed",
+    raw: "08025047821",
+    formatted: "0802 504 7821",
+    wa: "2348025047821",
+    showContact: true
+  },
+  {
+    no: "04",
+    pos: "Assistant General Secretary",
+    name: "Alhaja Ajewanle",
+    showContact: false
+  },
+  {
+    no: "05",
+    pos: "Treasurer",
+    name: "Owolabi Adesanya",
+    showContact: false
+  },
+  {
+    no: "06",
+    pos: "Financial Secretary",
+    name: "Raji Adeola Tafi",
+    showContact: false
+  },
+  {
+    no: "07",
+    pos: "Auditor",
+    name: "Sodipo Akeem",
+    showContact: false
+  },
+  {
+    no: "08",
+    pos: "Social Secretary",
+    name: "Hazzan Aminat",
+    showContact: false
+  },
+  {
+    no: "09",
+    pos: "Assistant Social Secretary",
+    name: "Sobola Aina",
+    showContact: false
+  },
+  {
+    no: "10",
+    pos: "PRO",
+    name: "Olasunkanmi",
+    showContact: false
+  },
+  {
+    no: "11",
+    pos: "Assistant PRO",
+    name: "Ogundiran Sunday",
+    showContact: false
+  },
+  {
+    no: "12",
+    pos: "Project Coordinator",
+    name: "Engr. Enisemo Solomon",
+    showContact: false
+  },
+  {
+    no: "13",
+    pos: "Welfare",
+    name: "Oyelade Motunrayo",
+    showContact: false
+  },
+  {
+    no: "14",
+    pos: "Asst Welfare",
+    name: "Ogundare Oyewunmi Omolara",
+    showContact: false
+  },
+  {
+    no: "15",
+    pos: "Chief Whip",
+    name: "Quadry Rasaq",
+    showContact: false
+  },
+  {
+    no: "16",
+    pos: "Asst Chief Whip",
+    name: "Alhaji Yekinni Jamiu",
+    showContact: false
+  },
+  {
+    no: "17",
+    pos: "Legal Adviser",
+    name: "Odamo Adewale",
+    showContact: false
+  }
+];
+

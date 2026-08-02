@@ -13,6 +13,7 @@ import { BuildingProject } from './components/BuildingProject';
 import { HistorySection } from './components/HistorySection';
 import { NotableAlumni } from './components/NotableAlumni';
 import { Administration } from './components/Administration';
+import { ExcoSection } from './components/ExcoSection';
 import { AlumniDirectory } from './components/AlumniDirectory';
 import { EventsSection } from './components/EventsSection';
 import { GallerySection } from './components/GallerySection';
@@ -223,6 +224,14 @@ export default function App() {
 
         {activeTab === 'leadership' && (
           <Administration />
+        )}
+
+        {activeTab === 'exco' && (
+          <ExcoSection 
+            setActiveTab={setActiveTab}
+            onOpenDonate={() => setIsDonateOpen(true)}
+            onOpenRegister={() => setIsRegisterOpen(true)}
+          />
         )}
 
         {activeTab === 'directory' && (

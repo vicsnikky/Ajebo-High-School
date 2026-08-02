@@ -17,7 +17,8 @@ import {
   X,
   Sparkles,
   MapPin,
-  GraduationCap
+  GraduationCap,
+  Crown
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -40,6 +41,7 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'building', label: 'Rebuilding Project', icon: <Building2 className="w-4 h-4" /> },
     { id: 'history', label: 'School History', icon: <History className="w-4 h-4" /> },
     { id: 'leadership', label: 'Administration', icon: <UserCheck className="w-4 h-4" /> },
+    { id: 'exco', label: 'EXCO', icon: <Crown className="w-4 h-4" /> },
     { id: 'alumni', label: 'Distinguished Alumni', icon: <Award className="w-4 h-4" /> },
     { id: 'directory', label: 'Alumni Registry', icon: <Users className="w-4 h-4" /> },
     { id: 'events', label: 'School Events', icon: <Calendar className="w-4 h-4" /> },

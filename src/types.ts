@@ -5,9 +5,20 @@ export type TabType =
   | 'alumni'
   | 'directory'
   | 'leadership'
+  | 'exco'
   | 'events'
   | 'gallery'
   | 'forum';
+
+export interface ExcoMember {
+  no: string;
+  pos: string;
+  name: string;
+  raw?: string;
+  formatted?: string;
+  wa?: string;
+  showContact?: boolean;
+}
 
 export interface AlumniProfile {
   id: string;
