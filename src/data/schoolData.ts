@@ -4,16 +4,22 @@ export const SCHOOL_INFO = {
   name: "Ajebo Community High School",
   acronym: "ACHS",
   associationName: "Ajebo Community High School Old Students Association (ACHSOSA)",
-  motto: "Knowledge, Diligence & Community Excellence",
+  motto: "IWE KIKO LAISI OKO ATI ADA KOIPE",
+  mottoMeaning: "Education must be combined with hard work and practical life",
   location: "Ajebo Town, Obafemi Owode Local Government Area, Ogun State, Nigeria",
   lga: "Obafemi Owode LGA",
   state: "Ogun State",
-  establishedYear: "1970s",
+  establishedYear: "October 1977",
   waecAccreditationYear: "1983–1984",
   logoUrl: "https://i.ibb.co/5XyPmfPd/Whats-App-Image-2026-08-01-at-2-45-25-PM.jpg",
   contactEmail: "info@ajebocommunityhighschool.edu.ng",
   contactPhone: "+234 803 456 7890",
-  rebuildingDriveStatus: "Phase 1 Construction & Modernization Underway",
+  rebuildingDriveStatus: "Phase 1 Construction & Infrastructure Modernization",
+  badgeDetails: {
+    book: "The Open Book at the top stands for Knowledge.",
+    cutlassHoe: "The Crossed Cutlass (Ada) and Hoe (Oko) with farm mound stands for Agriculture and dignity of labour - true to our motto.",
+    shield: "The Shield stands for the protection and unity of Ajebo community."
+  }
 };
 
 export const NOTABLE_ALUMNI: AlumniProfile[] = [
@@ -151,45 +157,45 @@ export const ADMIN_LEADERS: AdminLeader[] = [
 
 export const HISTORY_EVENTS: HistoryEvent[] = [
   {
-    year: "Late 1970s",
-    title: "Establishment of the School",
-    subtitle: "Bringing Education to Agrarian Communities",
-    description: "Founded as a co-educational, community-backed public secondary school situated in Ajebo, Obafemi Owode LGA, Ogun State. The initiative saved local children from traveling long, exhausting distances to major urban centers like Abeokuta or Sagamu.",
+    year: "October 1977",
+    title: "Founding via Communal Self-Help",
+    subtitle: "Community Driven Self-Help Initiative",
+    description: "Founded in October 1977, Ajebo Community High School, Ajebo was established through communal self-help. Visionary local elders and leaders established the institution to bring quality secondary education directly to Ajebo town and surrounding agrarian villages.",
     category: "founding"
   },
   {
-    year: "Early 1980s",
-    title: "Agricultural Science Foundation",
-    subtitle: "Pioneering Practical Farming & Poultry Production",
-    description: "Under the instruction of notable expatriate staff, including Ghanaian agricultural educators, the institution established a practical farming model. Students gained hands-on experience in crop farming, poultry, and agribusiness, shaping pioneers like Eunice Akinwande.",
-    category: "agriculture"
+    year: "1977–1982",
+    title: "Pioneer Era & Volunteer Faculty",
+    subtitle: "Communal Classrooms & Dedicated Teachers",
+    description: "During 1977–1982: Pioneer students, communal classrooms, and dedicated volunteer teachers laid the solid foundation of academic discipline, practical agriculture, and community self-reliance.",
+    category: "founding"
+  },
+  {
+    year: "1982",
+    title: "Graduation of the Foundation Set",
+    subtitle: "First Set Graduation Milestone",
+    description: "1982: First Set graduated - the foundation set. The inaugural graduating class proved the success of the communal self-help effort and set a high standard for generations of students to come.",
+    category: "accreditation"
   },
   {
     year: "1983–1984",
     title: "WAEC & GCE O-Level Accreditation",
     subtitle: "National Examination Milestone",
-    description: "Archived civil records confirm that the school achieved full accreditation to present candidates for the West African Examinations Council (WAEC) and GCE O-Levels. Early graduates included Hon. (Dr.) Tella O. Babatunde (Class of 1984).",
+    description: "Archived records confirm full accreditation to present candidates for the West African Examinations Council (WAEC) and GCE O-Levels. Early cohorts produced prominent public servants like Hon. (Dr.) Tella O. Babatunde (1984 Set).",
     category: "accreditation"
   },
   {
-    year: "2000s–2010s",
-    title: "Administrative Expansion & LGA Integration",
-    subtitle: "Leadership under Mr. Okusi & Mrs. Elegbede",
-    description: "The school adapted to Ogun State's decentralized public school registry system, establishing Junior and Senior arms. Dedicated leaders like Mr. Okusi and Mrs. Abosede Aderemi Elegbede guided student cohorts with community backing.",
+    year: "2000s–2024",
+    title: "Junior & Senior Secondary Integration",
+    subtitle: "Leadership & Administration",
+    description: "The school expanded into distinct Junior and Senior secondary arms under the Ogun State Ministry of Education, guided by dedicated administrators like Mr. Okusi and Mrs. Abosede Aderemi Elegbede.",
     category: "leadership"
   },
   {
-    year: "August 2024",
-    title: "Mrs. Elegbede's Retirement & Alumni Call-to-Action",
-    subtitle: "Passing the Baton",
-    description: "Mrs. Abosede Aderemi Elegbede officially retired after years of exemplary service as Junior Principal. The event energized the Ajebo Community High School Old Students Association (ACHSOSA) to launch a mega school rebuild initiative.",
-    category: "leadership"
-  },
-  {
-    year: "Present Day",
-    title: "The ACHSOSA School Rebuilding Project",
-    subtitle: "A Modern Legacy for Future Generations",
-    description: "Alumni across Nigeria and the diaspora have united to fund and construct a modern 16-classroom block, digital ICT hub, modern science labs, solar power grid, and upgraded agricultural demonstration farm.",
+    year: "Today",
+    title: "Full Secondary School & Thriving Alumni Network",
+    subtitle: "Ogun State Public School & ACHSOSA Rebuilding Drive",
+    description: "Today: A full Junior and Senior Secondary School under Ogun State, with a thriving Old Students' Association (ACHSOSA) actively constructing a modern 16-classroom block, STEM ICT hub, solar grid, and revamped agricultural farm.",
     category: "rebuilding"
   }
 ];

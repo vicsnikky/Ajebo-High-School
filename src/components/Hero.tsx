@@ -47,28 +47,35 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab, onOpenDonate, onOpenRe
               Welcome to <span className="text-emerald-300 underline decoration-orange-500/80 decoration-4 underline-offset-8">Ajebo Community</span> High School
             </h1>
 
+            {/* Motto Banner */}
+            <div className="bg-emerald-950/80 border border-emerald-700/80 p-3 rounded-xl text-xs space-y-1 text-left inline-block max-w-xl">
+              <span className="text-orange-400 font-bold uppercase tracking-wider text-[11px]">School Motto:</span>
+              <div className="text-white font-mono font-bold text-sm">"{SCHOOL_INFO.motto}"</div>
+              <div className="text-emerald-200 text-[11px] italic">"{SCHOOL_INFO.mottoMeaning}"</div>
+            </div>
+
             {/* Paragraph summary */}
             <p className="text-emerald-100 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Rooted in Obafemi Owode LGA, Ogun State, Ajebo Community High School has provided academic discipline, practical agricultural education, and WAEC & GCE O-Level achievements since the 1970s. Today, our alumni (ACHSOSA) are actively supporting the school by constructing a modern 16-classroom block, STEM ICT hub, solar grid, and revamped agricultural farm.
+              Founded in <strong>October 1977</strong> through communal self-help, Ajebo Community High School, Ajebo provides academic discipline, practical agricultural skills, and character building to students in Obafemi Owode LGA, Ogun State. Today, our alumni (ACHSOSA) are actively supporting the school by constructing a modern 16-classroom block, STEM ICT hub, solar grid, and revamped agricultural farm.
             </p>
 
             {/* Stats Pills */}
             <div className="grid grid-cols-3 gap-3 pt-2 max-w-lg mx-auto lg:mx-0 text-left">
               <div className="bg-slate-800/80 border border-slate-700 rounded-xl p-3">
                 <div className="text-xs text-emerald-300 font-semibold">Established</div>
-                <div className="text-base sm:text-lg font-bold text-white font-mono">1970s</div>
-                <div className="text-[11px] text-slate-400">Ajebo, Ogun State</div>
+                <div className="text-sm sm:text-base font-bold text-white font-mono">Oct 1977</div>
+                <div className="text-[11px] text-slate-400">Communal Self-Help</div>
               </div>
 
               <div className="bg-slate-800/80 border border-slate-700 rounded-xl p-3">
-                <div className="text-xs text-emerald-300 font-semibold">WAEC Record</div>
-                <div className="text-base sm:text-lg font-bold text-white font-mono">1983–1984</div>
-                <div className="text-[11px] text-slate-400">GCE O-Level Era</div>
+                <div className="text-xs text-emerald-300 font-semibold">First Set</div>
+                <div className="text-sm sm:text-base font-bold text-white font-mono">1982</div>
+                <div className="text-[11px] text-slate-400">Foundation Set</div>
               </div>
 
               <div className="bg-slate-800/80 border border-slate-700 rounded-xl p-3 border-l-2 border-l-orange-500">
-                <div className="text-xs text-emerald-300 font-semibold">Alumni Initiative</div>
-                <div className="text-base sm:text-lg font-bold text-orange-400 font-mono">Rebuilding</div>
+                <div className="text-xs text-emerald-300 font-semibold">Alumni Support</div>
+                <div className="text-sm sm:text-base font-bold text-orange-400 font-mono">Rebuilding</div>
                 <div className="text-[11px] text-orange-200">School Expansion</div>
               </div>
             </div>

@@ -214,7 +214,7 @@ export default function App() {
         )}
 
         {activeTab === 'history' && (
-          <HistorySection />
+          <HistorySection setActiveTab={setActiveTab} />
         )}
 
         {activeTab === 'alumni' && (
