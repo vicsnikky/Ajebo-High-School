@@ -122,6 +122,9 @@ export const HistorySection: React.FC<HistorySectionProps> = ({ setActiveTab }) 
               <img 
                 src={SCHOOL_INFO.logoUrl} 
                 alt="Ajebo Community High School Badge Logo" 
+                loading="eager"
+                decoding="async"
+                referrerPolicy="no-referrer"
                 className="w-full h-full object-contain"
               />
             </div>

@@ -67,7 +67,10 @@ export const GallerySection: React.FC = () => {
               <img 
                 src={item.imageUrl} 
                 alt={item.title} 
-                className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                loading="eager"
+                decoding="async"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                 <ZoomIn className="w-8 h-8 text-white drop-shadow-md" />

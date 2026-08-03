@@ -335,60 +335,46 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                     {facility.title}
                   </h3>
 
-                  {/* Proposed 3D Architectural Image Render if available */}
+                  {/* Proposed Architectural Design Photos */}
                   {facility.proposedImageUrls && facility.proposedImageUrls.length > 0 ? (
-                    <div className="grid grid-cols-2 gap-1.5 my-2">
+                    <div className="grid grid-cols-2 gap-2 my-2">
                       {facility.proposedImageUrls.map((imgUrl, imgIdx) => (
                         <div 
                           key={imgIdx}
-                          onClick={() => setSelectedImage({ url: imgUrl, title: `${facility.title} (Proposed Render ${imgIdx + 1})`, type: 'Proposed 3D Model Render' })}
-                          className="relative group rounded-xl overflow-hidden border-2 border-emerald-300 bg-slate-950 cursor-pointer shadow-xs"
+                          onClick={() => setSelectedImage({ url: imgUrl, title: `${facility.title} (Proposed View ${imgIdx + 1})`, type: 'Proposed Architectural Design' })}
+                          className="relative rounded-xl overflow-hidden border border-emerald-200 bg-slate-100 cursor-pointer hover:border-emerald-500 shadow-xs transition"
                         >
                           <img 
                             src={imgUrl} 
                             alt={`${facility.title} proposed ${imgIdx + 1}`}
+                            loading="eager"
+                            decoding="async"
                             referrerPolicy="no-referrer" 
-                            className="w-full h-36 object-cover group-hover:scale-105 transition duration-300"
+                            className="w-full h-36 object-cover"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition" />
-                          <div className="absolute bottom-1.5 left-1.5 right-1.5 flex items-center justify-between text-white text-[10px]">
-                            <span className="bg-emerald-600/90 backdrop-blur-xs px-1.5 py-0.5 rounded font-bold uppercase tracking-wider flex items-center gap-0.5 shadow-xs">
-                              <Sparkles className="w-2.5 h-2.5 text-amber-300" /> Render {imgIdx + 1}
-                            </span>
-                            <span className="text-[10px] text-emerald-200 font-semibold bg-slate-900/90 px-1 py-0.5 rounded flex items-center gap-0.5">
-                              <Maximize2 className="w-2.5 h-2.5 text-emerald-400" />
-                            </span>
-                          </div>
                         </div>
                       ))}
                     </div>
                   ) : facility.proposedImageUrl ? (
                     <div 
-                      onClick={() => setSelectedImage({ url: facility.proposedImageUrl!, title: facility.title, type: 'Proposed 3D Model Render' })}
-                      className="relative group rounded-xl overflow-hidden border-2 border-emerald-300 bg-slate-950 cursor-pointer shadow-sm my-2"
+                      onClick={() => setSelectedImage({ url: facility.proposedImageUrl!, title: facility.title, type: 'Proposed Architectural Design' })}
+                      className="relative rounded-xl overflow-hidden border border-emerald-200 bg-slate-100 cursor-pointer hover:border-emerald-500 shadow-xs my-2"
                     >
                       <img 
                         src={facility.proposedImageUrl} 
                         alt={facility.title}
+                        loading="eager"
+                        decoding="async"
                         referrerPolicy="no-referrer" 
-                        className="w-full h-52 object-cover group-hover:scale-105 transition duration-300"
+                        className="w-full h-52 object-cover"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition" />
-                      <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-white text-xs">
-                        <span className="bg-emerald-600/90 backdrop-blur-xs px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider flex items-center gap-1 shadow-xs">
-                          <Sparkles className="w-3 h-3 text-amber-300" /> 3D Render
-                        </span>
-                        <span className="text-[10px] text-emerald-200 font-semibold bg-slate-900/90 px-2 py-0.5 rounded flex items-center gap-1">
-                          <Maximize2 className="w-3 h-3 text-emerald-400" /> Enlarge
-                        </span>
-                      </div>
                     </div>
                   ) : null}
 
-                  {/* Proposed 3D Render Vision Box */}
+                  {/* Proposed Blueprint Vision Box */}
                   <div className="bg-emerald-50/80 p-3.5 rounded-xl border border-emerald-200/80 space-y-1">
                     <div className="text-[10px] font-bold text-emerald-900 uppercase tracking-wider flex items-center gap-1">
-                      <Sparkles className="w-3.5 h-3.5 text-emerald-700" /> Proposed 3D Model Blueprint
+                      <Sparkles className="w-3.5 h-3.5 text-emerald-700" /> Proposed Architectural Blueprint
                     </div>
                     <p className="text-xs text-slate-700 leading-relaxed">
                       {facility.proposedModelDesc}
@@ -401,51 +387,37 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                       <Clock className="w-3.5 h-3.5 text-amber-700" /> As-Built Reality Analysis
                     </div>
                     {facility.asBuiltImageUrls && facility.asBuiltImageUrls.length > 0 ? (
-                      <div className="grid grid-cols-2 gap-1.5 my-1">
+                      <div className="grid grid-cols-2 gap-2 my-1">
                         {facility.asBuiltImageUrls.map((imgUrl, imgIdx) => (
                           <div 
                             key={imgIdx}
                             onClick={() => setSelectedImage({ url: imgUrl, title: `${facility.title} (As-Built Photo ${imgIdx + 1})`, type: 'Original As-Built Photo' })}
-                            className="relative group rounded-lg overflow-hidden border border-amber-300 bg-slate-950 cursor-pointer shadow-xs"
+                            className="relative rounded-lg overflow-hidden border border-amber-200 bg-slate-100 cursor-pointer hover:border-amber-400 shadow-xs"
                           >
                             <img 
                               src={imgUrl} 
                               alt={`${facility.title} as-built ${imgIdx + 1}`}
+                              loading="eager"
+                              decoding="async"
                               referrerPolicy="no-referrer" 
-                              className="w-full h-36 object-cover group-hover:scale-105 transition duration-300"
+                              className="w-full h-36 object-cover"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition" />
-                            <div className="absolute bottom-1.5 left-1.5 right-1.5 flex items-center justify-between text-white text-[10px]">
-                              <span className="bg-amber-600/90 backdrop-blur-xs px-1.5 py-0.5 rounded font-bold uppercase tracking-wider">
-                                Photo {imgIdx + 1}
-                              </span>
-                              <span className="text-[10px] text-amber-200 font-semibold bg-slate-900/90 px-1 py-0.5 rounded flex items-center gap-0.5">
-                                <Maximize2 className="w-2.5 h-2.5 text-amber-300" />
-                              </span>
-                            </div>
                           </div>
                         ))}
                       </div>
                     ) : facility.asBuiltImageUrl ? (
                       <div 
                         onClick={() => setSelectedImage({ url: facility.asBuiltImageUrl!, title: `${facility.title} (Original / As-Built Structure)`, type: 'Original As-Built Photo' })}
-                        className="relative group rounded-lg overflow-hidden border border-amber-300 bg-slate-950 cursor-pointer shadow-xs my-1"
+                        className="relative rounded-lg overflow-hidden border border-amber-200 bg-slate-100 cursor-pointer hover:border-amber-400 shadow-xs my-1"
                       >
                         <img 
                           src={facility.asBuiltImageUrl} 
                           alt={`${facility.title} Old Entrance`}
+                          loading="eager"
+                          decoding="async"
                           referrerPolicy="no-referrer" 
-                          className="w-full h-44 object-cover group-hover:scale-105 transition duration-300"
+                          className="w-full h-44 object-cover"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition" />
-                        <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-white text-xs">
-                          <span className="bg-amber-600/90 backdrop-blur-xs px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider flex items-center gap-1">
-                            <Clock className="w-3 h-3 text-amber-200" /> As-Built Photo
-                          </span>
-                          <span className="text-[10px] text-amber-200 font-semibold bg-slate-900/90 px-2 py-0.5 rounded flex items-center gap-1">
-                            <Maximize2 className="w-3 h-3 text-amber-300" /> Enlarge
-                          </span>
-                        </div>
                       </div>
                     ) : null}
                     <p className="text-xs text-slate-700 leading-relaxed">
@@ -725,6 +697,8 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
               <img 
                 src={selectedImage.url} 
                 alt={selectedImage.title}
+                loading="eager"
+                decoding="async"
                 referrerPolicy="no-referrer"
                 className="max-h-[70vh] w-auto object-contain rounded-2xl shadow-lg border border-slate-800"
               />
