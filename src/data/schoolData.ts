@@ -850,3 +850,10 @@ export const EXCO_MEMBERS: ExcoMember[] = [
   }
 ];
 
+// School established in October 1977. Sets range from 1977 Set to 2025 Set.
+export const GRADUATING_SETS: string[] = Array.from(
+  { length: 2025 - 1977 + 1 },
+  (_, i) => `${1977 + i} Set`
+);
+
+

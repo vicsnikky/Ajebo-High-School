@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AlumniRegistration } from '../types';
+import { GRADUATING_SETS } from '../data/schoolData';
 import { Users, UserPlus, Search, Filter, MapPin, Briefcase, GraduationCap, Mail, Phone, ExternalLink } from 'lucide-react';
 
 interface AlumniDirectoryProps {
@@ -15,7 +16,7 @@ export const AlumniDirectory: React.FC<AlumniDirectoryProps> = ({
   const [selectedSet, setSelectedSet] = useState<string>('all');
 
   const availableSets = Array.from(
-    new Set(registeredAlumni.map(a => a.gradSet))
+    new Set([...registeredAlumni.map(a => a.gradSet), ...GRADUATING_SETS])
   ).sort();
 
   const filtered = registeredAlumni.filter(alum => {
