@@ -1,4 +1,224 @@
-import { AlumniProfile, AdminLeader, BuildingSubProject, DonorRecord, HistoryEvent, SchoolEvent, GalleryItem, ForumPost, ExcoMember } from '../types';
+import { 
+  AlumniProfile, 
+  AdminLeader, 
+  BuildingSubProject, 
+  DonorRecord, 
+  HistoryEvent, 
+  SchoolEvent, 
+  GalleryItem, 
+  ForumPost, 
+  ExcoMember,
+  RemodellingFacility,
+  EducationalProgram,
+  MemberWelfareItem
+} from '../types';
+
+export const GREENWALL_DESIGN_CREDITS = {
+  projectTitle: "PROPOSED REMODELLING OF BLOCKS OF CLASS ROOMS FOR AJEBO COMMUNITY HIGH SCHOOL",
+  firmName: "GREENWALL DESIGN AND CONSTRUCT",
+  address: "5, IBULANRAGBA COMMUNITY OKE ATA ABEOKUTA OGUN STATE",
+  phoneNumbers: ["09057146054", "09047846779"],
+  phoneFormatted: "0905 714 6054 / 0904 784 6779"
+};
+
+export const PEG_MISSION = {
+  title: "OUR MISSION (PEG)",
+  subtitle: "Project, Educational & Health Programs, and General Members Welfare",
+  project: "Renovate classrooms in ACHS and Initiate plan and build School Main Gate, 100 Seater CBT/ICT Center and 500 Seater Hall.",
+  educationalAndHealth: "Organize 3 educational and health programs per term for students. (Empowering Students for Brighter Future)",
+  welfare: "Support welfare and Empowerment initiatives for Ajebite members."
+};
+
+export const REMODELLING_FACILITIES: RemodellingFacility[] = [
+  {
+    id: "rem-gatehouse",
+    title: "Proposed School Gate House",
+    category: "New Capital Project",
+    proposedModelDesc: "Modern entrance arch and gated security house featuring the ACHS school emblem (Open Book, Cutlass & Hoe), perimeter security wall, pedestrian access, and security guard post.",
+    asBuiltRealityDesc: "Previous open entrance without security gate, vulnerable to unauthorized trespass and lack of institutional identity branding.",
+    status: "Proposed 3D Render Ready",
+    iconName: "Shield"
+  },
+  {
+    id: "rem-classrooms",
+    title: "Remodelling of Classroom Blocks (SS1, SS2, SS3)",
+    category: "Classroom Block",
+    proposedModelDesc: "3D architectural remodel featuring modern yellow-accented corrugated roofing, plastered and painted walls, tiled floors, secure steel casement windows, and ergonomic student desks.",
+    asBuiltRealityDesc: "As-built SS1 & SS3 blocks suffered severe roof leakages, cracked earth floors, broken wooden window shutters, and missing furniture.",
+    status: "As-Built Analysis",
+    iconName: "Building2"
+  },
+  {
+    id: "rem-science-lab",
+    title: "Science Laboratory Remodelling",
+    category: "Specialist Facility",
+    proposedModelDesc: "3D model of Block D Science Lab with full laboratory benches, gas and water supply lines, safety equipment, and secure storage for chemistry, physics, and biology equipment.",
+    asBuiltRealityDesc: "As-built science lab had completely collapsed timber roof trusses, rotting laboratory benches, missing window panes, and dilapidated walls.",
+    status: "As-Built Analysis",
+    iconName: "Microscope"
+  },
+  {
+    id: "rem-technical-workshop",
+    title: "Technical Building & Workshop Remodelling",
+    category: "Specialist Facility",
+    proposedModelDesc: "3D model of Block A Technical Workshop with specialized practical equipment benches, safety partitioning, and adequate lighting for technical drawing and vocational crafts.",
+    asBuiltRealityDesc: "As-built technical workshop was an unrendered hollow red-brick structure with broken corrugated sheets and incomplete doors.",
+    status: "As-Built Analysis",
+    iconName: "Wrench"
+  },
+  {
+    id: "rem-auditorium",
+    title: "School Auditorium Remodelling",
+    category: "Classroom Block",
+    proposedModelDesc: "3D model of proposed remodelled main school auditorium featuring elevated stage, acoustic ceiling, dual double-door emergency exits, and high-capacity assembly seating.",
+    asBuiltRealityDesc: "As-built auditorium roof had caved in entirely due to weather exposure, leaving structural beams exposed and walls severely degraded.",
+    status: "As-Built Analysis",
+    iconName: "Users"
+  },
+  {
+    id: "rem-principal-ict-staff",
+    title: "Principal Office, ICT Lab & Staff Room Block",
+    category: "Specialist Facility",
+    proposedModelDesc: "3D model combining executive principal office suite, staff common room, and 40-desktop computer lab under one modern administrative wing.",
+    asBuiltRealityDesc: "As-built ICT and staff room were unplastered block structures with rusting security bars and leaking roof sheets.",
+    status: "Proposed 3D Render Ready",
+    iconName: "Laptop"
+  },
+  {
+    id: "rem-principal-lodge",
+    title: "Principal's Official Lodge Remodelling",
+    category: "Staff Lodge",
+    proposedModelDesc: "Proposed remodelled residential lodge with modern green architectural wall accents, ensuite facilities, security fencing, and water supply for resident principals.",
+    asBuiltRealityDesc: "As-built principal lodge suffered water damage, stained walls, missing plumbing fixtures, and degraded roofing.",
+    status: "As-Built Analysis",
+    iconName: "Home"
+  },
+  {
+    id: "rem-corpers-lodge",
+    title: "Corper's Lodge (NYSC Residential Quarters)",
+    category: "Staff Lodge",
+    proposedModelDesc: "Proposed remodelling to provide comfortable, safe residential quarters for National Youth Service Corps (NYSC) teachers serving at ACHS.",
+    asBuiltRealityDesc: "As-built corper's lodge had deteriorating plaster, weather-beaten wooden doors, and no internal sanitary facilities.",
+    status: "As-Built Analysis",
+    iconName: "GraduationCap"
+  },
+  {
+    id: "rem-hall-500",
+    title: "New Project: 500-Seater Multipurpose Hall",
+    category: "New Capital Project",
+    proposedModelDesc: "Brand-new architectural proposal for a 500-seater grand hall for school assemblies, WAEC/NECO examination halls, alumni conventions, and community events.",
+    asBuiltRealityDesc: "New capital initiative designed by Greenwall Design and Construct to replace makeshift gathering spaces.",
+    status: "Proposed 3D Render Ready",
+    iconName: "Building"
+  },
+  {
+    id: "rem-cbt-100",
+    title: "New Project: 100-Seater CBT / ICT Center",
+    category: "New Capital Project",
+    proposedModelDesc: "Standalone modern Computer-Based Test (CBT) center with 100 networked computer terminals, server room, solar backup, and JAMB accreditation setup.",
+    asBuiltRealityDesc: "New capital project to enable ACHS students take JAMB UTME & SSCE CBT exams locally without traveling long distances.",
+    status: "Proposed 3D Render Ready",
+    iconName: "Monitor"
+  },
+  {
+    id: "rem-toilets",
+    title: "Front & Back Toilet Facilities Modernization",
+    category: "Sanitation & Utilities",
+    proposedModelDesc: "Complete sanitation overhaul converting uncompleted pit toilet structures into modern water-waterborne toilet blocks for male and female students and staff.",
+    asBuiltRealityDesc: "As-built front and back toilet buildings were uncompleted shells with no WC equipment, tiles, running water, or roofs.",
+    status: "Action Plan Specified",
+    requirements: [
+      "Borehole Water Drilling & Submersible Pump",
+      "Overhead Water Storage Tanks & Piping",
+      "Soakaway & Septic Tank Construction",
+      "Toilet Roof Repair & Ceilings",
+      "Non-slip Floor Tiles & Easy-Clean Wall Tiles",
+      "8 Complete WC Toilet Equipment Sets",
+      "Exterior & Interior Wall Painting",
+      "Paved Pedestrian Walkway to Toilet Buildings"
+    ],
+    iconName: "Droplets"
+  }
+];
+
+export const EDUCATIONAL_HEALTH_PROGRAMS: EducationalProgram[] = [
+  {
+    id: "prog-educational-career",
+    title: "1. Educational and Career Guidance",
+    presenters: "Motivational Speakers, Successful Entrepreneurs, and Certified Career Counselors",
+    outline: [
+      "Presentation on the importance of quality education, goal setting, and academic discipline.",
+      "Interactive workshop exploring diverse career paths in engineering, law, medicine, technology, agriculture, and public service.",
+      "Open Q&A session with distinguished ACHSOSA alumni mentors."
+    ]
+  },
+  {
+    id: "prog-health-hygiene",
+    title: "2. Personal Health & Hygiene Awareness",
+    presenters: "Qualified Healthcare Professionals (Doctors and Registered Nurses)",
+    outline: [
+      "Comprehensive presentation on personal hygiene, sanitation habits, and disease prevention.",
+      "In-depth discussion on common health issues, nutritional health, and wellness affecting teenagers.",
+      "Interactive Q&A session providing medical guidance and practical health tips."
+    ]
+  },
+  {
+    id: "prog-sex-education",
+    title: "3. Sex Education & Adolescent Health",
+    presenters: "Trained Adolescent Counselors and Healthcare Specialists",
+    outline: [
+      "Age-appropriate presentation on sex education, reproductive health, and bodily awareness.",
+      "Interactive session on developing healthy relationships, peer pressure management, and positive decision-making.",
+      "Confidential and open Q&A session addressing student questions respectfully."
+    ]
+  }
+];
+
+export const AJEBITE_WELFARE_INITIATIVES: MemberWelfareItem[] = [
+  {
+    id: "welf-vocational",
+    title: "Vocational & Skill Acquisition Training",
+    description: "Hands-on technical training to empower alumni and community members with marketable skills.",
+    examples: "Fashion Design & Sewing, Carpentry & Woodwork, Digital & IT Skills"
+  },
+  {
+    id: "welf-microfinance",
+    title: "Microfinance & Business Loan Schemes",
+    description: "Seed grants and soft micro-loans to support small businesses and entrepreneurial ventures owned by Ajebite members.",
+    examples: "Revolving micro-credit loans, business plan advisory, trader support grants"
+  },
+  {
+    id: "welf-jobs",
+    title: "Job Placement & Career Fairs",
+    description: "Connecting young graduates and job seekers with employment opportunities through the alumni corporate network.",
+    examples: "CV writing clinics, job listings, alumni internship referrals"
+  },
+  {
+    id: "welf-vulnerable",
+    title: "Support for Vulnerable Members",
+    description: "Dedicated welfare fund providing direct assistance to widows, elderly alumni, and Persons with Disabilities (PWDs).",
+    examples: "Emergency medical funds, compassionate grants, assistive care support"
+  },
+  {
+    id: "welf-savings",
+    title: "Community Savings & Cooperative Societies",
+    description: "Establishing cooperative societies to foster financial discipline, mutual savings, and investment pools.",
+    examples: "ACHSOSA Cooperative Society, low-interest member loans"
+  },
+  {
+    id: "welf-leadership",
+    title: "Leadership & Personal Development",
+    description: "Workshops and seminars focused on leadership, public speaking, financial literacy, and career growth.",
+    examples: "Annual leadership retreats, financial literacy masterclasses"
+  },
+  {
+    id: "welf-food-drives",
+    title: "Food Drives & Essential Distribution",
+    description: "Periodic community outreach programs distributing food packages and essential household supplies to families in need.",
+    examples: "Festive food outreach packages, back-to-school student supply drives"
+  }
+];
+
 
 export const SCHOOL_INFO = {
   name: "Ajebo Community High School",

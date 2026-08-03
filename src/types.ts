@@ -131,3 +131,29 @@ export interface ForumPost {
     date: string;
   }[];
 }
+
+export interface RemodellingFacility {
+  id: string;
+  title: string;
+  category: 'Classroom Block' | 'Specialist Facility' | 'Staff Lodge' | 'New Capital Project' | 'Sanitation & Utilities';
+  proposedModelDesc: string;
+  asBuiltRealityDesc: string;
+  status: 'Proposed 3D Render Ready' | 'As-Built Analysis' | 'Action Plan Specified';
+  requirements?: string[];
+  iconName: string;
+}
+
+export interface EducationalProgram {
+  id: string;
+  title: string;
+  presenters: string;
+  outline: string[];
+}
+
+export interface MemberWelfareItem {
+  id: string;
+  title: string;
+  description: string;
+  examples: string;
+}
+
