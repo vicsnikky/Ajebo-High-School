@@ -37,7 +37,9 @@ export const REMODELLING_FACILITIES: RemodellingFacility[] = [
     proposedModelDesc: "Modern entrance arch and gated security house featuring the ACHS school emblem (Open Book, Cutlass & Hoe), perimeter security wall, pedestrian access, and security guard post.",
     asBuiltRealityDesc: "Previous open entrance without security gate, vulnerable to unauthorized trespass and lack of institutional identity branding.",
     status: "Proposed 3D Render Ready",
-    iconName: "Shield"
+    iconName: "Shield",
+    proposedImageUrl: "https://i.ibb.co/21x83Z60/proposedgate.png",
+    asBuiltImageUrl: "https://i.ibb.co/GQXnLtTK/Whats-App-Image-2026-08-02-at-9-06-31-PM.jpg"
   },
   {
     id: "rem-classrooms",
@@ -46,7 +48,13 @@ export const REMODELLING_FACILITIES: RemodellingFacility[] = [
     proposedModelDesc: "3D architectural remodel featuring modern yellow-accented corrugated roofing, plastered and painted walls, tiled floors, secure steel casement windows, and ergonomic student desks.",
     asBuiltRealityDesc: "As-built SS1 & SS3 blocks suffered severe roof leakages, cracked earth floors, broken wooden window shutters, and missing furniture.",
     status: "As-Built Analysis",
-    iconName: "Building2"
+    iconName: "Building2",
+    proposedImageUrl: "https://i.ibb.co/wNBn7gH6/proposed-classroom-layout.png",
+    asBuiltImageUrl: "https://i.ibb.co/SwhqYF4x/Whats-App-Image-2026-08-02-at-9-06-25-PM.jpg",
+    asBuiltImageUrls: [
+      "https://i.ibb.co/SwhqYF4x/Whats-App-Image-2026-08-02-at-9-06-25-PM.jpg",
+      "https://i.ibb.co/B55VRWfR/Whats-App-Image-2026-08-02-at-9-06-28-PM-1.jpg"
+    ]
   },
   {
     id: "rem-science-lab",

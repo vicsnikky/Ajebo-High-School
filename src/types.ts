@@ -141,6 +141,9 @@ export interface RemodellingFacility {
   status: 'Proposed 3D Render Ready' | 'As-Built Analysis' | 'Action Plan Specified';
   requirements?: string[];
   iconName: string;
+  proposedImageUrl?: string;
+  asBuiltImageUrl?: string;
+  asBuiltImageUrls?: string[];
 }
 
 export interface EducationalProgram {

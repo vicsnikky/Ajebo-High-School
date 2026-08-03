@@ -36,7 +36,10 @@ import {
   Activity,
   UserCheck,
   Building,
-  Check
+  Check,
+  X,
+  Maximize2,
+  Eye
 } from 'lucide-react';
 
 interface BuildingProjectProps {
@@ -47,6 +50,7 @@ interface BuildingProjectProps {
 export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpenDonate }) => {
   const [activeTab, setActiveTab] = useState<'facilities' | 'peg-programs' | 'peg-welfare' | 'subprojects'>('facilities');
   const [facilityFilter, setFacilityFilter] = useState<string>('all');
+  const [selectedImage, setSelectedImage] = useState<{ url: string; title: string; type: string } | null>(null);
 
   const getIcon = (iconName: string) => {
     switch (iconName) {
@@ -331,6 +335,30 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                     {facility.title}
                   </h3>
 
+                  {/* Proposed 3D Architectural Image Render if available */}
+                  {facility.proposedImageUrl && (
+                    <div 
+                      onClick={() => setSelectedImage({ url: facility.proposedImageUrl!, title: facility.title, type: 'Proposed 3D Model Render' })}
+                      className="relative group rounded-xl overflow-hidden border-2 border-emerald-300 bg-slate-950 cursor-pointer shadow-sm my-2"
+                    >
+                      <img 
+                        src={facility.proposedImageUrl} 
+                        alt={facility.title}
+                        referrerPolicy="no-referrer" 
+                        className="w-full h-52 object-cover group-hover:scale-105 transition duration-300"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition" />
+                      <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-white text-xs">
+                        <span className="bg-emerald-600/90 backdrop-blur-xs px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider flex items-center gap-1 shadow-xs">
+                          <Sparkles className="w-3 h-3 text-amber-300" /> 3D Render
+                        </span>
+                        <span className="text-[10px] text-emerald-200 font-semibold bg-slate-900/90 px-2 py-0.5 rounded flex items-center gap-1">
+                          <Maximize2 className="w-3 h-3 text-emerald-400" /> Enlarge
+                        </span>
+                      </div>
+                    </div>
+                  )}
+
                   {/* Proposed 3D Render Vision Box */}
                   <div className="bg-emerald-50/80 p-3.5 rounded-xl border border-emerald-200/80 space-y-1">
                     <div className="text-[10px] font-bold text-emerald-900 uppercase tracking-wider flex items-center gap-1">
@@ -342,10 +370,58 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                   </div>
 
                   {/* As-Built Reality Box */}
-                  <div className="bg-amber-50/80 p-3.5 rounded-xl border border-amber-200/80 space-y-1">
+                  <div className="bg-amber-50/80 p-3.5 rounded-xl border border-amber-200/80 space-y-2">
                     <div className="text-[10px] font-bold text-amber-900 uppercase tracking-wider flex items-center gap-1">
                       <Clock className="w-3.5 h-3.5 text-amber-700" /> As-Built Reality Analysis
                     </div>
+                    {facility.asBuiltImageUrls && facility.asBuiltImageUrls.length > 0 ? (
+                      <div className="grid grid-cols-2 gap-1.5 my-1">
+                        {facility.asBuiltImageUrls.map((imgUrl, imgIdx) => (
+                          <div 
+                            key={imgIdx}
+                            onClick={() => setSelectedImage({ url: imgUrl, title: `${facility.title} (As-Built Photo ${imgIdx + 1})`, type: 'Original As-Built Photo' })}
+                            className="relative group rounded-lg overflow-hidden border border-amber-300 bg-slate-950 cursor-pointer shadow-xs"
+                          >
+                            <img 
+                              src={imgUrl} 
+                              alt={`${facility.title} as-built ${imgIdx + 1}`}
+                              referrerPolicy="no-referrer" 
+                              className="w-full h-36 object-cover group-hover:scale-105 transition duration-300"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition" />
+                            <div className="absolute bottom-1.5 left-1.5 right-1.5 flex items-center justify-between text-white text-[10px]">
+                              <span className="bg-amber-600/90 backdrop-blur-xs px-1.5 py-0.5 rounded font-bold uppercase tracking-wider">
+                                Photo {imgIdx + 1}
+                              </span>
+                              <span className="text-[10px] text-amber-200 font-semibold bg-slate-900/90 px-1 py-0.5 rounded flex items-center gap-0.5">
+                                <Maximize2 className="w-2.5 h-2.5 text-amber-300" />
+                              </span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : facility.asBuiltImageUrl ? (
+                      <div 
+                        onClick={() => setSelectedImage({ url: facility.asBuiltImageUrl!, title: `${facility.title} (Original / As-Built Structure)`, type: 'Original As-Built Photo' })}
+                        className="relative group rounded-lg overflow-hidden border border-amber-300 bg-slate-950 cursor-pointer shadow-xs my-1"
+                      >
+                        <img 
+                          src={facility.asBuiltImageUrl} 
+                          alt={`${facility.title} Old Entrance`}
+                          referrerPolicy="no-referrer" 
+                          className="w-full h-44 object-cover group-hover:scale-105 transition duration-300"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition" />
+                        <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-white text-xs">
+                          <span className="bg-amber-600/90 backdrop-blur-xs px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider flex items-center gap-1">
+                            <Clock className="w-3 h-3 text-amber-200" /> As-Built Photo
+                          </span>
+                          <span className="text-[10px] text-amber-200 font-semibold bg-slate-900/90 px-2 py-0.5 rounded flex items-center gap-1">
+                            <Maximize2 className="w-3 h-3 text-amber-300" /> Enlarge
+                          </span>
+                        </div>
+                      </div>
+                    ) : null}
                     <p className="text-xs text-slate-700 leading-relaxed">
                       {facility.asBuiltRealityDesc}
                     </p>
@@ -589,6 +665,53 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                   ))}
                 </tbody>
               </table>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Image Preview Lightbox Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div 
+            className="bg-slate-900 border border-slate-700 rounded-3xl overflow-hidden max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between p-4 bg-slate-950 border-b border-slate-800 text-white">
+              <div>
+                <span className="text-[10px] font-bold text-amber-400 uppercase tracking-widest bg-amber-950/80 px-2.5 py-0.5 rounded border border-amber-800">
+                  {selectedImage.type}
+                </span>
+                <h3 className="font-bold text-lg font-serif mt-1">{selectedImage.title}</h3>
+              </div>
+              <button 
+                onClick={() => setSelectedImage(null)}
+                className="p-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-full transition"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="p-4 flex-1 overflow-auto flex items-center justify-center bg-slate-950">
+              <img 
+                src={selectedImage.url} 
+                alt={selectedImage.title}
+                referrerPolicy="no-referrer"
+                className="max-h-[70vh] w-auto object-contain rounded-2xl shadow-lg border border-slate-800"
+              />
+            </div>
+
+            <div className="p-4 bg-slate-950 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+              <span>Architectural Design Blueprint by Greenwall Design & Construct</span>
+              <button 
+                onClick={() => setSelectedImage(null)}
+                className="bg-emerald-700 hover:bg-emerald-600 text-white font-bold px-4 py-1.5 rounded-xl transition"
+              >
+                Close View
+              </button>
             </div>
           </div>
         </div>
