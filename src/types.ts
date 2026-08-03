@@ -14,6 +14,8 @@ export interface ExcoMember {
   no: string;
   pos: string;
   name: string;
+  email?: string;
+  personalEmail?: string;
   raw?: string;
   formatted?: string;
   wa?: string;
