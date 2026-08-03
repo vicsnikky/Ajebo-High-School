@@ -63,7 +63,13 @@ export const REMODELLING_FACILITIES: RemodellingFacility[] = [
     proposedModelDesc: "3D model of Block D Science Lab with full laboratory benches, gas and water supply lines, safety equipment, and secure storage for chemistry, physics, and biology equipment.",
     asBuiltRealityDesc: "As-built science lab had completely collapsed timber roof trusses, rotting laboratory benches, missing window panes, and dilapidated walls.",
     status: "As-Built Analysis",
-    iconName: "Microscope"
+    iconName: "Microscope",
+    proposedImageUrl: "https://i.ibb.co/TDPt4jTH/labratory.png",
+    asBuiltImageUrl: "https://i.ibb.co/rRvhZJht/Picture4.png",
+    asBuiltImageUrls: [
+      "https://i.ibb.co/rRvhZJht/Picture4.png",
+      "https://i.ibb.co/jPbmkYNB/Picture5.png"
+    ]
   },
   {
     id: "rem-technical-workshop",
