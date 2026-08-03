@@ -151,7 +151,15 @@ export const REMODELLING_FACILITIES: RemodellingFacility[] = [
     proposedModelDesc: "Proposed remodelling to provide comfortable, safe residential quarters for National Youth Service Corps (NYSC) teachers serving at ACHS.",
     asBuiltRealityDesc: "As-built corper's lodge had deteriorating plaster, weather-beaten wooden doors, and no internal sanitary facilities.",
     status: "As-Built Analysis",
-    iconName: "GraduationCap"
+    iconName: "GraduationCap",
+    proposedImageUrl: "https://i.ibb.co/Mkmqn3vc/corps.png",
+    proposedImageUrls: [
+      "https://i.ibb.co/Mkmqn3vc/corps.png"
+    ],
+    asBuiltImageUrl: "https://i.ibb.co/Xrg8s3Xt/oldcorps.jpg",
+    asBuiltImageUrls: [
+      "https://i.ibb.co/Xrg8s3Xt/oldcorps.jpg"
+    ]
   },
   {
     id: "rem-hall-500",
@@ -160,7 +168,12 @@ export const REMODELLING_FACILITIES: RemodellingFacility[] = [
     proposedModelDesc: "Brand-new architectural proposal for a 500-seater grand hall for school assemblies, WAEC/NECO examination halls, alumni conventions, and community events.",
     asBuiltRealityDesc: "New capital initiative designed by Greenwall Design and Construct to replace makeshift gathering spaces.",
     status: "Proposed 3D Render Ready",
-    iconName: "Building"
+    iconName: "Building",
+    proposedImageUrl: "https://i.ibb.co/Y7Pp3Wvk/500-seater.png",
+    proposedImageUrls: [
+      "https://i.ibb.co/Y7Pp3Wvk/500-seater.png",
+      "https://i.ibb.co/FLbqZPMk/5002.png"
+    ]
   },
   {
     id: "rem-cbt-100",
@@ -169,7 +182,12 @@ export const REMODELLING_FACILITIES: RemodellingFacility[] = [
     proposedModelDesc: "Standalone modern Computer-Based Test (CBT) center with 100 networked computer terminals, server room, solar backup, and JAMB accreditation setup.",
     asBuiltRealityDesc: "New capital project to enable ACHS students take JAMB UTME & SSCE CBT exams locally without traveling long distances.",
     status: "Proposed 3D Render Ready",
-    iconName: "Monitor"
+    iconName: "Monitor",
+    proposedImageUrl: "https://i.ibb.co/PZh6NLhp/100seater.png",
+    proposedImageUrls: [
+      "https://i.ibb.co/PZh6NLhp/100seater.png",
+      "https://i.ibb.co/FLtJNyhD/100seater1.png"
+    ]
   },
   {
     id: "rem-toilets",
@@ -177,7 +195,13 @@ export const REMODELLING_FACILITIES: RemodellingFacility[] = [
     category: "Sanitation & Utilities",
     proposedModelDesc: "Complete sanitation overhaul converting uncompleted pit toilet structures into modern water-waterborne toilet blocks for male and female students and staff.",
     asBuiltRealityDesc: "As-built front and back toilet buildings were uncompleted shells with no WC equipment, tiles, running water, or roofs.",
-    status: "Action Plan Specified",
+    status: "As-Built Analysis",
+    asBuiltImageUrl: "https://i.ibb.co/HkjpXMq/toilet.jpg",
+    asBuiltImageUrls: [
+      "https://i.ibb.co/HkjpXMq/toilet.jpg",
+      "https://i.ibb.co/ynXbKKJq/toilet1.jpg",
+      "https://i.ibb.co/nMKhT8Sc/toilet2.jpg"
+    ],
     requirements: [
       "Borehole Water Drilling & Submersible Pump",
       "Overhead Water Storage Tanks & Piping",
