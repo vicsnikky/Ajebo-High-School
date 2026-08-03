@@ -336,7 +336,33 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                   </h3>
 
                   {/* Proposed 3D Architectural Image Render if available */}
-                  {facility.proposedImageUrl && (
+                  {facility.proposedImageUrls && facility.proposedImageUrls.length > 0 ? (
+                    <div className="grid grid-cols-2 gap-1.5 my-2">
+                      {facility.proposedImageUrls.map((imgUrl, imgIdx) => (
+                        <div 
+                          key={imgIdx}
+                          onClick={() => setSelectedImage({ url: imgUrl, title: `${facility.title} (Proposed Render ${imgIdx + 1})`, type: 'Proposed 3D Model Render' })}
+                          className="relative group rounded-xl overflow-hidden border-2 border-emerald-300 bg-slate-950 cursor-pointer shadow-xs"
+                        >
+                          <img 
+                            src={imgUrl} 
+                            alt={`${facility.title} proposed ${imgIdx + 1}`}
+                            referrerPolicy="no-referrer" 
+                            className="w-full h-36 object-cover group-hover:scale-105 transition duration-300"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition" />
+                          <div className="absolute bottom-1.5 left-1.5 right-1.5 flex items-center justify-between text-white text-[10px]">
+                            <span className="bg-emerald-600/90 backdrop-blur-xs px-1.5 py-0.5 rounded font-bold uppercase tracking-wider flex items-center gap-0.5 shadow-xs">
+                              <Sparkles className="w-2.5 h-2.5 text-amber-300" /> Render {imgIdx + 1}
+                            </span>
+                            <span className="text-[10px] text-emerald-200 font-semibold bg-slate-900/90 px-1 py-0.5 rounded flex items-center gap-0.5">
+                              <Maximize2 className="w-2.5 h-2.5 text-emerald-400" />
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : facility.proposedImageUrl ? (
                     <div 
                       onClick={() => setSelectedImage({ url: facility.proposedImageUrl!, title: facility.title, type: 'Proposed 3D Model Render' })}
                       className="relative group rounded-xl overflow-hidden border-2 border-emerald-300 bg-slate-950 cursor-pointer shadow-sm my-2"
@@ -357,7 +383,7 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                         </span>
                       </div>
                     </div>
-                  )}
+                  ) : null}
 
                   {/* Proposed 3D Render Vision Box */}
                   <div className="bg-emerald-50/80 p-3.5 rounded-xl border border-emerald-200/80 space-y-1">

@@ -142,6 +142,7 @@ export interface RemodellingFacility {
   requirements?: string[];
   iconName: string;
   proposedImageUrl?: string;
+  proposedImageUrls?: string[];
   asBuiltImageUrl?: string;
   asBuiltImageUrls?: string[];
 }

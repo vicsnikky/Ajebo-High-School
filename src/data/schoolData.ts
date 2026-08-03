@@ -49,9 +49,18 @@ export const REMODELLING_FACILITIES: RemodellingFacility[] = [
     asBuiltRealityDesc: "As-built SS1 & SS3 blocks suffered severe roof leakages, cracked earth floors, broken wooden window shutters, and missing furniture.",
     status: "As-Built Analysis",
     iconName: "Building2",
-    proposedImageUrl: "https://i.ibb.co/wNBn7gH6/proposed-classroom-layout.png",
-    asBuiltImageUrl: "https://i.ibb.co/SwhqYF4x/Whats-App-Image-2026-08-02-at-9-06-25-PM.jpg",
+    proposedImageUrl: "https://i.ibb.co/SDT9CGC9/Picture6.png",
+    proposedImageUrls: [
+      "https://i.ibb.co/SDT9CGC9/Picture6.png",
+      "https://i.ibb.co/39zYfLj4/ss3.png",
+      "https://i.ibb.co/wNBn7gH6/proposed-classroom-layout.png"
+    ],
+    asBuiltImageUrl: "https://i.ibb.co/7d8L9B7Z/ss1.jpg",
     asBuiltImageUrls: [
+      "https://i.ibb.co/7d8L9B7Z/ss1.jpg",
+      "https://i.ibb.co/hFXDk7r9/oldss31.jpg",
+      "https://i.ibb.co/mrgsnrcd/oldss322.jpg",
+      "https://i.ibb.co/F43RVCKN/ss3old.jpg",
       "https://i.ibb.co/SwhqYF4x/Whats-App-Image-2026-08-02-at-9-06-25-PM.jpg",
       "https://i.ibb.co/B55VRWfR/Whats-App-Image-2026-08-02-at-9-06-28-PM-1.jpg"
     ]
@@ -78,7 +87,11 @@ export const REMODELLING_FACILITIES: RemodellingFacility[] = [
     proposedModelDesc: "3D model of Block A Technical Workshop with specialized practical equipment benches, safety partitioning, and adequate lighting for technical drawing and vocational crafts.",
     asBuiltRealityDesc: "As-built technical workshop was an unrendered hollow red-brick structure with broken corrugated sheets and incomplete doors.",
     status: "As-Built Analysis",
-    iconName: "Wrench"
+    iconName: "Wrench",
+    asBuiltImageUrl: "https://i.ibb.co/CKH34KsQ/old-tech.jpg",
+    asBuiltImageUrls: [
+      "https://i.ibb.co/CKH34KsQ/old-tech.jpg"
+    ]
   },
   {
     id: "rem-auditorium",
@@ -87,7 +100,15 @@ export const REMODELLING_FACILITIES: RemodellingFacility[] = [
     proposedModelDesc: "3D model of proposed remodelled main school auditorium featuring elevated stage, acoustic ceiling, dual double-door emergency exits, and high-capacity assembly seating.",
     asBuiltRealityDesc: "As-built auditorium roof had caved in entirely due to weather exposure, leaving structural beams exposed and walls severely degraded.",
     status: "As-Built Analysis",
-    iconName: "Users"
+    iconName: "Users",
+    proposedImageUrl: "https://i.ibb.co/4ZFMcXXL/prop-aud.png",
+    proposedImageUrls: [
+      "https://i.ibb.co/4ZFMcXXL/prop-aud.png"
+    ],
+    asBuiltImageUrl: "https://i.ibb.co/Xk3dzTtP/old-aud.jpg",
+    asBuiltImageUrls: [
+      "https://i.ibb.co/Xk3dzTtP/old-aud.jpg"
+    ]
   },
   {
     id: "rem-principal-ict-staff",
@@ -95,8 +116,16 @@ export const REMODELLING_FACILITIES: RemodellingFacility[] = [
     category: "Specialist Facility",
     proposedModelDesc: "3D model combining executive principal office suite, staff common room, and 40-desktop computer lab under one modern administrative wing.",
     asBuiltRealityDesc: "As-built ICT and staff room were unplastered block structures with rusting security bars and leaking roof sheets.",
-    status: "Proposed 3D Render Ready",
-    iconName: "Laptop"
+    status: "As-Built Analysis",
+    iconName: "Laptop",
+    proposedImageUrl: "https://i.ibb.co/k2dRD8n4/ict.png",
+    proposedImageUrls: [
+      "https://i.ibb.co/k2dRD8n4/ict.png"
+    ],
+    asBuiltImageUrl: "https://i.ibb.co/ccSnqnpD/oldict.jpg",
+    asBuiltImageUrls: [
+      "https://i.ibb.co/ccSnqnpD/oldict.jpg"
+    ]
   },
   {
     id: "rem-principal-lodge",
@@ -105,7 +134,15 @@ export const REMODELLING_FACILITIES: RemodellingFacility[] = [
     proposedModelDesc: "Proposed remodelled residential lodge with modern green architectural wall accents, ensuite facilities, security fencing, and water supply for resident principals.",
     asBuiltRealityDesc: "As-built principal lodge suffered water damage, stained walls, missing plumbing fixtures, and degraded roofing.",
     status: "As-Built Analysis",
-    iconName: "Home"
+    iconName: "Home",
+    proposedImageUrl: "https://i.ibb.co/prBbC32g/principal.png",
+    proposedImageUrls: [
+      "https://i.ibb.co/prBbC32g/principal.png"
+    ],
+    asBuiltImageUrl: "https://i.ibb.co/8Lx6ddF5/oldprincipal.jpg",
+    asBuiltImageUrls: [
+      "https://i.ibb.co/8Lx6ddF5/oldprincipal.jpg"
+    ]
   },
   {
     id: "rem-corpers-lodge",
