@@ -4,19 +4,16 @@ import { TabType } from '../types';
 import { 
   Users, 
   Crown, 
-  Phone, 
   PhoneCall, 
   MessageSquare, 
   Search, 
   X, 
   ShieldCheck, 
-  CheckCircle2, 
   Building2, 
   GraduationCap, 
   History, 
   Sparkles,
-  UserCheck,
-  Award
+  UserCheck
 } from 'lucide-react';
 
 interface ExcoSectionProps {
@@ -63,13 +60,13 @@ export const ExcoSection: React.FC<ExcoSectionProps> = ({
             </h1>
             
             <p className="text-emerald-100 text-sm sm:text-base leading-relaxed">
-              Official Executive Council of Ajebo Community High School Old Students Association (ACHSOSA) — coordinating alumni, driving the school rebuilding project, and serving our alma mater since October 1977.
+              Official Executive Officers of Ajebo Community High School Old Students Association (ACHSOSA) — coordinating alumni, driving the school rebuilding project, and serving our alma mater since October 1977.
             </p>
           </div>
 
           <div className="bg-slate-900/90 border border-emerald-700/80 p-5 rounded-2xl text-xs space-y-2.5 shrink-0 w-full lg:w-80 shadow-inner">
             <div className="font-bold text-orange-400 uppercase tracking-wider flex items-center gap-1.5 text-xs">
-              <Sparkles className="w-4 h-4 text-orange-400" /> Executive Council Summary
+              <Sparkles className="w-4 h-4 text-orange-400" /> Executive Leadership Summary
             </div>
             <div className="text-emerald-100 space-y-1.5 font-medium">
               <p className="flex items-center gap-2">
@@ -78,7 +75,7 @@ export const ExcoSection: React.FC<ExcoSectionProps> = ({
               </p>
               <p className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                <span><strong>Total Executive Council:</strong> 17 Offices</span>
+                <span><strong>Total Offices:</strong> 17 Executive Positions</span>
               </p>
               <p className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
@@ -102,24 +99,24 @@ export const ExcoSection: React.FC<ExcoSectionProps> = ({
         </div>
       </div>
 
-      {/* Featured Executive Officers (President & General Secretary - Full Details) */}
+      {/* Principal Executive Officers (President & General Secretary - With Phone Numbers) */}
       <div className="space-y-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-200 pb-4">
           <div>
-            <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider">Principal Executive Officers</span>
+            <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider">Principal Leadership</span>
             <h2 className="text-2xl font-bold font-serif text-slate-900 flex items-center gap-2 mt-0.5">
               <Crown className="w-6 h-6 text-amber-500" />
-              <span>Key Officers Contact Directory</span>
+              <span>President & General Secretary Contact Details</span>
             </h2>
           </div>
           <p className="text-xs text-slate-500 max-w-sm">
-            Contact the President or General Secretary for official ACHSOSA inquiries, set registrations, and rebuilding pledges.
+            Contact the President or General Secretary directly for official ACHSOSA inquiries, set registrations, and rebuilding pledges.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           
-          {/* President Card - Full Details */}
+          {/* President Card - With Phone Number */}
           {president && (
             <div className="bg-gradient-to-br from-amber-50 via-white to-emerald-50 rounded-3xl p-6 sm:p-8 border-2 border-amber-300 shadow-md space-y-5 relative overflow-hidden">
               <div className="absolute top-0 right-0 bg-amber-400 text-amber-950 font-black text-[10px] uppercase tracking-widest px-4 py-1 rounded-bl-2xl shadow-xs">
@@ -130,24 +127,20 @@ export const ExcoSection: React.FC<ExcoSectionProps> = ({
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-800 to-emerald-950 text-amber-400 flex items-center justify-center font-bold text-2xl shadow-md shrink-0 border-2 border-amber-300">
                   <Crown className="w-8 h-8" />
                 </div>
-                <div>
-                  <span className="bg-emerald-900 text-amber-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-1">
+                <div className="space-y-1">
+                  <span className="bg-emerald-900 text-amber-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block">
                     {president.pos} • Office No. {president.no}
                   </span>
                   <h3 className="text-xl sm:text-2xl font-bold font-serif text-slate-900 leading-tight">
                     {president.name}
                   </h3>
-                  <p className="text-xs text-emerald-800 font-semibold mt-1">
+                  <p className="text-xs text-emerald-800 font-semibold">
                     President, Ajebo Community High School Old Students Association (ACHSOSA)
                   </p>
                 </div>
               </div>
 
-              <p className="text-xs text-slate-600 leading-relaxed bg-white/80 p-3 rounded-xl border border-amber-200">
-                Directing the overall vision, alumni engagement, and infrastructure rebuilding drive for Ajebo Community High School.
-              </p>
-
-              {/* Verified Contact Details */}
+              {/* Verified Contact Details for President */}
               <div className="bg-white rounded-2xl p-4 border border-amber-200 shadow-xs space-y-3">
                 <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-2">
                   <span className="text-xs font-bold text-slate-700 uppercase tracking-wider">Direct Phone Contact:</span>
@@ -177,7 +170,7 @@ export const ExcoSection: React.FC<ExcoSectionProps> = ({
             </div>
           )}
 
-          {/* General Secretary Card - Full Details */}
+          {/* General Secretary Card - With Phone Number */}
           {secGen && (
             <div className="bg-gradient-to-br from-blue-50 via-white to-emerald-50 rounded-3xl p-6 sm:p-8 border-2 border-blue-200 shadow-md space-y-5 relative overflow-hidden">
               <div className="absolute top-0 right-0 bg-blue-600 text-white font-bold text-[10px] uppercase tracking-widest px-4 py-1 rounded-bl-2xl shadow-xs">
@@ -188,24 +181,20 @@ export const ExcoSection: React.FC<ExcoSectionProps> = ({
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-900 to-slate-900 text-blue-200 flex items-center justify-center font-bold text-2xl shadow-md shrink-0 border-2 border-blue-200">
                   <UserCheck className="w-8 h-8" />
                 </div>
-                <div>
-                  <span className="bg-blue-900 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-1">
+                <div className="space-y-1">
+                  <span className="bg-blue-900 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block">
                     {secGen.pos} • Office No. {secGen.no}
                   </span>
                   <h3 className="text-xl sm:text-2xl font-bold font-serif text-slate-900 leading-tight">
                     {secGen.name}
                   </h3>
-                  <p className="text-xs text-blue-900 font-semibold mt-1">
+                  <p className="text-xs text-blue-900 font-semibold">
                     General Secretary, ACHSOSA Executive Council
                   </p>
                 </div>
               </div>
 
-              <p className="text-xs text-slate-600 leading-relaxed bg-white/80 p-3 rounded-xl border border-blue-200">
-                Coordinating official administrative correspondence, meeting records, member registries, and general secretariat communications.
-              </p>
-
-              {/* Verified Contact Details */}
+              {/* Verified Contact Details for General Secretary */}
               <div className="bg-white rounded-2xl p-4 border border-blue-200 shadow-xs space-y-3">
                 <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-2">
                   <span className="text-xs font-bold text-slate-700 uppercase tracking-wider">Direct Phone Contact:</span>
@@ -238,11 +227,11 @@ export const ExcoSection: React.FC<ExcoSectionProps> = ({
         </div>
       </div>
 
-      {/* All EXCO Executive Officers (Names & Posts Only - NO Phone/WA) */}
+      {/* Full EXCO Roster (All 17 Officers - Phone Numbers shown ONLY for President & General Secretary) */}
       <div className="bg-white rounded-3xl p-8 border border-emerald-100 shadow-md space-y-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-100 pb-4">
           <div>
-            <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider">Executive Roster</span>
+            <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider">Full Executive Roster</span>
             <h2 className="text-2xl font-bold font-serif text-slate-900 flex items-center gap-2 mt-0.5">
               <Users className="w-6 h-6 text-emerald-700" />
               <span>Full ACHSOSA EXCO Roll (17 Executive Officers)</span>
@@ -254,7 +243,7 @@ export const ExcoSection: React.FC<ExcoSectionProps> = ({
             <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
             <input 
               type="text"
-              placeholder="Search by name or office..."
+              placeholder="Search by name, post, or office no..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full pl-9 pr-8 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-emerald-500 transition"
@@ -273,11 +262,11 @@ export const ExcoSection: React.FC<ExcoSectionProps> = ({
         <div className="bg-emerald-50 p-4 rounded-2xl border border-emerald-200 text-xs text-emerald-950 flex items-center gap-2">
           <ShieldCheck className="w-4 h-4 text-emerald-700 shrink-0" />
           <span>
-            Below is the full roster of the 17 EXCO officers. Names and official posts are listed for organizational transparency.
+            Below is the full roster of all 17 EXCO officers. Direct phone contact details are displayed exclusively for the President and General Secretary.
           </span>
         </div>
 
-        {/* EXCO Officers Grid */}
+        {/* EXCO Officers Grid (3 Columns on Desktop) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredMembers.map((member) => {
             const isLeader = member.pos === "President" || member.pos === "General Secretary";
@@ -316,12 +305,12 @@ export const ExcoSection: React.FC<ExcoSectionProps> = ({
                 {/* Show contact only for President & Gen Sec */}
                 {member.showContact && member.formatted ? (
                   <div className="pt-2 border-t border-slate-200/60 flex items-center justify-between text-xs text-emerald-900 font-mono font-semibold">
-                    <span>Contact:</span>
+                    <span>Phone:</span>
                     <span>{member.formatted}</span>
                   </div>
                 ) : (
                   <div className="pt-1 text-[11px] text-slate-500 italic">
-                    Official Executive Officer
+                    Executive Officer
                   </div>
                 )}
               </div>
