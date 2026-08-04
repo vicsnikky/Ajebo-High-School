@@ -644,52 +644,157 @@ export const SCHOOL_EVENTS: SchoolEvent[] = [
 
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
-    id: "gal-1",
-    title: "Early Practical Agricultural Science Class",
-    year: "1982",
-    category: "historical",
-    imageUrl: "https://images.unsplash.com/photo-1592417817098-8f3d6eb12735?auto=format&fit=crop&q=80&w=800",
-    caption: "Students working on the experimental poultry and crop plots under expatriate agricultural instructors."
+    id: "exco-inaug-1",
+    title: "EXCO Inauguration Assembly",
+    year: "Feb 14, 2026",
+    category: "inauguration",
+    imageUrl: "https://i.ibb.co/nNVWFRP2/Whats-App-Image-2026-08-03-at-7-36-13-PM.jpg",
+    linkUrl: "https://ibb.co/dw3hR7m9",
+    caption: "ACHSOSA Executive Officers during the official inauguration ceremony on Feb 14, 2026."
   },
   {
-    id: "gal-2",
-    title: "Groundbreaking & Site Survey for New Classroom Block",
-    year: "2026",
-    category: "rebuilding",
-    imageUrl: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&q=80&w=800",
-    caption: "ACHSOSA building committee members conducting physical surveys on school grounds."
+    id: "exco-inaug-2",
+    title: "Oath of Office & Swearing-In",
+    year: "Feb 14, 2026",
+    category: "swearing-in",
+    imageUrl: "https://i.ibb.co/7tFCW727/Whats-App-Image-2026-08-03-at-7-36-10-PM-1.jpg",
+    linkUrl: "https://ibb.co/CKF87xhx",
+    caption: "Newly elected ACHSOSA executive members taking their oath of office during proceedings."
   },
   {
-    id: "gal-3",
-    title: "Mrs. Abosede Elegbede Retirement Send-off",
-    year: "August 2024",
-    category: "historical",
-    imageUrl: "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=800",
-    caption: "Staff and old students celebrating Mrs. Elegbede after years of service as ACHS Junior Principal."
+    id: "exco-inaug-3",
+    title: "Presidential Inaugural Address",
+    year: "Feb 14, 2026",
+    category: "inauguration",
+    imageUrl: "https://i.ibb.co/1GgzHjyM/Whats-App-Image-2026-08-03-at-7-36-10-PM.jpg",
+    linkUrl: "https://ibb.co/YBC0vwnX",
+    caption: "Engr. Adebayo Joseph Joda delivering the inaugural address to assembly members."
   },
   {
-    id: "gal-4",
-    title: "Architectural 3D Model of Proposed School Complex",
-    year: "2026",
-    category: "rebuilding",
-    imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
-    caption: "The vision for the modern eco-friendly academic block, solar grid, and ICT hub."
+    id: "exco-inaug-4",
+    title: "Secretariat Proceedings & Documentation",
+    year: "Feb 14, 2026",
+    category: "swearing-in",
+    imageUrl: "https://i.ibb.co/zThs7XqM/Whats-App-Image-2026-08-03-at-7-36-08-PM.jpg",
+    linkUrl: "https://ibb.co/hJRsZB36",
+    caption: "General Secretary Awojobi Babatunde Saheed and secretariat team recording proceedings."
   },
   {
-    id: "gal-5",
-    title: "1984 WAEC Set Reunion Gathering",
-    year: "2023",
-    category: "reunions",
-    imageUrl: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=800",
-    caption: "Members of the 1984 set reuniting to establish the initial school development endowment fund."
+    id: "exco-inaug-5",
+    title: "Alumni Dignitaries & Set Leaders",
+    year: "Feb 14, 2026",
+    category: "portraits",
+    imageUrl: "https://i.ibb.co/rGqC8YvM/Whats-App-Image-2026-08-03-at-7-36-06-PM.jpg",
+    linkUrl: "https://ibb.co/HDRWw6XY",
+    caption: "Distinguished old students and set representatives gathered at the inauguration."
   },
   {
-    id: "gal-6",
-    title: "Current Students in Classroom Session",
-    year: "2025",
-    category: "academics",
-    imageUrl: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800",
-    caption: "Students diligent at work, inspiring the alumni's commitment to building improved modern facilities."
+    id: "exco-inaug-6",
+    title: "EXCO Executive Group Portrait",
+    year: "Feb 14, 2026",
+    category: "portraits",
+    imageUrl: "https://i.ibb.co/gx48bGp/Whats-App-Image-2026-08-03-at-7-36-03-PM-2.jpg",
+    linkUrl: "https://ibb.co/RqjKG1m",
+    caption: "Group portrait of the 17 executive officers following official swearing-in."
+  },
+  {
+    id: "exco-inaug-7",
+    title: "Inauguration Ceremony Assembly",
+    year: "Feb 14, 2026",
+    category: "inauguration",
+    imageUrl: "https://i.ibb.co/Gv8PCCpP/Whats-App-Image-2026-08-03-at-7-36-05-PM.jpg",
+    linkUrl: "https://ibb.co/fYy0rrF0",
+    caption: "Alumni assembly gathered at Ajebo Community High School grounds."
+  },
+  {
+    id: "exco-inaug-8",
+    title: "EXCO Inauguration Milestone Photo",
+    year: "Feb 14, 2026",
+    category: "portraits",
+    imageUrl: "https://i.ibb.co/gx48bGp/Whats-App-Image-2026-08-03-at-7-36-03-PM-2.jpg",
+    linkUrl: "https://ibb.co/RqjKG1m",
+    caption: "Executive council officers celebrating the historic inauguration milestone."
+  },
+  {
+    id: "exco-inaug-9",
+    title: "Executive Officers Presentation",
+    year: "Feb 14, 2026",
+    category: "inauguration",
+    imageUrl: "https://i.ibb.co/QvhZ2vFD/Whats-App-Image-2026-08-03-at-7-36-03-PM.jpg",
+    linkUrl: "https://ibb.co/5hCdNhWK",
+    caption: "Official presentation of executive committee members."
+  },
+  {
+    id: "exco-inaug-10",
+    title: "Handover & Swearing-In Moment",
+    year: "Feb 14, 2026",
+    category: "swearing-in",
+    imageUrl: "https://i.ibb.co/23tWm8yh/Whats-App-Image-2026-08-03-at-7-36-02-PM.jpg",
+    linkUrl: "https://ibb.co/Swn5WQPy",
+    caption: "Handover ceremony and presentation of official duties to incoming EXCO."
+  },
+  {
+    id: "exco-inaug-11",
+    title: "Alumni Fellowship & Gathering",
+    year: "Feb 14, 2026",
+    category: "portraits",
+    imageUrl: "https://i.ibb.co/whSXHdVw/Whats-App-Image-2026-08-03-at-7-34-56-PM.jpg",
+    linkUrl: "https://ibb.co/0yCSNnTF",
+    caption: "Old students connecting in celebration during the inauguration ceremony."
+  },
+  {
+    id: "exco-inaug-12",
+    title: "Executive Council Leadership Session",
+    year: "Feb 14, 2026",
+    category: "inauguration",
+    imageUrl: "https://i.ibb.co/zVwFH5hd/Whats-App-Image-2026-08-03-at-7-34-55-PM-5.jpg",
+    linkUrl: "https://ibb.co/fd79GSYJ",
+    caption: "ACHSOSA executive council officers sharing a light moment during inauguration."
+  },
+  {
+    id: "exco-inaug-13",
+    title: "Swearing-In Ceremony Highlights",
+    year: "Feb 14, 2026",
+    category: "swearing-in",
+    imageUrl: "https://i.ibb.co/ZpRP1C3R/Whats-App-Image-2026-08-03-at-7-34-55-PM-4.jpg",
+    linkUrl: "https://ibb.co/67cxJ52c",
+    caption: "Key moments captured during the swearing-in of the 17 officers."
+  },
+  {
+    id: "exco-inaug-14",
+    title: "Congratulatory Session",
+    year: "Feb 14, 2026",
+    category: "portraits",
+    imageUrl: "https://i.ibb.co/KxSCwXbk/Whats-App-Image-2026-08-03-at-7-34-55-PM-3.jpg",
+    linkUrl: "https://ibb.co/fdLmv2q5",
+    caption: "Old students extending congratulations to newly inaugurated leaders."
+  },
+  {
+    id: "exco-inaug-15",
+    title: "ACHS Rebuilding Commitment",
+    year: "Feb 14, 2026",
+    category: "inauguration",
+    imageUrl: "https://i.ibb.co/QFMvfZTs/Whats-App-Image-2026-08-03-at-7-34-55-PM-2.jpg",
+    linkUrl: "https://ibb.co/d0D4rSVn",
+    caption: "Alumni leaders committing to the physical rebuilding of Ajebo High School."
+  },
+  {
+    id: "exco-inaug-16",
+    title: "Executive Officers Portrait Session",
+    year: "Feb 14, 2026",
+    category: "portraits",
+    imageUrl: "https://i.ibb.co/JWJxPL8R/Whats-App-Image-2026-08-03-at-7-34-55-PM-1.jpg",
+    linkUrl: "https://ibb.co/V04H8ybW",
+    caption: "Official inauguration portrait of ACHSOSA executive members."
+  },
+  {
+    id: "exco-inaug-17",
+    title: "Commemorative Inauguration Group Photo",
+    year: "Feb 14, 2026",
+    category: "portraits",
+    imageUrl: "https://i.ibb.co/kg80Cgsr/Whats-App-Image-2026-08-03-at-7-34-55-PM.jpg",
+    linkUrl: "https://ibb.co/Z68KD6pw",
+    caption: "Commemorative group photograph marking the conclusion of the EXCO inauguration."
   }
 ];
 

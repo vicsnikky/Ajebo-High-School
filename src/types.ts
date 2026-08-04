@@ -112,9 +112,10 @@ export interface GalleryItem {
   id: string;
   title: string;
   year: string;
-  category: 'historical' | 'rebuilding' | 'reunions' | 'academics';
+  category: string;
   imageUrl: string;
   caption: string;
+  linkUrl?: string;
 }
 
 export interface ForumPost {
