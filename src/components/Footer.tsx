@@ -72,7 +72,12 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenDonate, onOp
             </div>
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-orange-400 shrink-0" />
-              <span>{SCHOOL_INFO.contactPhone}</span>
+              <a 
+                href="tel:07087106906" 
+                className="hover:text-white transition underline decoration-emerald-500/50"
+              >
+                0708 710 6906 (President: Engr. Adebayo Joseph Joda)
+              </a>
             </div>
           </div>
         </div>

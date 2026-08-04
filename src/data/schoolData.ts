@@ -308,7 +308,7 @@ export const SCHOOL_INFO = {
   waecAccreditationYear: "1983–1984",
   logoUrl: "https://i.ibb.co/5XyPmfPd/Whats-App-Image-2026-08-01-at-2-45-25-PM.jpg",
   contactEmail: "info@ajebocommunityhighschool.edu.ng",
-  contactPhone: "+234 803 456 7890",
+  contactPhone: "0708 710 6906 (President: Engr. Adebayo Joseph Joda)",
   rebuildingDriveStatus: "Phase 1 Construction & Infrastructure Modernization",
   badgeDetails: {
     book: "The Open Book at the top stands for Knowledge.",
