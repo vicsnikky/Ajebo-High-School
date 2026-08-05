@@ -9,6 +9,7 @@ import {
   AJEBITE_WELFARE_INITIATIVES 
 } from '../data/schoolData';
 import { DonorRecord, RemodellingFacility } from '../types';
+import { ImageWithFallback } from './ImageWithFallback';
 import { 
   Building2, 
   HeartHandshake, 
@@ -344,12 +345,9 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                           onClick={() => setSelectedImage({ url: imgUrl, title: `${facility.title} (Proposed View ${imgIdx + 1})`, type: 'Proposed Architectural Design' })}
                           className="relative rounded-xl overflow-hidden border border-emerald-200 bg-slate-100 cursor-pointer hover:border-emerald-500 shadow-xs transition"
                         >
-                          <img 
+                          <ImageWithFallback 
                             src={imgUrl} 
                             alt={`${facility.title} proposed ${imgIdx + 1}`}
-                            loading="eager"
-                            decoding="async"
-                            referrerPolicy="no-referrer" 
                             className="w-full h-36 object-cover"
                           />
                         </div>
@@ -360,12 +358,9 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                       onClick={() => setSelectedImage({ url: facility.proposedImageUrl!, title: facility.title, type: 'Proposed Architectural Design' })}
                       className="relative rounded-xl overflow-hidden border border-emerald-200 bg-slate-100 cursor-pointer hover:border-emerald-500 shadow-xs my-2"
                     >
-                      <img 
+                      <ImageWithFallback 
                         src={facility.proposedImageUrl} 
                         alt={facility.title}
-                        loading="eager"
-                        decoding="async"
-                        referrerPolicy="no-referrer" 
                         className="w-full h-52 object-cover"
                       />
                     </div>
@@ -394,12 +389,9 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                             onClick={() => setSelectedImage({ url: imgUrl, title: `${facility.title} (As-Built Photo ${imgIdx + 1})`, type: 'Original As-Built Photo' })}
                             className="relative rounded-lg overflow-hidden border border-amber-200 bg-slate-100 cursor-pointer hover:border-amber-400 shadow-xs"
                           >
-                            <img 
+                            <ImageWithFallback 
                               src={imgUrl} 
                               alt={`${facility.title} as-built ${imgIdx + 1}`}
-                              loading="eager"
-                              decoding="async"
-                              referrerPolicy="no-referrer" 
                               className="w-full h-36 object-cover"
                             />
                           </div>
@@ -410,12 +402,9 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                         onClick={() => setSelectedImage({ url: facility.asBuiltImageUrl!, title: `${facility.title} (Original / As-Built Structure)`, type: 'Original As-Built Photo' })}
                         className="relative rounded-lg overflow-hidden border border-amber-200 bg-slate-100 cursor-pointer hover:border-amber-400 shadow-xs my-1"
                       >
-                        <img 
+                        <ImageWithFallback 
                           src={facility.asBuiltImageUrl} 
                           alt={`${facility.title} Old Entrance`}
-                          loading="eager"
-                          decoding="async"
-                          referrerPolicy="no-referrer" 
                           className="w-full h-44 object-cover"
                         />
                       </div>
@@ -694,12 +683,9 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
             </div>
 
             <div className="p-4 flex-1 overflow-auto flex items-center justify-center bg-slate-950">
-              <img 
+              <ImageWithFallback 
                 src={selectedImage.url} 
                 alt={selectedImage.title}
-                loading="eager"
-                decoding="async"
-                referrerPolicy="no-referrer"
                 className="max-h-[70vh] w-auto object-contain rounded-2xl shadow-lg border border-slate-800"
               />
             </div>
