@@ -12,11 +12,17 @@ import {
   EducationalProgram,
   MemberWelfareItem,
   CompletedProject,
-  AlumniAmbassador
+  AlumniAmbassador,
+  BoardOfTrusteesMember,
+  EldersForumMember,
+  AdviserMember,
+  GrandPatronMember
 } from '../types';
 
 export const SCHOOL_ANTHEM = {
   title: "Ajebo Community High School Anthem",
+  structure: "Verse One • Chorus • Verse Two • Chorus",
+  verse1Title: "Verse One",
   verse1: [
     "Ajebo Heights",
     "I'm proud of you",
@@ -25,18 +31,21 @@ export const SCHOOL_ANTHEM = {
     "I'm proud of you",
     "I enjoy your blessings."
   ],
+  chorusTitle: "Chorus",
   chorus: [
     "My school (2ce)",
     "I will never forget you",
     "My school (2ce)",
     "I will never disobey"
   ],
+  verse2Title: "Verse Two",
   verse2: [
     "You teach me to be child of hope",
     "And to obey my parents",
     "You provide useful and loyal teachers",
     "And dedicated friends."
   ],
+  chorusRepriseTitle: "Chorus",
   chorusReprise: [
     "My school (2ce)",
     "I will never forget you",
@@ -54,7 +63,10 @@ export const ACHSOSA_COMPLETED_PROJECTS: CompletedProject[] = [
     description: "We have renovated Senior Principal's office and provided book shelves to properly arrange old and new students documents.",
     imageUrls: [
       "https://i.ibb.co/fd62ggW0/Whats-App-Image-2026-08-06-at-8-36-59-AM-1.jpg",
-      "https://i.ibb.co/wZJGBbbJ/Whats-App-Image-2026-08-06-at-8-36-59-AM-2.jpg"
+      "https://i.ibb.co/wZJGBbbJ/Whats-App-Image-2026-08-06-at-8-36-59-AM-2.jpg",
+      "https://i.ibb.co/yFbQbQSp/Whats-App-Image-2026-08-06-at-11-54-04-AM.jpg",
+      "https://i.ibb.co/JFFn58cx/Whats-App-Image-2026-08-06-at-11-54-03-AM-1.jpg",
+      "https://i.ibb.co/F44xXqRL/Whats-App-Image-2026-08-06-at-11-54-03-AM.jpg"
     ]
   },
   {
@@ -75,7 +87,11 @@ export const ACHSOSA_COMPLETED_PROJECTS: CompletedProject[] = [
     dateCompleted: "Second Term 2026",
     description: "As part of the project, we organised career counselling, career development and goal setting program for outgoing students SSS3 during second term academic session year 2026. Guiding students on future pathways, subject choices and life goals.",
     imageUrls: [
-      "https://i.ibb.co/dwy1YLMD/Whats-App-Image-2026-08-06-at-8-37-00-AM.jpg"
+      "https://i.ibb.co/dwy1YLMD/Whats-App-Image-2026-08-06-at-8-37-00-AM.jpg",
+      "https://i.ibb.co/qM9tSWTM/Whats-App-Image-2026-08-06-at-10-25-28-AM.jpg",
+      "https://i.ibb.co/Kx81LL7B/Whats-App-Image-2026-08-06-at-10-25-26-AM.jpg",
+      "https://i.ibb.co/Pz4T5J8n/Whats-App-Image-2026-08-06-at-10-25-16-AM-1.jpg",
+      "https://i.ibb.co/7xQtgvdD/Whats-App-Image-2026-08-06-at-10-25-16-AM.jpg"
     ]
   }
 ];
@@ -91,6 +107,24 @@ export const COMPLETED_PROJECTS_GALLERY = [
     imageUrl: "https://i.ibb.co/wZJGBbbJ/Whats-App-Image-2026-08-06-at-8-36-59-AM-2.jpg",
     linkUrl: "https://ibb.co/1Ysy7pps",
     title: "Executive Office Furnishing & Documentation Storage",
+    project: "Renovation of Senior Principal's Office"
+  },
+  {
+    imageUrl: "https://i.ibb.co/yFbQbQSp/Whats-App-Image-2026-08-06-at-11-54-04-AM.jpg",
+    linkUrl: "https://ibb.co/whxzxzs7",
+    title: "Senior Principal Office Refurbishment & Consultation Desk",
+    project: "Renovation of Senior Principal's Office"
+  },
+  {
+    imageUrl: "https://i.ibb.co/JFFn58cx/Whats-App-Image-2026-08-06-at-11-54-03-AM-1.jpg",
+    linkUrl: "https://ibb.co/844M6Gmz",
+    title: "Administrative Office Interior & Storage Units",
+    project: "Renovation of Senior Principal's Office"
+  },
+  {
+    imageUrl: "https://i.ibb.co/F44xXqRL/Whats-App-Image-2026-08-06-at-11-54-03-AM.jpg",
+    linkUrl: "https://ibb.co/5hhMkxbg",
+    title: "Renovated Principal Office Entry & Documentation Facilities",
     project: "Renovation of Senior Principal's Office"
   },
   {
@@ -110,6 +144,30 @@ export const COMPLETED_PROJECTS_GALLERY = [
     linkUrl: "https://ibb.co/5gVtHn4L",
     title: "SSS3 Career Counselling & Goal Setting Workshop",
     project: "Career Counselling & Development for Outgoing Students"
+  },
+  {
+    imageUrl: "https://i.ibb.co/qM9tSWTM/Whats-App-Image-2026-08-06-at-10-25-28-AM.jpg",
+    linkUrl: "https://ibb.co/vxm7FQ0x",
+    title: "Career Mentorship Interactive Session with SSS3 Students",
+    project: "Career Counselling & Development for Outgoing Students"
+  },
+  {
+    imageUrl: "https://i.ibb.co/Kx81LL7B/Whats-App-Image-2026-08-06-at-10-25-26-AM.jpg",
+    linkUrl: "https://ibb.co/m5PxXXtd",
+    title: "Student Career Guidance & Future Pathways Presentation",
+    project: "Career Counselling & Development for Outgoing Students"
+  },
+  {
+    imageUrl: "https://i.ibb.co/Pz4T5J8n/Whats-App-Image-2026-08-06-at-10-25-16-AM-1.jpg",
+    linkUrl: "https://ibb.co/qF90Rhwf",
+    title: "SSS3 Career Development & Subject Choices Assembly",
+    project: "Career Counselling & Development for Outgoing Students"
+  },
+  {
+    imageUrl: "https://i.ibb.co/7xQtgvdD/Whats-App-Image-2026-08-06-at-10-25-16-AM.jpg",
+    linkUrl: "https://ibb.co/Y4XBD2FS",
+    title: "Outgoing Students Mentorship & Goal Setting Facilitation",
+    project: "Career Counselling & Development for Outgoing Students"
   }
 ];
 
@@ -124,7 +182,7 @@ export const ACHSOSA_AMBASSADORS: AlumniAmbassador[] = [
     id: "amb-2",
     name: "Dr. Gbenga Adeoye",
     role: "Chairman, Legal & Rebuilding Advisory Committee",
-    gradSet: "Class of 1986"
+    gradSet: "Class of 1995"
   },
   {
     id: "amb-3",
@@ -482,7 +540,7 @@ export const NOTABLE_ALUMNI: AlumniProfile[] = [
     id: "gbenga-adeoye",
     name: "Dr. Gbenga Adeoye",
     title: "Senior Legal Practitioner & Corporate Affairs Specialist",
-    gradYear: "1986",
+    gradYear: "1995",
     occupation: "Corporate Lawyer & Tax Consultant",
     companyOrOrg: "Adeoye & Associates Legal Consult",
     location: "Lagos & Abuja, Nigeria",
@@ -561,23 +619,23 @@ export const ADMIN_LEADERS: AdminLeader[] = [
   {
     id: "mrs-karunwi-taiwo-omodunke",
     name: "Mrs. Karunwi Taiwo Omodunke",
-    role: "Principal Junior School",
-    period: "Current Principal (Junior School)",
-    arm: "Ajebo Community High School, Junior Arm (ACHS JNR)",
-    phone: "08030463277",
-    bio: "Serving as the Principal for the Junior School of Ajebo Community High School, directing academic foundation, moral discipline, and foundational secondary school learning in Obafemi Owode LGA.",
-    notableAchievement: "Directing junior curriculum standards, character formation, and institutional development across JSS1–JSS3 cohorts.",
+    role: "Principal, Senior School",
+    period: "Current Principal (Senior School)",
+    arm: "Ajebo Community High School, Senior Arm (ACHS SNR)",
+    phone: "0803 046 3277",
+    bio: "Serving as the Principal for the Senior School of Ajebo Community High School, overseeing Senior Secondary education, WAEC/NECO academic preparedness, student career guidance, and collaborating with ACHSOSA on school facility modernization.",
+    notableAchievement: "Partnering with ACHSOSA alumni on office renovation, student career counselling, and senior school academic excellence.",
     status: "active"
   },
   {
     id: "mrs-dawodu-omowonuola",
     name: "Mrs. Dawodu Omowonuola",
-    role: "Principal, Senior School",
-    period: "Current Principal (Senior School)",
-    arm: "Ajebo Community High School, Senior Arm (ACHS SNR)",
-    phone: "08032582065",
-    bio: "Serving as the Principal for the Senior School of Ajebo Community High School, overseeing Senior Secondary education, WAEC/NECO academic preparedness, and modern infrastructure revitalization with ACHSOSA.",
-    notableAchievement: "Partnering with ACHSOSA alumni on office renovation, student career counselling, and senior school academic excellence.",
+    role: "Principal, Junior School",
+    period: "Current Principal (Junior School)",
+    arm: "Ajebo Community High School, Junior Arm (ACHS JNR)",
+    phone: "0803 258 2065",
+    bio: "Serving as the Principal for the Junior School of Ajebo Community High School, directing academic foundation, moral discipline, and foundational secondary school learning in Obafemi Owode LGA.",
+    notableAchievement: "Directing junior curriculum standards, character formation, and institutional development across JSS1–JSS3 cohorts.",
     status: "active"
   },
   {
@@ -774,6 +832,42 @@ export const INITIAL_DONORS: DonorRecord[] = [
 ];
 
 export const SCHOOL_EVENTS: SchoolEvent[] = [
+  {
+    id: "evt-retirement-adigbo",
+    title: "Retirement Celebration & Honor Ceremony for Mrs. Bola Adigbo",
+    date: "August 2026 (Passed / Concluded)",
+    time: "11:00 AM WAT",
+    location: "Ajebo Community High School & Reception Hall",
+    description: "Special milestone honor ceremony celebrating the meritorious service and retirement of esteemed former Principal Mrs. Bola Adigbo, featuring ACHSOSA executive presentation of congratulatory retirement gifts and tokens of appreciation.",
+    type: "Honorary & Retirement Ceremony",
+    status: "concluded",
+    isPassed: true,
+    honouree: "Mrs. Bola Adigbo (Retired Principal)",
+    featuredImage: "https://i.ibb.co/hJWdFwry/Whats-App-Image-2026-08-06-at-10-33-59-AM.jpg",
+    featuredImageCaption: "Mrs. Bola Adigbo, Celebrated Retired Principal of Ajebo Community High School",
+    giftImages: [
+      {
+        url: "https://i.ibb.co/WRsLGTX/Whats-App-Image-2026-08-06-at-10-33-00-AM.jpg",
+        caption: "ACHSOSA Executive Presentation of Retirement Commemorative Gift to Mrs. Bola Adigbo",
+        linkUrl: "https://ibb.co/zH9D6d82"
+      },
+      {
+        url: "https://i.ibb.co/8LS6pbJC/Whats-App-Image-2026-08-06-at-8-09-54-PM-2.jpg",
+        caption: "Gift Presentation & Felicitation by Association Representatives",
+        linkUrl: "https://ibb.co/bgs148C4"
+      },
+      {
+        url: "https://i.ibb.co/3YdMb5Z2/Whats-App-Image-2026-08-06-at-8-09-54-PM-1.jpg",
+        caption: "Honorary Gift Package Delivered on Behalf of ACHSOSA Worldwide",
+        linkUrl: "https://ibb.co/7dCqG9hC"
+      },
+      {
+        url: "https://i.ibb.co/nqFwT6wr/Whats-App-Image-2026-08-06-at-8-09-54-PM.jpg",
+        caption: "Retirement Celebration Reception with Alumni and School Staff",
+        linkUrl: "https://ibb.co/8L4482g7"
+      }
+    ]
+  },
   {
     id: "evt-1",
     title: "ACHSOSA Grand Building Project Foundation Laying & Homecoming",
@@ -1302,5 +1396,46 @@ export const GRADUATING_SETS: string[] = Array.from(
   { length: 2025 - 1977 + 1 },
   (_, i) => `${1977 + i} Set`
 );
+
+export const ACHSOSA_BOARD_OF_TRUSTEES: BoardOfTrusteesMember[] = [
+  { id: "bot-1", no: "1", name: "Engr Shadrach Ogunseye", role: "Member, Board of Trustees" },
+  { id: "bot-2", no: "2", name: "Barr Sina Soyinka", role: "Member, Board of Trustees" },
+  { id: "bot-3", no: "3", name: "Dr. Tunde Anifowose-Kelani", role: "Member, Board of Trustees" },
+  { id: "bot-4", no: "4", name: "Dr Joseph Kayode Ogunwede", role: "Member, Board of Trustees" },
+  { id: "bot-5", no: "5", name: "Chief Ade Adeniji", role: "Member, Board of Trustees" },
+  { id: "bot-6", no: "6", name: "Mr Dolamu Akindele", role: "Member, Board of Trustees" }
+];
+
+export const ACHSOSA_ELDERS_FORUM: EldersForumMember[] = [
+  { id: "ef-1", no: "1", name: "Adegboyega Amos Adekunle", role: "Member, Elders Forum" },
+  { id: "ef-2", no: "2", name: "Bajegbo Segun", role: "Member, Elders Forum" },
+  { id: "ef-3", no: "3", name: "Dr Joseph Alawode", role: "Member, Elders Forum" },
+  { id: "ef-4", no: "4", name: "Dr Omoyayi Jubril", role: "Member, Elders Forum" },
+  { id: "ef-5", no: "5", name: "Dr Gbenga Adeoye", role: "Member, Elders Forum" },
+  { id: "ef-6", no: "6", name: "Elijah Adewusi", role: "Member, Elders Forum" },
+  { id: "ef-7", no: "7", name: "Funmilayo Obe", role: "Member, Elders Forum" },
+  { id: "ef-8", no: "8", name: "Flashade Olowu", role: "Member, Elders Forum" },
+  { id: "ef-9", no: "9", name: "Gbolahan Olufemi Akanji", role: "Member, Elders Forum" },
+  { id: "ef-10", no: "10", name: "Kuburat Omolara Olowokokere", role: "Member, Elders Forum" },
+  { id: "ef-11", no: "11", name: "Monilola Enuice Akinwale", role: "Member, Elders Forum" },
+  { id: "ef-12", no: "12", name: "Ojubanire Sina", role: "Member, Elders Forum" },
+  { id: "ef-13", no: "13", name: "Olusesan Idowu", role: "Member, Elders Forum" },
+  { id: "ef-14", no: "14", name: "Omotunde Ogunkoya", role: "Member, Elders Forum" },
+  { id: "ef-15", no: "15", name: "Sheu Adebowale", role: "Member, Elders Forum" }
+];
+
+export const ACHSOSA_ADVISERS: AdviserMember[] = [
+  { id: "adv-1", no: "1", name: "Adebisi Oyemade", role: "Adviser, ACHSOSA" },
+  { id: "adv-2", no: "2", name: "Adelaja Lukuman", role: "Adviser, ACHSOSA" },
+  { id: "adv-3", no: "3", name: "Oluwakemi Ojubanire", role: "Adviser, ACHSOSA" },
+  { id: "adv-4", no: "4", name: "Aspire Temitope", role: "Adviser, ACHSOSA" },
+  { id: "adv-5", no: "5", name: "Johnson Sotayo", role: "Adviser, ACHSOSA" },
+  { id: "adv-6", no: "6", name: "Olawale Afuape", role: "Adviser, ACHSOSA" }
+];
+
+export const ACHSOSA_GRAND_PATRONS: GrandPatronMember[] = [
+  { id: "gp-1", no: "1", name: "Chief Adebayo Abiodun Victor", role: "Grand Patron, ACHSOSA" }
+];
+
 
 

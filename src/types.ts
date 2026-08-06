@@ -115,6 +115,38 @@ export interface HistoryEvent {
   image?: string;
 }
 
+export interface BoardOfTrusteesMember {
+  id?: string;
+  no: string | number;
+  name: string;
+  role?: string;
+  title?: string;
+}
+
+export interface EldersForumMember {
+  id?: string;
+  no: string | number;
+  name: string;
+  role?: string;
+  title?: string;
+}
+
+export interface AdviserMember {
+  id?: string;
+  no: string | number;
+  name: string;
+  role?: string;
+  title?: string;
+}
+
+export interface GrandPatronMember {
+  id?: string;
+  no: string | number;
+  name: string;
+  role?: string;
+  title?: string;
+}
+
 export interface SchoolEvent {
   id: string;
   title: string;
@@ -122,8 +154,18 @@ export interface SchoolEvent {
   time: string;
   location: string;
   description: string;
-  type: 'Reunion' | 'Fundraiser' | 'Mentorship' | 'General Assembly';
+  type: 'Reunion' | 'Fundraiser' | 'Mentorship' | 'General Assembly' | 'Honorary & Retirement Ceremony' | 'Ceremony';
   isVirtual?: boolean;
+  featuredImage?: string;
+  featuredImageCaption?: string;
+  giftImages?: {
+    url: string;
+    caption: string;
+    linkUrl?: string;
+  }[];
+  honouree?: string;
+  status?: 'upcoming' | 'concluded' | 'passed';
+  isPassed?: boolean;
 }
 
 export interface GalleryItem {

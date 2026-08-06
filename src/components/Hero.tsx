@@ -209,13 +209,20 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab, onOpenDonate, onOpenRe
             </div>
           </div>
 
-          {/* Anthem Stanzas Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
-            {/* VERSE 1 */}
-            <div className="bg-slate-900/80 backdrop-blur-md p-6 sm:p-7 rounded-2xl border border-emerald-700/70 space-y-4 flex flex-col justify-between hover:border-emerald-400 transition shadow-inner">
+          {/* Anthem Structure Badge */}
+          <div className="relative z-10 flex items-center justify-center">
+            <span className="bg-emerald-900/90 text-emerald-200 border border-emerald-700 px-4 py-1 rounded-full text-xs font-semibold tracking-wide">
+              Official Sequence: <strong>Verse One</strong> → <strong>Chorus</strong> → <strong>Verse Two</strong> → <strong>Chorus</strong>
+            </span>
+          </div>
+
+          {/* Anthem Stanzas Grid: Verse One, Chorus, Verse Two, Chorus */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 relative z-10">
+            {/* 1. VERSE ONE */}
+            <div className="bg-slate-900/85 backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-emerald-700/70 space-y-4 flex flex-col justify-between hover:border-emerald-400 transition shadow-inner">
               <div className="space-y-3">
                 <span className="bg-emerald-800 text-emerald-200 font-bold text-[11px] px-3 py-1 rounded-full uppercase tracking-wider inline-block">
-                  Verse 1
+                  Verse One
                 </span>
                 <div className="space-y-1.5 text-sm sm:text-base font-serif leading-relaxed text-emerald-50">
                   {SCHOOL_ANTHEM.verse1.map((line, idx) => (
@@ -230,16 +237,16 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab, onOpenDonate, onOpenRe
               </div>
             </div>
 
-            {/* CHORUS */}
-            <div className="bg-gradient-to-b from-orange-950/70 to-slate-900/90 backdrop-blur-md p-6 sm:p-7 rounded-2xl border-2 border-orange-500/80 space-y-4 flex flex-col justify-between hover:border-orange-400 transition shadow-xl">
+            {/* 2. CHORUS */}
+            <div className="bg-gradient-to-b from-orange-950/70 to-slate-900/90 backdrop-blur-md p-5 sm:p-6 rounded-2xl border-2 border-orange-500/80 space-y-4 flex flex-col justify-between hover:border-orange-400 transition shadow-xl">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="bg-orange-500 text-white font-bold text-[11px] px-3 py-1 rounded-full uppercase tracking-wider inline-block shadow-xs">
                     Chorus
                   </span>
-                  <span className="text-[11px] font-mono text-orange-300 font-bold">(2ce Refrain)</span>
+                  <span className="text-[10px] font-mono text-orange-300 font-bold">(2ce Refrain)</span>
                 </div>
-                <div className="space-y-2 text-base sm:text-lg font-serif font-bold leading-relaxed text-white">
+                <div className="space-y-2 text-sm sm:text-base font-serif font-bold leading-relaxed text-white">
                   {SCHOOL_ANTHEM.chorus.map((line, idx) => (
                     <p key={idx} className="text-orange-100">
                       {line}
@@ -252,11 +259,11 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab, onOpenDonate, onOpenRe
               </div>
             </div>
 
-            {/* VERSE 2 */}
-            <div className="bg-slate-900/80 backdrop-blur-md p-6 sm:p-7 rounded-2xl border border-emerald-700/70 space-y-4 flex flex-col justify-between hover:border-emerald-400 transition shadow-inner">
+            {/* 3. VERSE TWO */}
+            <div className="bg-slate-900/85 backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-emerald-700/70 space-y-4 flex flex-col justify-between hover:border-emerald-400 transition shadow-inner">
               <div className="space-y-3">
                 <span className="bg-emerald-800 text-emerald-200 font-bold text-[11px] px-3 py-1 rounded-full uppercase tracking-wider inline-block">
-                  Verse 2
+                  Verse Two
                 </span>
                 <div className="space-y-1.5 text-sm sm:text-base font-serif leading-relaxed text-emerald-50">
                   {SCHOOL_ANTHEM.verse2.map((line, idx) => (
@@ -268,6 +275,28 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab, onOpenDonate, onOpenRe
               </div>
               <div className="pt-3 border-t border-emerald-800/60 text-[11px] text-emerald-300 italic">
                 Honoring our devoted teachers & values
+              </div>
+            </div>
+
+            {/* 4. CHORUS (REPRISE) */}
+            <div className="bg-gradient-to-b from-orange-950/70 to-slate-900/90 backdrop-blur-md p-5 sm:p-6 rounded-2xl border-2 border-orange-500/80 space-y-4 flex flex-col justify-between hover:border-orange-400 transition shadow-xl">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="bg-orange-500 text-white font-bold text-[11px] px-3 py-1 rounded-full uppercase tracking-wider inline-block shadow-xs">
+                    Chorus
+                  </span>
+                  <span className="text-[10px] font-mono text-orange-300 font-bold">(2ce Refrain)</span>
+                </div>
+                <div className="space-y-2 text-sm sm:text-base font-serif font-bold leading-relaxed text-white">
+                  {SCHOOL_ANTHEM.chorusReprise.map((line, idx) => (
+                    <p key={idx} className="text-orange-100">
+                      {line}
+                    </p>
+                  ))}
+                </div>
+              </div>
+              <div className="pt-3 border-t border-orange-800/60 text-[11px] text-orange-300 italic font-medium">
+                Pledge of perpetual loyalty & obedience
               </div>
             </div>
           </div>

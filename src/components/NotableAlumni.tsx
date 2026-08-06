@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
-import { NOTABLE_ALUMNI, ACHSOSA_AMBASSADORS } from '../data/schoolData';
+import { 
+  NOTABLE_ALUMNI, 
+  ACHSOSA_AMBASSADORS,
+  ACHSOSA_BOARD_OF_TRUSTEES,
+  ACHSOSA_ELDERS_FORUM,
+  ACHSOSA_ADVISERS,
+  ACHSOSA_GRAND_PATRONS
+} from '../data/schoolData';
 import { AlumniProfile } from '../types';
 import { 
   Award, 
@@ -16,7 +23,9 @@ import {
   Sparkles,
   Users,
   Info,
-  Clock
+  Clock,
+  Compass,
+  UserCheck
 } from 'lucide-react';
 
 export const NotableAlumni: React.FC = () => {
@@ -62,8 +71,49 @@ export const NotableAlumni: React.FC = () => {
         </div>
       </div>
 
+      {/* ACHSOSA GRAND PATRON SECTION */}
+      <div className="bg-gradient-to-br from-amber-950 via-slate-900 to-emerald-950 text-white rounded-3xl p-8 sm:p-10 border-2 border-amber-500/40 shadow-xl relative overflow-hidden space-y-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-amber-500/20 pb-4">
+          <div>
+            <span className="bg-amber-500 text-slate-950 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider inline-flex items-center gap-1.5 shadow-xs">
+              <Crown className="w-3.5 h-3.5 text-slate-950" /> Honorary Patronage
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white mt-2">
+              ACHSOSA Grand Patron
+            </h2>
+            <p className="text-xs sm:text-sm text-amber-200/80 mt-1">
+              Apex patron providing leadership guidance, royal support, and visionary patronage for the school community.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {ACHSOSA_GRAND_PATRONS.map((patron) => (
+            <div 
+              key={patron.id}
+              className="bg-slate-900/90 border border-amber-400/40 p-6 sm:p-8 rounded-2xl flex items-center gap-5 shadow-lg"
+            >
+              <div className="w-14 h-14 bg-amber-500/20 border border-amber-400/50 rounded-2xl flex items-center justify-center text-amber-400 shrink-0">
+                <Crown className="w-7 h-7" />
+              </div>
+              <div className="space-y-1">
+                <span className="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-widest">
+                  Grand Patron
+                </span>
+                <h3 className="text-xl sm:text-2xl font-bold font-serif text-white">
+                  {patron.name}
+                </h3>
+                <p className="text-xs text-amber-200/70">
+                  {patron.role}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* ACHSOSA BOARD OF TRUSTEES SECTION */}
-      <div className="bg-white rounded-3xl p-8 border-2 border-emerald-200 shadow-md space-y-6">
+      <div className="bg-white rounded-3xl p-8 border-2 border-emerald-300 shadow-md space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
           <div>
             <span className="bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-flex items-center gap-1.5">
@@ -76,28 +126,146 @@ export const NotableAlumni: React.FC = () => {
               Apex advisory custodians and fiduciary trustees of Ajebo Community High School Old Students Association.
             </p>
           </div>
-          <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-900 bg-amber-50 px-3 py-1.5 rounded-xl border border-amber-200 self-start sm:self-auto">
-            <Clock className="w-4 h-4 text-amber-600" /> Official Gazetting In Progress
+          <span className="text-xs font-mono font-bold text-emerald-800 bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-200 self-start sm:self-auto">
+            {ACHSOSA_BOARD_OF_TRUSTEES.length} BOT Trustees
           </span>
         </div>
 
-        {/* Board of Trustees Notice Card (No names yet, as requested) */}
-        <div className="bg-gradient-to-br from-emerald-50/70 via-slate-50 to-amber-50/50 p-8 rounded-2xl border border-emerald-200/80 text-center space-y-4">
-          <div className="w-14 h-14 bg-emerald-900 text-orange-400 rounded-2xl flex items-center justify-center mx-auto shadow-md">
-            <Crown className="w-7 h-7" />
-          </div>
-          <div className="space-y-2 max-w-xl mx-auto">
-            <h3 className="text-xl font-bold font-serif text-slate-900">
-              Board Composition & Official Gazette
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              The official appointment, tenure ratification, and distinguished roll of the <strong>ACHSOSA Board of Trustees</strong> will be formally published following ratification by the General Assembly and Central Executive Council.
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {ACHSOSA_BOARD_OF_TRUSTEES.map((bot) => (
+            <div 
+              key={bot.id}
+              className="bg-slate-50 hover:bg-emerald-50/50 p-5 rounded-2xl border border-slate-200/80 hover:border-emerald-300 transition space-y-2 flex flex-col justify-between shadow-xs group"
+            >
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="w-7 h-7 rounded-full bg-emerald-900 text-emerald-100 font-bold text-xs flex items-center justify-center">
+                    {bot.no}
+                  </span>
+                  <span className="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-md">
+                    Trustee
+                  </span>
+                </div>
+                <h3 className="font-bold text-slate-900 text-base font-serif group-hover:text-emerald-900 transition">
+                  {bot.name}
+                </h3>
+                <p className="text-xs font-medium text-emerald-700">
+                  {bot.role}
+                </p>
+              </div>
+
+              <div className="pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] text-slate-500">
+                <span className="flex items-center gap-1">
+                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Board of Trustees
+                </span>
+                <span className="font-semibold text-emerald-800">ACHSOSA</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ACHSOSA ELDERS FORUM SECTION */}
+      <div className="bg-white rounded-3xl p-8 border-2 border-emerald-300 shadow-md space-y-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
+          <div>
+            <span className="bg-blue-100 text-blue-900 border border-blue-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-flex items-center gap-1.5">
+              <Users className="w-3.5 h-3.5 text-blue-700" /> Wisdom & Guidance
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold font-serif text-slate-900 mt-2">
+              ACHSOSA Elders Forum
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-500 mt-1">
+              Senior alumni elders offering generational wisdom, peacebuilding, and strategic counsel for association development.
             </p>
           </div>
-          <div className="inline-flex items-center gap-2 text-xs font-semibold text-emerald-800 bg-white px-4 py-2 rounded-xl border border-emerald-200 shadow-xs">
-            <Info className="w-4 h-4 text-emerald-600" />
-            <span>Official roll to be unveiled at the General Alumni Convention</span>
+          <span className="text-xs font-mono font-bold text-blue-800 bg-blue-50 px-3 py-1.5 rounded-xl border border-blue-200 self-start sm:self-auto">
+            {ACHSOSA_ELDERS_FORUM.length} Forum Elders
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {ACHSOSA_ELDERS_FORUM.map((elder) => (
+            <div 
+              key={elder.id}
+              className="bg-slate-50 hover:bg-blue-50/50 p-4 rounded-2xl border border-slate-200/80 hover:border-blue-300 transition space-y-2 flex flex-col justify-between shadow-xs group"
+            >
+              <div className="space-y-1.5">
+                <div className="flex items-center justify-between">
+                  <span className="w-6 h-6 rounded-full bg-blue-900 text-blue-100 font-bold text-xs flex items-center justify-center">
+                    {elder.no}
+                  </span>
+                  <span className="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded-md">
+                    Elder
+                  </span>
+                </div>
+                <h3 className="font-bold text-slate-900 text-sm sm:text-base font-serif group-hover:text-blue-900 transition">
+                  {elder.name}
+                </h3>
+                <p className="text-xs font-medium text-slate-600">
+                  {elder.role}
+                </p>
+              </div>
+
+              <div className="pt-2 border-t border-slate-200/60 flex items-center justify-between text-[11px] text-slate-400">
+                <span>Elders Forum</span>
+                <span className="font-semibold text-blue-700">ACHSOSA</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ACHSOSA ADVISERS SECTION */}
+      <div className="bg-white rounded-3xl p-8 border-2 border-emerald-300 shadow-md space-y-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
+          <div>
+            <span className="bg-purple-100 text-purple-900 border border-purple-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-flex items-center gap-1.5">
+              <Compass className="w-3.5 h-3.5 text-purple-700" /> Strategic Advisory
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold font-serif text-slate-900 mt-2">
+              ACHSOSA Advisers
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-500 mt-1">
+              Appointed advisory council assisting the executive committee in project planning, institutional alignment, and outreach.
+            </p>
           </div>
+          <span className="text-xs font-mono font-bold text-purple-800 bg-purple-50 px-3 py-1.5 rounded-xl border border-purple-200 self-start sm:self-auto">
+            {ACHSOSA_ADVISERS.length} Advisers
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {ACHSOSA_ADVISERS.map((adv) => (
+            <div 
+              key={adv.id}
+              className="bg-slate-50 hover:bg-purple-50/50 p-5 rounded-2xl border border-slate-200/80 hover:border-purple-300 transition space-y-2 flex flex-col justify-between shadow-xs group"
+            >
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="w-7 h-7 rounded-full bg-purple-900 text-purple-100 font-bold text-xs flex items-center justify-center">
+                    {adv.no}
+                  </span>
+                  <span className="bg-purple-100 text-purple-800 text-[10px] font-bold px-2 py-0.5 rounded-md">
+                    Adviser
+                  </span>
+                </div>
+                <h3 className="font-bold text-slate-900 text-base font-serif group-hover:text-purple-900 transition">
+                  {adv.name}
+                </h3>
+                <p className="text-xs font-medium text-purple-700">
+                  {adv.role}
+                </p>
+              </div>
+
+              <div className="pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] text-slate-500">
+                <span className="flex items-center gap-1">
+                  <Compass className="w-3.5 h-3.5 text-purple-600" /> Strategic Counsel
+                </span>
+                <span className="font-semibold text-purple-800">ACHSOSA</span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -117,7 +285,7 @@ export const NotableAlumni: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {ACHSOSA_AMBASSADORS.map((amb) => (
             <div 
               key={amb.id}
@@ -200,7 +368,7 @@ export const NotableAlumni: React.FC = () => {
             <div className="space-y-3">
               <div className="flex justify-between items-start">
                 <span className="bg-emerald-100 text-emerald-900 font-mono font-bold text-xs px-3 py-1 rounded-full border border-emerald-300">
-                  Class of 1986
+                  Class of 1995
                 </span>
                 <span className="bg-amber-100 text-amber-900 text-xs font-semibold px-2.5 py-0.5 rounded-md">
                   Corporate Law Expert

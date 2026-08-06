@@ -319,15 +319,18 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
 
                 {/* Attached Photo Previews */}
                 <div className="space-y-2 pt-2">
-                  <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
-                    Completed Project Photos:
-                  </span>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
+                      Renovation Photos (5 Images):
+                    </span>
+                    <span className="text-[11px] text-emerald-700 font-medium">Click to expand</span>
+                  </div>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                     <div 
                       onClick={() => setSelectedImage({
                         url: "https://i.ibb.co/fd62ggW0/Whats-App-Image-2026-08-06-at-8-36-59-AM-1.jpg",
                         title: "Renovated Senior Principal's Office & Archive Book Shelves",
-                        type: "ACHSOSA Completed Project"
+                        type: "Renovation of Senior Principal's Office"
                       })}
                       className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100"
                     >
@@ -340,7 +343,7 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                         className="w-full h-full object-cover group-hover:scale-105 transition"
                       />
                       <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
-                        <Maximize2 className="w-5 h-5" />
+                        <Maximize2 className="w-4 h-4" />
                       </div>
                     </div>
 
@@ -348,7 +351,7 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                       onClick={() => setSelectedImage({
                         url: "https://i.ibb.co/wZJGBbbJ/Whats-App-Image-2026-08-06-at-8-36-59-AM-2.jpg",
                         title: "Executive Office Furnishings & Document Shelving",
-                        type: "ACHSOSA Completed Project"
+                        type: "Renovation of Senior Principal's Office"
                       })}
                       className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100"
                     >
@@ -361,7 +364,70 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                         className="w-full h-full object-cover group-hover:scale-105 transition"
                       />
                       <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
-                        <Maximize2 className="w-5 h-5" />
+                        <Maximize2 className="w-4 h-4" />
+                      </div>
+                    </div>
+
+                    <div 
+                      onClick={() => setSelectedImage({
+                        url: "https://i.ibb.co/yFbQbQSp/Whats-App-Image-2026-08-06-at-11-54-04-AM.jpg",
+                        title: "Senior Principal Office Refurbishment & Consultation Desk",
+                        type: "Renovation of Senior Principal's Office"
+                      })}
+                      className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100"
+                    >
+                      <img 
+                        src="https://i.ibb.co/yFbQbQSp/Whats-App-Image-2026-08-06-at-11-54-04-AM.jpg" 
+                        alt="Principal Office Refurbishment"
+                        loading="eager"
+                        decoding="async"
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover group-hover:scale-105 transition"
+                      />
+                      <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                        <Maximize2 className="w-4 h-4" />
+                      </div>
+                    </div>
+
+                    <div 
+                      onClick={() => setSelectedImage({
+                        url: "https://i.ibb.co/JFFn58cx/Whats-App-Image-2026-08-06-at-11-54-03-AM-1.jpg",
+                        title: "Administrative Office Interior & Storage Units",
+                        type: "Renovation of Senior Principal's Office"
+                      })}
+                      className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100"
+                    >
+                      <img 
+                        src="https://i.ibb.co/JFFn58cx/Whats-App-Image-2026-08-06-at-11-54-03-AM-1.jpg" 
+                        alt="Administrative Office Interior"
+                        loading="eager"
+                        decoding="async"
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover group-hover:scale-105 transition"
+                      />
+                      <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                        <Maximize2 className="w-4 h-4" />
+                      </div>
+                    </div>
+
+                    <div 
+                      onClick={() => setSelectedImage({
+                        url: "https://i.ibb.co/F44xXqRL/Whats-App-Image-2026-08-06-at-11-54-03-AM.jpg",
+                        title: "Renovated Principal Office Entry & Documentation Facilities",
+                        type: "Renovation of Senior Principal's Office"
+                      })}
+                      className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100 sm:col-span-2 md:col-span-1"
+                    >
+                      <img 
+                        src="https://i.ibb.co/F44xXqRL/Whats-App-Image-2026-08-06-at-11-54-03-AM.jpg" 
+                        alt="Principal Office Entry Facilities"
+                        loading="eager"
+                        decoding="async"
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover group-hover:scale-105 transition"
+                      />
+                      <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                        <Maximize2 className="w-4 h-4" />
                       </div>
                     </div>
                   </div>
@@ -475,29 +541,118 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                   As part of the project, we organised career counselling, career development and goal setting program for outgoing students SSS3 during second term academic session year 2026. Guiding students on future pathways, subject choices and life goals.
                 </p>
 
-                {/* Attached Photo Preview */}
+                {/* Attached Photo Previews */}
                 <div className="space-y-2 pt-2">
-                  <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
-                    Completed Project Photo:
-                  </span>
-                  <div 
-                    onClick={() => setSelectedImage({
-                      url: "https://i.ibb.co/dwy1YLMD/Whats-App-Image-2026-08-06-at-8-37-00-AM.jpg",
-                      title: "SSS3 Students Career Counselling & Mentorship Session",
-                      type: "ACHSOSA Completed Project"
-                    })}
-                    className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100"
-                  >
-                    <img 
-                      src="https://i.ibb.co/dwy1YLMD/Whats-App-Image-2026-08-06-at-8-37-00-AM.jpg" 
-                      alt="Career counselling workshop"
-                      loading="eager"
-                      decoding="async"
-                      referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover group-hover:scale-105 transition"
-                    />
-                    <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
-                      <Maximize2 className="w-5 h-5" />
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
+                      Career Counselling Photos (5 Images):
+                    </span>
+                    <span className="text-[11px] text-blue-700 font-medium">Click to expand</span>
+                  </div>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                    <div 
+                      onClick={() => setSelectedImage({
+                        url: "https://i.ibb.co/dwy1YLMD/Whats-App-Image-2026-08-06-at-8-37-00-AM.jpg",
+                        title: "SSS3 Students Career Counselling & Mentorship Session",
+                        type: "Career Counselling & Development for Outgoing Students"
+                      })}
+                      className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100"
+                    >
+                      <img 
+                        src="https://i.ibb.co/dwy1YLMD/Whats-App-Image-2026-08-06-at-8-37-00-AM.jpg" 
+                        alt="Career counselling workshop"
+                        loading="eager"
+                        decoding="async"
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover group-hover:scale-105 transition"
+                      />
+                      <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                        <Maximize2 className="w-4 h-4" />
+                      </div>
+                    </div>
+
+                    <div 
+                      onClick={() => setSelectedImage({
+                        url: "https://i.ibb.co/qM9tSWTM/Whats-App-Image-2026-08-06-at-10-25-28-AM.jpg",
+                        title: "Career Mentorship Interactive Session with SSS3 Students",
+                        type: "Career Counselling & Development for Outgoing Students"
+                      })}
+                      className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100"
+                    >
+                      <img 
+                        src="https://i.ibb.co/qM9tSWTM/Whats-App-Image-2026-08-06-at-10-25-28-AM.jpg" 
+                        alt="Career Mentorship Session"
+                        loading="eager"
+                        decoding="async"
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover group-hover:scale-105 transition"
+                      />
+                      <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                        <Maximize2 className="w-4 h-4" />
+                      </div>
+                    </div>
+
+                    <div 
+                      onClick={() => setSelectedImage({
+                        url: "https://i.ibb.co/Kx81LL7B/Whats-App-Image-2026-08-06-at-10-25-26-AM.jpg",
+                        title: "Student Career Guidance & Future Pathways Presentation",
+                        type: "Career Counselling & Development for Outgoing Students"
+                      })}
+                      className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100"
+                    >
+                      <img 
+                        src="https://i.ibb.co/Kx81LL7B/Whats-App-Image-2026-08-06-at-10-25-26-AM.jpg" 
+                        alt="Career Pathways Presentation"
+                        loading="eager"
+                        decoding="async"
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover group-hover:scale-105 transition"
+                      />
+                      <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                        <Maximize2 className="w-4 h-4" />
+                      </div>
+                    </div>
+
+                    <div 
+                      onClick={() => setSelectedImage({
+                        url: "https://i.ibb.co/Pz4T5J8n/Whats-App-Image-2026-08-06-at-10-25-16-AM-1.jpg",
+                        title: "SSS3 Career Development & Subject Choices Assembly",
+                        type: "Career Counselling & Development for Outgoing Students"
+                      })}
+                      className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100"
+                    >
+                      <img 
+                        src="https://i.ibb.co/Pz4T5J8n/Whats-App-Image-2026-08-06-at-10-25-16-AM-1.jpg" 
+                        alt="Career Development Assembly"
+                        loading="eager"
+                        decoding="async"
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover group-hover:scale-105 transition"
+                      />
+                      <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                        <Maximize2 className="w-4 h-4" />
+                      </div>
+                    </div>
+
+                    <div 
+                      onClick={() => setSelectedImage({
+                        url: "https://i.ibb.co/7xQtgvdD/Whats-App-Image-2026-08-06-at-10-25-16-AM.jpg",
+                        title: "Outgoing Students Mentorship & Goal Setting Facilitation",
+                        type: "Career Counselling & Development for Outgoing Students"
+                      })}
+                      className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100 sm:col-span-2 md:col-span-1"
+                    >
+                      <img 
+                        src="https://i.ibb.co/7xQtgvdD/Whats-App-Image-2026-08-06-at-10-25-16-AM.jpg" 
+                        alt="Mentorship & Goal Setting"
+                        loading="eager"
+                        decoding="async"
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover group-hover:scale-105 transition"
+                      />
+                      <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                        <Maximize2 className="w-4 h-4" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -509,59 +664,6 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                   <GraduationCap className="w-3.5 h-3.5" /> Second Term 2026
                 </span>
               </div>
-            </div>
-          </div>
-
-          {/* Dedicated Photo Gallery of Completed Projects */}
-          <div className="bg-slate-900 text-white rounded-3xl p-8 space-y-6 border border-emerald-800 shadow-xl">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
-              <div>
-                <span className="text-orange-400 text-xs font-bold uppercase tracking-wider">
-                  Project Gallery Archive
-                </span>
-                <h3 className="text-2xl font-bold font-serif text-white mt-1">
-                  ACHSOSA Completed Projects Photo Archive
-                </h3>
-                <p className="text-xs text-slate-300 mt-0.5">
-                  Visual proof of the delivered office renovation, electrical grid connections, water borehole pumps, and career workshops.
-                </p>
-              </div>
-              <span className="text-xs font-mono text-emerald-300 bg-emerald-950 px-3 py-1.5 rounded-lg border border-emerald-800">
-                5 Verified Images
-              </span>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-              {COMPLETED_PROJECTS_GALLERY.map((item, idx) => (
-                <div 
-                  key={idx}
-                  onClick={() => setSelectedImage({
-                    url: item.imageUrl,
-                    title: item.title,
-                    type: item.project
-                  })}
-                  className="group bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-400 transition cursor-pointer flex flex-col justify-between"
-                >
-                  <div className="relative aspect-4/3 bg-slate-950 overflow-hidden">
-                    <img 
-                      src={item.imageUrl}
-                      alt={item.title}
-                      loading="eager"
-                      decoding="async"
-                      referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover group-hover:scale-105 transition"
-                    />
-                    <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
-                      <Eye className="w-5 h-5 text-orange-400" />
-                    </div>
-                  </div>
-
-                  <div className="p-3 space-y-1">
-                    <p className="text-xs font-bold text-white line-clamp-2">{item.title}</p>
-                    <p className="text-[10px] text-orange-300 truncate">{item.project}</p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
