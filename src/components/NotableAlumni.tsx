@@ -1,7 +1,23 @@
 import React, { useState } from 'react';
-import { NOTABLE_ALUMNI } from '../data/schoolData';
+import { NOTABLE_ALUMNI, ACHSOSA_AMBASSADORS } from '../data/schoolData';
 import { AlumniProfile } from '../types';
-import { Award, Briefcase, GraduationCap, MapPin, CheckCircle2, Quote, ExternalLink, Filter, Search } from 'lucide-react';
+import { 
+  Award, 
+  Briefcase, 
+  GraduationCap, 
+  MapPin, 
+  CheckCircle2, 
+  Quote, 
+  ExternalLink, 
+  Filter, 
+  Search,
+  ShieldCheck,
+  Crown,
+  Sparkles,
+  Users,
+  Info,
+  Clock
+} from 'lucide-react';
 
 export const NotableAlumni: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -29,27 +45,118 @@ export const NotableAlumni: React.FC = () => {
   return (
     <div className="space-y-12 max-w-7xl mx-auto px-4 sm:px-6 py-8">
       {/* Title & Banner */}
-      <div className="bg-gradient-to-r from-emerald-900 via-emerald-800 to-emerald-950 text-white rounded-3xl p-8 shadow-md relative overflow-hidden space-y-4">
+      <div className="bg-gradient-to-r from-emerald-950 via-emerald-900 to-slate-900 text-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden space-y-4 border border-emerald-800">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
-          <div className="space-y-2 max-w-3xl">
-            <span className="bg-orange-500 text-white font-semibold text-xs px-3 py-1 rounded-full uppercase tracking-wider inline-flex items-center gap-1.5">
+          <div className="space-y-3 max-w-3xl">
+            <span className="bg-orange-500 text-white font-semibold text-xs px-3.5 py-1 rounded-full uppercase tracking-wider inline-flex items-center gap-1.5 shadow-xs">
               <Award className="w-3.5 h-3.5" /> Social Impact & Leadership
             </span>
-            <h1 className="text-3xl sm:text-4xl font-bold font-serif text-white">
-              Notable Alumni of Ajebo Community High School
+            <h1 className="text-3xl sm:text-5xl font-bold font-serif text-white leading-tight">
+              Distinguished Alumni of Ajebo High
             </h1>
             <p className="text-emerald-100 text-sm sm:text-base leading-relaxed">
-              Ajebo Community High School served as an educational launchpad for individuals who went on to hold prominent roles in Nigerian politics, law, corporate sectors, and agricultural development.
+              Ajebo Community High School served as an educational launchpad for prominent leaders in Nigerian politics, law, corporate sectors, engineering, and agricultural development.
             </p>
           </div>
         </div>
       </div>
 
-      {/* Spotlight Cards for Prompt's 3 Key Alumni */}
+      {/* ACHSOSA BOARD OF TRUSTEES SECTION */}
+      <div className="bg-white rounded-3xl p-8 border-2 border-emerald-200 shadow-md space-y-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
+          <div>
+            <span className="bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-flex items-center gap-1.5">
+              <ShieldCheck className="w-3.5 h-3.5 text-emerald-700" /> High Custodianship
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold font-serif text-slate-900 mt-2">
+              ACHSOSA Board of Trustees
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-500 mt-1">
+              Apex advisory custodians and fiduciary trustees of Ajebo Community High School Old Students Association.
+            </p>
+          </div>
+          <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-900 bg-amber-50 px-3 py-1.5 rounded-xl border border-amber-200 self-start sm:self-auto">
+            <Clock className="w-4 h-4 text-amber-600" /> Official Gazetting In Progress
+          </span>
+        </div>
+
+        {/* Board of Trustees Notice Card (No names yet, as requested) */}
+        <div className="bg-gradient-to-br from-emerald-50/70 via-slate-50 to-amber-50/50 p-8 rounded-2xl border border-emerald-200/80 text-center space-y-4">
+          <div className="w-14 h-14 bg-emerald-900 text-orange-400 rounded-2xl flex items-center justify-center mx-auto shadow-md">
+            <Crown className="w-7 h-7" />
+          </div>
+          <div className="space-y-2 max-w-xl mx-auto">
+            <h3 className="text-xl font-bold font-serif text-slate-900">
+              Board Composition & Official Gazette
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              The official appointment, tenure ratification, and distinguished roll of the <strong>ACHSOSA Board of Trustees</strong> will be formally published following ratification by the General Assembly and Central Executive Council.
+            </p>
+          </div>
+          <div className="inline-flex items-center gap-2 text-xs font-semibold text-emerald-800 bg-white px-4 py-2 rounded-xl border border-emerald-200 shadow-xs">
+            <Info className="w-4 h-4 text-emerald-600" />
+            <span>Official roll to be unveiled at the General Alumni Convention</span>
+          </div>
+        </div>
+      </div>
+
+      {/* ACHSOSA AMBASSADOR SECTION */}
+      <div className="bg-white rounded-3xl p-8 border border-emerald-200 shadow-md space-y-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
+          <div>
+            <span className="bg-orange-100 text-orange-900 border border-orange-200 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-orange-600" /> Global Representatives
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold font-serif text-slate-900 mt-2">
+              ACHSOSA Ambassadors
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-500 mt-1">
+              Distinguished old students and committee envoys advancing the institutional impact, school reconstruction, and academic mentorship of ACHS.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {ACHSOSA_AMBASSADORS.map((amb) => (
+            <div 
+              key={amb.id}
+              className="bg-slate-50 hover:bg-emerald-50/50 p-6 rounded-2xl border border-slate-200/80 hover:border-emerald-300 transition space-y-3 flex flex-col justify-between shadow-xs group"
+            >
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-mono font-bold text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-md">
+                    {amb.gradSet}
+                  </span>
+                  <span className="w-2 h-2 rounded-full bg-orange-500" />
+                </div>
+                <h3 className="font-bold text-slate-900 text-base font-serif group-hover:text-emerald-900 transition">
+                  {amb.name}
+                </h3>
+                <p className="text-xs font-medium text-emerald-800 leading-relaxed">
+                  {amb.role}
+                </p>
+              </div>
+
+              <div className="pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] text-slate-500">
+                <span>ACHSOSA Ambassador</span>
+                {amb.contact && (
+                  <span className="font-mono text-emerald-700">{amb.contact}</span>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Spotlight Cards for Key Alumni */}
       <div className="space-y-6">
-        <h2 className="text-2xl font-bold font-serif text-slate-900">
-          Featured Alumni Pioneers
-        </h2>
+        <div className="flex items-center justify-between border-b border-slate-200 pb-3">
+          <h2 className="text-2xl sm:text-3xl font-bold font-serif text-slate-900">
+            Featured Alumni Pioneers
+          </h2>
+          <span className="text-xs font-semibold text-slate-500">Spotlight Profiles</span>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { GALLERY_ITEMS } from '../data/schoolData';
 import { GalleryItem } from '../types';
-import { ImageWithFallback } from './ImageWithFallback';
 import { Image as ImageIcon, Camera, ZoomIn, ShieldCheck, Calendar } from 'lucide-react';
 
 export const GallerySection: React.FC = () => {
@@ -82,9 +81,12 @@ export const GallerySection: React.FC = () => {
           >
             <div className="space-y-3">
               <div className="relative aspect-4/3 rounded-xl overflow-hidden bg-slate-100">
-                <ImageWithFallback 
+                <img 
                   src={item.imageUrl} 
                   alt={item.title} 
+                  loading="eager"
+                  decoding="async"
+                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
                 />
                 <div className="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
@@ -125,9 +127,10 @@ export const GallerySection: React.FC = () => {
             </button>
 
             <div className="aspect-16/10 sm:aspect-16/9 rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shadow-inner">
-              <ImageWithFallback 
+              <img 
                 src={selectedImage.imageUrl} 
                 alt={selectedImage.title} 
+                referrerPolicy="no-referrer"
                 className="w-full h-full object-contain bg-slate-950"
               />
             </div>

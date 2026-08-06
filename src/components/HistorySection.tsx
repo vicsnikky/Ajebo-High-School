@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { HISTORY_EVENTS, SCHOOL_INFO } from '../data/schoolData';
 import { TabType } from '../types';
-import { SchoolLogo } from './SchoolLogo';
 import { 
   History, 
   Sprout, 
@@ -119,8 +118,15 @@ export const HistorySection: React.FC<HistorySectionProps> = ({ setActiveTab }) 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Logo Display Column */}
           <div className="lg:col-span-4 flex flex-col items-center text-center space-y-3 bg-gradient-to-b from-emerald-50 to-slate-50 p-6 rounded-2xl border border-emerald-100">
-            <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-2xl overflow-hidden border-4 border-emerald-700/20 shadow-md bg-white p-2 flex items-center justify-center">
-              <SchoolLogo size="xl" className="w-full h-full" imgClassName="w-full h-full object-contain" />
+            <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-2xl overflow-hidden border-4 border-emerald-700/20 shadow-md bg-white p-2">
+              <img 
+                src={SCHOOL_INFO.logoUrl} 
+                alt="Ajebo Community High School Badge Logo" 
+                loading="eager"
+                decoding="async"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <h3 className="font-serif font-bold text-slate-900 text-base">{SCHOOL_INFO.name} Crest</h3>

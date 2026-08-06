@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { TabType } from '../types';
 import { SCHOOL_INFO } from '../data/schoolData';
-import { SchoolLogo } from './SchoolLogo';
 import { 
   Building2, 
   History, 
@@ -87,7 +86,13 @@ export const Header: React.FC<HeaderProps> = ({
         >
           {/* Logo Container */}
           <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden border-2 border-emerald-600/30 shadow-xs bg-emerald-50 flex items-center justify-center p-0.5 transition group-hover:scale-105">
-            <SchoolLogo size="md" className="w-full h-full" imgClassName="w-full h-full object-contain" />
+            <img 
+              src={SCHOOL_INFO.logoUrl} 
+              alt="Ajebo Community High School Crest Logo" 
+              className="w-full h-full object-contain"
+              referrerPolicy="no-referrer"
+              loading="eager"
+            />
           </div>
 
           <div>

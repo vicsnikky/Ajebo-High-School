@@ -10,8 +10,148 @@ import {
   ExcoMember,
   RemodellingFacility,
   EducationalProgram,
-  MemberWelfareItem
+  MemberWelfareItem,
+  CompletedProject,
+  AlumniAmbassador
 } from '../types';
+
+export const SCHOOL_ANTHEM = {
+  title: "Ajebo Community High School Anthem",
+  verse1: [
+    "Ajebo Heights",
+    "I'm proud of you",
+    "For your progress and ideal",
+    "Ajebo Heights",
+    "I'm proud of you",
+    "I enjoy your blessings."
+  ],
+  chorus: [
+    "My school (2ce)",
+    "I will never forget you",
+    "My school (2ce)",
+    "I will never disobey"
+  ],
+  verse2: [
+    "You teach me to be child of hope",
+    "And to obey my parents",
+    "You provide useful and loyal teachers",
+    "And dedicated friends."
+  ],
+  chorusReprise: [
+    "My school (2ce)",
+    "I will never forget you",
+    "My school (2ce)",
+    "I will never disobey"
+  ]
+};
+
+export const ACHSOSA_COMPLETED_PROJECTS: CompletedProject[] = [
+  {
+    id: "proj-principal-office-reno",
+    title: "Renovation of Senior Principal's Office",
+    category: "Administrative Infrastructure",
+    dateCompleted: "2026",
+    description: "We have renovated Senior Principal's office and provided book shelves to properly arrange old and new students documents.",
+    imageUrls: [
+      "https://i.ibb.co/fd62ggW0/Whats-App-Image-2026-08-06-at-8-36-59-AM-1.jpg",
+      "https://i.ibb.co/wZJGBbbJ/Whats-App-Image-2026-08-06-at-8-36-59-AM-2.jpg"
+    ]
+  },
+  {
+    id: "proj-electrification-water",
+    title: "Electrification & Water Restoration",
+    category: "Power & Water Utilities",
+    dateCompleted: "2026",
+    description: "Electrification of school premises and electricity connection to reactivated borehole, NYSC and Principal's quarters.",
+    imageUrls: [
+      "https://i.ibb.co/3YzwYfyx/Whats-App-Image-2026-08-06-at-8-36-59-AM-3.jpg",
+      "https://i.ibb.co/ymQkpqjy/Whats-App-Image-2026-08-06-at-8-36-59-AM.jpg"
+    ]
+  },
+  {
+    id: "proj-career-counselling-2026",
+    title: "Career Counselling & Development for Outgoing Students",
+    category: "Student Development & Mentorship",
+    dateCompleted: "Second Term 2026",
+    description: "As part of the project, we organised career counselling, career development and goal setting program for outgoing students SSS3 during second term academic session year 2026. Guiding students on future pathways, subject choices and life goals.",
+    imageUrls: [
+      "https://i.ibb.co/dwy1YLMD/Whats-App-Image-2026-08-06-at-8-37-00-AM.jpg"
+    ]
+  }
+];
+
+export const COMPLETED_PROJECTS_GALLERY = [
+  {
+    imageUrl: "https://i.ibb.co/fd62ggW0/Whats-App-Image-2026-08-06-at-8-36-59-AM-1.jpg",
+    linkUrl: "https://ibb.co/RTr9FFKH",
+    title: "Renovated Senior Principal's Office & Archive Shelving",
+    project: "Renovation of Senior Principal's Office"
+  },
+  {
+    imageUrl: "https://i.ibb.co/wZJGBbbJ/Whats-App-Image-2026-08-06-at-8-36-59-AM-2.jpg",
+    linkUrl: "https://ibb.co/1Ysy7pps",
+    title: "Executive Office Furnishing & Documentation Storage",
+    project: "Renovation of Senior Principal's Office"
+  },
+  {
+    imageUrl: "https://i.ibb.co/3YzwYfyx/Whats-App-Image-2026-08-06-at-8-36-59-AM-3.jpg",
+    linkUrl: "https://ibb.co/JFQNFxRY",
+    title: "Electrification Grid Connection & Power Wiring",
+    project: "Electrification & Water Restoration"
+  },
+  {
+    imageUrl: "https://i.ibb.co/ymQkpqjy/Whats-App-Image-2026-08-06-at-8-36-59-AM.jpg",
+    linkUrl: "https://ibb.co/Gf5M9RS2",
+    title: "Borehole Water Reactivation & Quarters Supply",
+    project: "Electrification & Water Restoration"
+  },
+  {
+    imageUrl: "https://i.ibb.co/dwy1YLMD/Whats-App-Image-2026-08-06-at-8-37-00-AM.jpg",
+    linkUrl: "https://ibb.co/5gVtHn4L",
+    title: "SSS3 Career Counselling & Goal Setting Workshop",
+    project: "Career Counselling & Development for Outgoing Students"
+  }
+];
+
+export const ACHSOSA_AMBASSADORS: AlumniAmbassador[] = [
+  {
+    id: "amb-1",
+    name: "Hon. (Dr.) Tella O. Babatunde",
+    role: "Grand Patron & Legislative Liaison (OGHA Lawmaker)",
+    gradSet: "Class of 1984"
+  },
+  {
+    id: "amb-2",
+    name: "Dr. Gbenga Adeoye",
+    role: "Chairman, Legal & Rebuilding Advisory Committee",
+    gradSet: "Class of 1986"
+  },
+  {
+    id: "amb-3",
+    name: "Eunice Akinwande",
+    role: "Director, Agric Science Demo Farm Revamp (Former Asst. Director, Ministry of Agric)",
+    gradSet: "Class of 1985"
+  },
+  {
+    id: "amb-4",
+    name: "Engr. Olumide Ogundipe",
+    role: "Head of Structural & Solar Engineering Committee",
+    gradSet: "Class of 1992"
+  },
+  {
+    id: "amb-5",
+    name: "Mrs. Folake Aderibigbe",
+    role: "Academic Mentorship & Scholarship Lead (Principal Lecturer)",
+    gradSet: "Class of 1988"
+  },
+  {
+    id: "amb-6",
+    name: "ACHSOSA Secretariat Ambassador",
+    role: "Community & Institutional Engagement Coordinator",
+    gradSet: "Ajebo Town, Obafemi Owode LGA",
+    contact: "info@achsosa.org.ng"
+  }
+];
 
 export const GREENWALL_DESIGN_CREDITS = {
   projectTitle: "PROPOSED REMODELLING OF BLOCKS OF CLASS ROOMS FOR AJEBO COMMUNITY HIGH SCHOOL",
@@ -419,9 +559,31 @@ export const NOTABLE_ALUMNI: AlumniProfile[] = [
 
 export const ADMIN_LEADERS: AdminLeader[] = [
   {
+    id: "mrs-karunwi-taiwo-omodunke",
+    name: "Mrs. Karunwi Taiwo Omodunke",
+    role: "Principal Junior School",
+    period: "Current Principal (Junior School)",
+    arm: "Ajebo Community High School, Junior Arm (ACHS JNR)",
+    phone: "08030463277",
+    bio: "Serving as the Principal for the Junior School of Ajebo Community High School, directing academic foundation, moral discipline, and foundational secondary school learning in Obafemi Owode LGA.",
+    notableAchievement: "Directing junior curriculum standards, character formation, and institutional development across JSS1–JSS3 cohorts.",
+    status: "active"
+  },
+  {
+    id: "mrs-dawodu-omowonuola",
+    name: "Mrs. Dawodu Omowonuola",
+    role: "Principal, Senior School",
+    period: "Current Principal (Senior School)",
+    arm: "Ajebo Community High School, Senior Arm (ACHS SNR)",
+    phone: "08032582065",
+    bio: "Serving as the Principal for the Senior School of Ajebo Community High School, overseeing Senior Secondary education, WAEC/NECO academic preparedness, and modern infrastructure revitalization with ACHSOSA.",
+    notableAchievement: "Partnering with ACHSOSA alumni on office renovation, student career counselling, and senior school academic excellence.",
+    status: "active"
+  },
+  {
     id: "mrs-abosede-elegbede",
     name: "Mrs. Abosede Aderemi Elegbede",
-    role: "Principal (Junior Arm - ACHS JNR)",
+    role: "Former Principal (Junior Arm - ACHS JNR)",
     period: "2016 – August 2024",
     arm: "Ajebo Community High School, JNR",
     bio: "Mrs. Abosede Aderemi Elegbede served with distinction as the Principal for the Junior arm of the school until she officially stepped down and retired from active teaching service in August 2024. Her tenure was marked by academic discipline, moral leadership, and active collaboration with the Old Students Association to maintain school facilities.",
@@ -795,6 +957,186 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     imageUrl: "https://i.ibb.co/kg80Cgsr/Whats-App-Image-2026-08-03-at-7-34-55-PM.jpg",
     linkUrl: "https://ibb.co/Z68KD6pw",
     caption: "Commemorative group photograph marking the conclusion of the EXCO inauguration."
+  },
+  {
+    id: "gallery-campus-1",
+    title: "School Compound & Grounds View I",
+    year: "2026",
+    category: "school-grounds",
+    imageUrl: "https://i.ibb.co/DfqJrQXV/Whats-App-Image-2026-08-06-at-8-26-05-AM-1.jpg",
+    linkUrl: "https://ibb.co/WvThVf9x",
+    caption: "Perspective of the school grounds and administrative compound at Ajebo Community High School."
+  },
+  {
+    id: "gallery-campus-2",
+    title: "School Compound & Grounds View II",
+    year: "2026",
+    category: "school-grounds",
+    imageUrl: "https://i.ibb.co/219YLGXn/Whats-App-Image-2026-08-06-at-8-26-05-AM-2.jpg",
+    linkUrl: "https://ibb.co/67MJpj6n",
+    caption: "Open school grounds and serene natural landscape of the Ajebo campus."
+  },
+  {
+    id: "gallery-campus-3",
+    title: "Academic Facilities & Walkways",
+    year: "2026",
+    category: "school-grounds",
+    imageUrl: "https://i.ibb.co/rGGpY3nQ/Whats-App-Image-2026-08-06-at-8-26-05-AM.jpg",
+    linkUrl: "https://ibb.co/KjjsdDC5",
+    caption: "Connecting pathways and surrounding trees across the secondary school environment."
+  },
+  {
+    id: "gallery-campus-4",
+    title: "Classroom Block Structure & Facade",
+    year: "2026",
+    category: "classrooms",
+    imageUrl: "https://i.ibb.co/3YNR1Xt3/Whats-App-Image-2026-08-06-at-8-26-06-AM-1.jpg",
+    linkUrl: "https://ibb.co/KzqK6ZCP",
+    caption: "Classroom block architecture and veranda layout at Ajebo Community High School."
+  },
+  {
+    id: "gallery-campus-5",
+    title: "School Building Perspective",
+    year: "2026",
+    category: "classrooms",
+    imageUrl: "https://i.ibb.co/n8mLNcwX/Whats-App-Image-2026-08-06-at-8-26-06-AM-2.jpg",
+    linkUrl: "https://ibb.co/prwLBz1H",
+    caption: "Exterior view of classroom facilities and structural blocks."
+  },
+  {
+    id: "gallery-campus-6",
+    title: "Classroom Corridor & Access Way",
+    year: "2026",
+    category: "classrooms",
+    imageUrl: "https://i.ibb.co/jkrRY6Gv/Whats-App-Image-2026-08-06-at-8-26-06-AM-3.jpg",
+    linkUrl: "https://ibb.co/yFQSCf5n",
+    caption: "Covered hallway and access corridor leading to student classrooms."
+  },
+  {
+    id: "gallery-campus-7",
+    title: "ACHS School Compound Landscape",
+    year: "2026",
+    category: "school-grounds",
+    imageUrl: "https://i.ibb.co/JFB7tvBJ/Whats-App-Image-2026-08-06-at-8-26-06-AM.jpg",
+    linkUrl: "https://ibb.co/6JnPwHnC",
+    caption: "Expansive greenery and compound perimeter at the school."
+  },
+  {
+    id: "gallery-campus-8",
+    title: "Senior School Administration Wing",
+    year: "2026",
+    category: "classrooms",
+    imageUrl: "https://i.ibb.co/yBk4WRdV/Whats-App-Image-2026-08-06-at-8-26-07-AM-1.jpg",
+    linkUrl: "https://ibb.co/FqYHgWmn",
+    caption: "Senior school academic wing and administrative office entrance."
+  },
+  {
+    id: "gallery-campus-9",
+    title: "Educational Campus Overview",
+    year: "2026",
+    category: "school-grounds",
+    imageUrl: "https://i.ibb.co/Wvf2xTTM/Whats-App-Image-2026-08-06-at-8-26-07-AM-2.jpg",
+    linkUrl: "https://ibb.co/zVZ4nkkB",
+    caption: "Broad landscape view across the Ajebo Community High School compound."
+  },
+  {
+    id: "gallery-campus-10",
+    title: "Campus Infrastructure View",
+    year: "2026",
+    category: "school-grounds",
+    imageUrl: "https://i.ibb.co/rRt1nC4S/Whats-App-Image-2026-08-06-at-8-26-07-AM.jpg",
+    linkUrl: "https://ibb.co/ycRbLwW1",
+    caption: "School environment and utility quarters across the school premises."
+  },
+  {
+    id: "gallery-campus-11",
+    title: "Assembly & Classrooms Grounds",
+    year: "2026",
+    category: "school-grounds",
+    imageUrl: "https://i.ibb.co/fYxvN9xm/Whats-App-Image-2026-08-06-at-8-26-08-AM-1.jpg",
+    linkUrl: "https://ibb.co/6RWBt8W6",
+    caption: "Morning assembly area and surrounding classroom blocks."
+  },
+  {
+    id: "gallery-campus-12",
+    title: "Campus Exterior Architecture",
+    year: "2026",
+    category: "classrooms",
+    imageUrl: "https://i.ibb.co/5hLH7c1J/Whats-App-Image-2026-08-06-at-8-26-08-AM-2.jpg",
+    linkUrl: "https://ibb.co/d4DYhKfH",
+    caption: "External masonry and architecture of the secondary school buildings."
+  },
+  {
+    id: "gallery-campus-13",
+    title: "School Field & Green Grounds",
+    year: "2026",
+    category: "school-grounds",
+    imageUrl: "https://i.ibb.co/67k5SFh2/Whats-App-Image-2026-08-06-at-8-26-08-AM-3.jpg",
+    linkUrl: "https://ibb.co/ycrJCqTD",
+    caption: "Sports field and surrounding natural vegetation of Ajebo town."
+  },
+  {
+    id: "gallery-campus-14",
+    title: "Campus Environment & Blocks",
+    year: "2026",
+    category: "school-grounds",
+    imageUrl: "https://i.ibb.co/fd59gPZ8/Whats-App-Image-2026-08-06-at-8-26-08-AM-4.jpg",
+    linkUrl: "https://ibb.co/9HLhDCBw",
+    caption: "Front lawn and access route into the central school area."
+  },
+  {
+    id: "gallery-campus-15",
+    title: "School Facilities & Structure",
+    year: "2026",
+    category: "classrooms",
+    imageUrl: "https://i.ibb.co/BKG8r3Qg/Whats-App-Image-2026-08-06-at-8-26-08-AM.jpg",
+    linkUrl: "https://ibb.co/tPzyxKvb",
+    caption: "Architectural outline of the learning blocks at ACHS."
+  },
+  {
+    id: "gallery-campus-16",
+    title: "Classroom Exterior & Roofing Detail",
+    year: "2026",
+    category: "classrooms",
+    imageUrl: "https://i.ibb.co/yrVrGp9/Whats-App-Image-2026-08-06-at-8-26-09-AM-1.jpg",
+    linkUrl: "https://ibb.co/L3v3brF",
+    caption: "Roof line and masonry structure of the classroom wing."
+  },
+  {
+    id: "gallery-campus-17",
+    title: "School Compound Pathways",
+    year: "2026",
+    category: "school-grounds",
+    imageUrl: "https://i.ibb.co/hx39D2bj/Whats-App-Image-2026-08-06-at-8-26-09-AM-2.jpg",
+    linkUrl: "https://ibb.co/rKD045YS",
+    caption: "Central walkway connecting different sections of the school."
+  },
+  {
+    id: "gallery-campus-18",
+    title: "Academic Block Frontage",
+    year: "2026",
+    category: "classrooms",
+    imageUrl: "https://i.ibb.co/SXLXzQQy/Whats-App-Image-2026-08-06-at-8-26-09-AM-3.jpg",
+    linkUrl: "https://ibb.co/hRqRSXX9",
+    caption: "Front perspective of the educational blocks at Ajebo Community High School."
+  },
+  {
+    id: "gallery-campus-19",
+    title: "ACHS Grounds & Environment",
+    year: "2026",
+    category: "school-grounds",
+    imageUrl: "https://i.ibb.co/bgfBj2yF/Whats-App-Image-2026-08-06-at-8-26-09-AM-4.jpg",
+    linkUrl: "https://ibb.co/XZwsf3dD",
+    caption: "Open school perimeter and tranquil countryside setting of Ajebo."
+  },
+  {
+    id: "gallery-campus-20",
+    title: "Campus Architecture & Perimeter",
+    year: "2026",
+    category: "school-grounds",
+    imageUrl: "https://i.ibb.co/k2r0sH5d/Whats-App-Image-2026-08-06-at-8-26-09-AM.jpg",
+    linkUrl: "https://ibb.co/9Hf2k8cM",
+    caption: "School architectural perimeter and educational ground views."
   }
 ];
 

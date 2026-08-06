@@ -1,7 +1,6 @@
 import React from 'react';
 import { SCHOOL_INFO } from '../data/schoolData';
 import { TabType } from '../types';
-import { SchoolLogo } from './SchoolLogo';
 import { MapPin, Mail, Phone, HeartHandshake, ShieldCheck, GraduationCap } from 'lucide-react';
 
 interface FooterProps {
@@ -49,9 +48,12 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenDonate, onOp
         {/* Col 1: School Profile */}
         <div className="space-y-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-white rounded-lg p-1 flex items-center justify-center shrink-0">
-              <SchoolLogo size="sm" className="w-full h-full" imgClassName="w-full h-full object-contain" />
-            </div>
+            <img 
+              src={SCHOOL_INFO.logoUrl} 
+              alt="ACHS Crest" 
+              className="w-10 h-10 object-contain bg-white rounded-lg p-1"
+              referrerPolicy="no-referrer"
+            />
             <div>
               <h4 className="font-bold text-white font-serif text-base">{SCHOOL_INFO.name}</h4>
               <p className="text-xs text-emerald-300">Official Secondary School Portal</p>

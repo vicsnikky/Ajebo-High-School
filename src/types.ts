@@ -45,10 +45,28 @@ export interface AdminLeader {
   role: string;
   period: string;
   arm?: string;
+  phone?: string;
   bio: string;
   notableAchievement: string;
   status: 'active' | 'retired' | 'historical';
   image?: string;
+}
+
+export interface CompletedProject {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  dateCompleted?: string;
+  imageUrls: string[];
+}
+
+export interface AlumniAmbassador {
+  id: string;
+  name: string;
+  role: string;
+  gradSet: string;
+  contact?: string;
 }
 
 export interface BuildingSubProject {
