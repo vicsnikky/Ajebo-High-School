@@ -321,11 +321,11 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                 <div className="space-y-2 pt-2">
                   <div className="flex items-center justify-between">
                     <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
-                      Renovation Photos (5 Images):
+                      Renovation Photos (7 Images):
                     </span>
                     <span className="text-[11px] text-emerald-700 font-medium">Click to expand</span>
                   </div>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
                     <div 
                       onClick={() => setSelectedImage({
                         url: "https://i.ibb.co/fd62ggW0/Whats-App-Image-2026-08-06-at-8-36-59-AM-1.jpg",
@@ -358,6 +358,48 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                       <img 
                         src="https://i.ibb.co/wZJGBbbJ/Whats-App-Image-2026-08-06-at-8-36-59-AM-2.jpg" 
                         alt="Executive Office Furnishings"
+                        loading="eager"
+                        decoding="async"
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover group-hover:scale-105 transition"
+                      />
+                      <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                        <Maximize2 className="w-4 h-4" />
+                      </div>
+                    </div>
+
+                    <div 
+                      onClick={() => setSelectedImage({
+                        url: "https://i.ibb.co/3YzwYfyx/Whats-App-Image-2026-08-06-at-8-36-59-AM-3.jpg",
+                        title: "Office Interior & Documentation Storage Shelving",
+                        type: "Renovation of Senior Principal's Office"
+                      })}
+                      className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100"
+                    >
+                      <img 
+                        src="https://i.ibb.co/3YzwYfyx/Whats-App-Image-2026-08-06-at-8-36-59-AM-3.jpg" 
+                        alt="Office Interior Storage"
+                        loading="eager"
+                        decoding="async"
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover group-hover:scale-105 transition"
+                      />
+                      <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                        <Maximize2 className="w-4 h-4" />
+                      </div>
+                    </div>
+
+                    <div 
+                      onClick={() => setSelectedImage({
+                        url: "https://i.ibb.co/ymQkpqjy/Whats-App-Image-2026-08-06-at-8-36-59-AM.jpg",
+                        title: "Senior Principal Office Fitted Cabinetry & Records Storage",
+                        type: "Renovation of Senior Principal's Office"
+                      })}
+                      className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100"
+                    >
+                      <img 
+                        src="https://i.ibb.co/ymQkpqjy/Whats-App-Image-2026-08-06-at-8-36-59-AM.jpg" 
+                        alt="Principal Office Fitted Cabinetry"
                         loading="eager"
                         decoding="async"
                         referrerPolicy="no-referrer"
@@ -416,7 +458,7 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                         title: "Renovated Principal Office Entry & Documentation Facilities",
                         type: "Renovation of Senior Principal's Office"
                       })}
-                      className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100 sm:col-span-2 md:col-span-1"
+                      className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100"
                     >
                       <img 
                         src="https://i.ibb.co/F44xXqRL/Whats-App-Image-2026-08-06-at-11-54-03-AM.jpg" 
@@ -462,53 +504,26 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                   Electrification of school premises and electricity connection to reactivated borehole, NYSC and Principal's quarters.
                 </p>
 
-                {/* Attached Photo Previews */}
-                <div className="space-y-2 pt-2">
-                  <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
-                    Completed Project Photos:
-                  </span>
-                  <div className="grid grid-cols-2 gap-2">
-                    <div 
-                      onClick={() => setSelectedImage({
-                        url: "https://i.ibb.co/3YzwYfyx/Whats-App-Image-2026-08-06-at-8-36-59-AM-3.jpg",
-                        title: "Premises Electrical Connection & Cabling",
-                        type: "ACHSOSA Completed Project"
-                      })}
-                      className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100"
-                    >
-                      <img 
-                        src="https://i.ibb.co/3YzwYfyx/Whats-App-Image-2026-08-06-at-8-36-59-AM-3.jpg" 
-                        alt="Electrification wiring"
-                        loading="eager"
-                        decoding="async"
-                        referrerPolicy="no-referrer"
-                        className="w-full h-full object-cover group-hover:scale-105 transition"
-                      />
-                      <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
-                        <Maximize2 className="w-5 h-5" />
-                      </div>
+                {/* Utility Restoration Highlights */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                  <div className="bg-emerald-50/70 border border-emerald-200 p-3.5 rounded-2xl space-y-1">
+                    <div className="flex items-center gap-2 text-emerald-900 font-bold text-xs">
+                      <Zap className="w-4 h-4 text-amber-500 shrink-0" />
+                      <span>Premises Electrification</span>
                     </div>
+                    <p className="text-[11px] text-slate-600 leading-relaxed">
+                      Complete electrical connection and cabling restored across the school grounds and administrative sections.
+                    </p>
+                  </div>
 
-                    <div 
-                      onClick={() => setSelectedImage({
-                        url: "https://i.ibb.co/ymQkpqjy/Whats-App-Image-2026-08-06-at-8-36-59-AM.jpg",
-                        title: "Reactivated Borehole & Quarters Water Line",
-                        type: "ACHSOSA Completed Project"
-                      })}
-                      className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100"
-                    >
-                      <img 
-                        src="https://i.ibb.co/ymQkpqjy/Whats-App-Image-2026-08-06-at-8-36-59-AM.jpg" 
-                        alt="Borehole water restoration"
-                        loading="eager"
-                        decoding="async"
-                        referrerPolicy="no-referrer"
-                        className="w-full h-full object-cover group-hover:scale-105 transition"
-                      />
-                      <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
-                        <Maximize2 className="w-5 h-5" />
-                      </div>
+                  <div className="bg-blue-50/70 border border-blue-200 p-3.5 rounded-2xl space-y-1">
+                    <div className="flex items-center gap-2 text-blue-900 font-bold text-xs">
+                      <Droplets className="w-4 h-4 text-blue-600 shrink-0" />
+                      <span>Reactivated Borehole & Water</span>
                     </div>
+                    <p className="text-[11px] text-slate-600 leading-relaxed">
+                      Powered water borehole pump providing clean pipe-borne water to the NYSC lodge and Principal's quarters.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -545,32 +560,11 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                 <div className="space-y-2 pt-2">
                   <div className="flex items-center justify-between">
                     <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
-                      Career Counselling Photos (5 Images):
+                      Career Counselling Photos (4 Images):
                     </span>
                     <span className="text-[11px] text-blue-700 font-medium">Click to expand</span>
                   </div>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                    <div 
-                      onClick={() => setSelectedImage({
-                        url: "https://i.ibb.co/dwy1YLMD/Whats-App-Image-2026-08-06-at-8-37-00-AM.jpg",
-                        title: "SSS3 Students Career Counselling & Mentorship Session",
-                        type: "Career Counselling & Development for Outgoing Students"
-                      })}
-                      className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100"
-                    >
-                      <img 
-                        src="https://i.ibb.co/dwy1YLMD/Whats-App-Image-2026-08-06-at-8-37-00-AM.jpg" 
-                        alt="Career counselling workshop"
-                        loading="eager"
-                        decoding="async"
-                        referrerPolicy="no-referrer"
-                        className="w-full h-full object-cover group-hover:scale-105 transition"
-                      />
-                      <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
-                        <Maximize2 className="w-4 h-4" />
-                      </div>
-                    </div>
-
+                  <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2">
                     <div 
                       onClick={() => setSelectedImage({
                         url: "https://i.ibb.co/qM9tSWTM/Whats-App-Image-2026-08-06-at-10-25-28-AM.jpg",
@@ -640,11 +634,11 @@ export const BuildingProject: React.FC<BuildingProjectProps> = ({ donors, onOpen
                         title: "Outgoing Students Mentorship & Goal Setting Facilitation",
                         type: "Career Counselling & Development for Outgoing Students"
                       })}
-                      className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100 sm:col-span-2 md:col-span-1"
+                      className="group relative rounded-xl overflow-hidden cursor-pointer border border-slate-200 aspect-video bg-slate-100"
                     >
                       <img 
                         src="https://i.ibb.co/7xQtgvdD/Whats-App-Image-2026-08-06-at-10-25-16-AM.jpg" 
-                        alt="Mentorship & Goal Setting"
+                        alt="Mentorship Facilitation"
                         loading="eager"
                         decoding="async"
                         referrerPolicy="no-referrer"

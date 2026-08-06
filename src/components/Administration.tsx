@@ -54,6 +54,16 @@ export const Administration: React.FC<AdministrationProps> = ({ setActiveTab }) 
       url: "https://i.ibb.co/wZJGBbbJ/Whats-App-Image-2026-08-06-at-8-36-59-AM-2.jpg",
       title: "Executive Office Furnishings & Document Storage Shelving",
       link: "https://ibb.co/1Ysy7pps"
+    },
+    {
+      url: "https://i.ibb.co/3YzwYfyx/Whats-App-Image-2026-08-06-at-8-36-59-AM-3.jpg",
+      title: "Office Interior & Documentation Storage Shelving",
+      link: "https://ibb.co/3YzwYfyx"
+    },
+    {
+      url: "https://i.ibb.co/ymQkpqjy/Whats-App-Image-2026-08-06-at-8-36-59-AM.jpg",
+      title: "Senior Principal Office Fitted Cabinetry & Records Storage",
+      link: "https://ibb.co/ymQkpqjy"
     }
   ];
 

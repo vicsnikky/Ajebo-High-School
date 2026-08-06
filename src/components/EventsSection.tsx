@@ -144,9 +144,6 @@ export const EventsSection: React.FC = () => {
               <span className="bg-amber-100 text-amber-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-flex items-center gap-1 border border-amber-300">
                 <CheckCircle2 className="w-3.5 h-3.5 text-amber-700" /> Milestone Event (Concluded)
               </span>
-              <span className="bg-emerald-100 text-emerald-900 text-xs font-semibold px-2.5 py-0.5 rounded-full">
-                August 2026
-              </span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold font-serif text-slate-900 pt-1">
               Retirement Celebration & Honor Ceremony for Mrs. Bola Adigbo
@@ -207,10 +204,10 @@ export const EventsSection: React.FC = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
               <div className="flex items-center gap-2.5 bg-white p-3 rounded-xl border border-slate-200 text-xs text-slate-700">
-                <Calendar className="w-4 h-4 text-amber-600 shrink-0" />
+                <Award className="w-4 h-4 text-amber-600 shrink-0" />
                 <div>
-                  <span className="font-bold block text-slate-900">Event Date</span>
-                  <span>August 2026 (Successfully Held)</span>
+                  <span className="font-bold block text-slate-900">Event Status</span>
+                  <span>Meritorious Retirement & Gift Presentation</span>
                 </div>
               </div>
               <div className="flex items-center gap-2.5 bg-white p-3 rounded-xl border border-slate-200 text-xs text-slate-700">

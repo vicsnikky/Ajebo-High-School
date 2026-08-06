@@ -835,8 +835,8 @@ export const SCHOOL_EVENTS: SchoolEvent[] = [
   {
     id: "evt-retirement-adigbo",
     title: "Retirement Celebration & Honor Ceremony for Mrs. Bola Adigbo",
-    date: "August 2026 (Passed / Concluded)",
-    time: "11:00 AM WAT",
+    date: "",
+    time: "",
     location: "Ajebo Community High School & Reception Hall",
     description: "Special milestone honor ceremony celebrating the meritorious service and retirement of esteemed former Principal Mrs. Bola Adigbo, featuring ACHSOSA executive presentation of congratulatory retirement gifts and tokens of appreciation.",
     type: "Honorary & Retirement Ceremony",
