@@ -37,16 +37,16 @@ export const Header: React.FC<HeaderProps> = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems: { id: TabType; label: string; icon: React.ReactNode }[] = [
-    { id: 'home', label: 'School Home', icon: <Home className="w-4 h-4" /> },
-    { id: 'building', label: 'Rebuilding Project', icon: <Building2 className="w-4 h-4" /> },
-    { id: 'history', label: 'School History', icon: <History className="w-4 h-4" /> },
-    { id: 'leadership', label: 'Administration', icon: <UserCheck className="w-4 h-4" /> },
-    { id: 'exco', label: 'EXCO', icon: <Crown className="w-4 h-4" /> },
-    { id: 'alumni', label: 'Distinguished Alumni', icon: <Award className="w-4 h-4" /> },
-    { id: 'directory', label: 'Alumni Registry', icon: <Users className="w-4 h-4" /> },
-    { id: 'events', label: 'School Events', icon: <Calendar className="w-4 h-4" /> },
-    { id: 'gallery', label: 'Photo Archives', icon: <ImageIcon className="w-4 h-4" /> },
-    { id: 'forum', label: 'Community Forum', icon: <MessageSquare className="w-4 h-4" /> },
+    { id: 'home', label: 'Home', icon: <Home className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" /> },
+    { id: 'building', label: 'Projects', icon: <Building2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" /> },
+    { id: 'history', label: 'History', icon: <History className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" /> },
+    { id: 'leadership', label: 'Admin', icon: <UserCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" /> },
+    { id: 'exco', label: 'EXCO', icon: <Crown className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" /> },
+    { id: 'alumni', label: 'Alumni', icon: <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" /> },
+    { id: 'directory', label: 'Directory', icon: <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" /> },
+    { id: 'events', label: 'Events', icon: <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" /> },
+    { id: 'gallery', label: 'Gallery', icon: <ImageIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" /> },
+    { id: 'forum', label: 'Forum', icon: <MessageSquare className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" /> },
   ];
 
   return (
@@ -114,32 +114,32 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         {/* Action Buttons */}
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-2.5">
           <button
             id="header-register-btn"
             onClick={onOpenRegister}
-            className="border border-emerald-700 text-emerald-800 hover:bg-emerald-50 text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition flex items-center gap-1.5"
+            className="border border-emerald-700 text-emerald-800 hover:bg-emerald-50 text-xs font-semibold px-3.5 py-2 rounded-xl transition flex items-center gap-1.5"
           >
-            <UserPlus className="w-4 h-4 text-emerald-700" />
-            Alumni Registration
+            <UserPlus className="w-3.5 h-3.5 text-emerald-700" />
+            <span>Alumni Register</span>
           </button>
           
           <button
             id="header-donate-btn"
             onClick={onOpenDonate}
-            className="bg-emerald-800 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold px-4.5 py-2 rounded-xl shadow-sm transition flex items-center gap-1.5"
+            className="bg-emerald-800 hover:bg-emerald-700 text-white text-xs font-semibold px-4 py-2 rounded-xl shadow-xs transition flex items-center gap-1.5"
           >
-            <HeartHandshake className="w-4 h-4 text-orange-400" />
-            Pledge Project Support
+            <HeartHandshake className="w-3.5 h-3.5 text-orange-400" />
+            <span>Support Project</span>
           </button>
         </div>
 
         {/* Mobile menu button */}
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-2 md:hidden">
           <button
             id="header-mobile-donate"
             onClick={onOpenDonate}
-            className="bg-emerald-800 text-white text-xs font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1"
+            className="bg-emerald-800 text-white text-xs font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-xs"
           >
             <HeartHandshake className="w-3.5 h-3.5 text-orange-400" />
             Support
@@ -156,10 +156,10 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* Primary Desktop Navigation Bar */}
-      <nav className="hidden lg:block bg-slate-900 text-white border-t border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
-          <div className="flex items-center space-x-1 overflow-x-auto scrollbar-none py-1.5">
+      {/* Primary Navigation Bar */}
+      <nav className="hidden md:block bg-slate-900 text-white border-t border-slate-800 shadow-inner">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4">
+          <div className="flex items-center justify-between xl:justify-center xl:gap-1.5 py-1 overflow-x-auto scrollbar-none">
             {navItems.map((item) => {
               const isActive = activeTab === item.id;
               return (
@@ -167,16 +167,17 @@ export const Header: React.FC<HeaderProps> = ({
                   key={item.id}
                   id={`nav-tab-${item.id}`}
                   onClick={() => setActiveTab(item.id)}
-                  className={`flex items-center gap-2 px-3.5 py-2 text-xs sm:text-sm font-medium rounded-lg transition whitespace-nowrap ${
+                  className={`flex items-center gap-1.5 px-2.5 py-1.5 lg:px-3 lg:py-2 text-xs xl:text-sm font-medium rounded-lg transition whitespace-nowrap shrink-0 ${
                     isActive
-                      ? 'bg-emerald-800 text-white shadow-xs font-semibold text-orange-200'
+                      ? 'bg-emerald-800 text-white shadow-xs font-semibold text-orange-200 ring-1 ring-emerald-500/40'
                       : 'text-slate-300 hover:bg-slate-800 hover:text-white'
                   }`}
+                  title={item.label}
                 >
                   <span className={isActive ? 'text-orange-400' : 'text-emerald-400'}>
                     {item.icon}
                   </span>
-                  {item.label}
+                  <span>{item.label}</span>
                 </button>
               );
             })}
@@ -186,8 +187,8 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-slate-900 text-white border-t border-slate-800 px-4 py-4 space-y-2">
-          <div className="grid grid-cols-1 gap-1">
+        <div className="md:hidden bg-slate-900 text-white border-t border-slate-800 px-4 py-4 space-y-2">
+          <div className="grid grid-cols-2 gap-1.5">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -196,16 +197,16 @@ export const Header: React.FC<HeaderProps> = ({
                   setActiveTab(item.id);
                   setMobileMenuOpen(false);
                 }}
-                className={`flex items-center gap-3 px-4 py-3 text-sm rounded-lg transition text-left ${
+                className={`flex items-center gap-2.5 px-3 py-2.5 text-xs sm:text-sm rounded-lg transition text-left ${
                   activeTab === item.id
-                    ? 'bg-emerald-800 text-white font-semibold border-l-4 border-orange-500'
-                    : 'text-slate-200 hover:bg-slate-800'
+                    ? 'bg-emerald-800 text-white font-semibold border-l-4 border-orange-500 shadow-xs'
+                    : 'text-slate-200 hover:bg-slate-800 bg-slate-800/40'
                 }`}
               >
                 <span className={activeTab === item.id ? 'text-orange-400' : 'text-emerald-400'}>
                   {item.icon}
                 </span>
-                {item.label}
+                <span className="truncate">{item.label}</span>
               </button>
             ))}
           </div>

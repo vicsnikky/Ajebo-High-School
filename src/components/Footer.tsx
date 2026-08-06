@@ -94,7 +94,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenDonate, onOp
                 onClick={() => setActiveTab('home')}
                 className="hover:text-white transition flex items-center gap-1.5"
               >
-                <span>School Overview</span>
+                <span>Home</span>
               </button>
             </li>
             <li>
@@ -102,7 +102,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenDonate, onOp
                 onClick={() => setActiveTab('building')}
                 className="hover:text-white transition flex items-center gap-1.5"
               >
-                <span className="text-orange-300 font-medium">Rebuilding Project Hub</span>
+                <span className="text-orange-300 font-medium">Projects</span>
               </button>
             </li>
             <li>
@@ -110,15 +110,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenDonate, onOp
                 onClick={() => setActiveTab('history')}
                 className="hover:text-white transition flex items-center gap-1.5"
               >
-                <span>School History & Archive</span>
-              </button>
-            </li>
-            <li>
-              <button 
-                onClick={() => setActiveTab('alumni')}
-                className="hover:text-white transition flex items-center gap-1.5"
-              >
-                <span>Notable Alumni Roll</span>
+                <span>History</span>
               </button>
             </li>
             <li>
@@ -126,7 +118,23 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenDonate, onOp
                 onClick={() => setActiveTab('leadership')}
                 className="hover:text-white transition flex items-center gap-1.5"
               >
-                <span>School Principals & Staff</span>
+                <span>Admin / Leadership</span>
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => setActiveTab('exco')}
+                className="hover:text-white transition flex items-center gap-1.5"
+              >
+                <span className="text-orange-300 font-medium">EXCO Members</span>
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => setActiveTab('alumni')}
+                className="hover:text-white transition flex items-center gap-1.5"
+              >
+                <span>Alumni</span>
               </button>
             </li>
             <li>
@@ -134,7 +142,31 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenDonate, onOp
                 onClick={() => setActiveTab('directory')}
                 className="hover:text-white transition flex items-center gap-1.5"
               >
-                <span>Alumni Directory</span>
+                <span>Directory</span>
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => setActiveTab('events')}
+                className="hover:text-white transition flex items-center gap-1.5"
+              >
+                <span>Events</span>
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => setActiveTab('gallery')}
+                className="hover:text-white transition flex items-center gap-1.5"
+              >
+                <span>Gallery</span>
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => setActiveTab('forum')}
+                className="hover:text-white transition flex items-center gap-1.5"
+              >
+                <span>Forum</span>
               </button>
             </li>
           </ul>
