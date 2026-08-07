@@ -270,7 +270,7 @@ export const NotableAlumni: React.FC = () => {
       </div>
 
       {/* ACHSOSA AMBASSADOR SECTION */}
-      <div className="bg-white rounded-3xl p-8 border border-emerald-200 shadow-md space-y-6">
+      <div className="bg-white rounded-3xl p-8 border-2 border-emerald-300 shadow-md space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
           <div>
             <span className="bg-orange-100 text-orange-900 border border-orange-200 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-flex items-center gap-1.5">
@@ -283,33 +283,48 @@ export const NotableAlumni: React.FC = () => {
               Distinguished old students and committee envoys advancing the institutional impact, school reconstruction, and academic mentorship of ACHS.
             </p>
           </div>
+          <span className="text-xs font-mono font-bold text-orange-800 bg-orange-50 px-3 py-1.5 rounded-xl border border-orange-200 self-start sm:self-auto">
+            {ACHSOSA_AMBASSADORS.length} Ambassadors
+          </span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {ACHSOSA_AMBASSADORS.map((amb) => (
             <div 
               key={amb.id}
-              className="bg-slate-50 hover:bg-emerald-50/50 p-6 rounded-2xl border border-slate-200/80 hover:border-emerald-300 transition space-y-3 flex flex-col justify-between shadow-xs group"
+              className="bg-slate-50 hover:bg-orange-50/40 p-5 rounded-2xl border border-slate-200/80 hover:border-orange-300 transition space-y-2 flex flex-col justify-between shadow-xs group"
             >
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-[11px] font-mono font-bold text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-md">
-                    {amb.gradSet}
+                  {amb.no ? (
+                    <span className="w-7 h-7 rounded-full bg-orange-600 text-white font-bold text-xs flex items-center justify-center shadow-xs">
+                      {amb.no}
+                    </span>
+                  ) : (
+                    <span className="text-[11px] font-mono font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md">
+                      {amb.gradSet || "Alumni"}
+                    </span>
+                  )}
+                  <span className="bg-orange-100 text-orange-900 text-[10px] font-bold px-2 py-0.5 rounded-md">
+                    {amb.gradSet && !amb.no ? amb.gradSet : "Ambassador"}
                   </span>
-                  <span className="w-2 h-2 rounded-full bg-orange-500" />
                 </div>
-                <h3 className="font-bold text-slate-900 text-base font-serif group-hover:text-emerald-900 transition">
+                <h3 className="font-bold text-slate-900 text-base font-serif group-hover:text-orange-950 transition">
                   {amb.name}
                 </h3>
-                <p className="text-xs font-medium text-emerald-800 leading-relaxed">
+                <p className="text-xs font-medium text-slate-600">
                   {amb.role}
                 </p>
               </div>
 
               <div className="pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] text-slate-500">
-                <span>ACHSOSA Ambassador</span>
-                {amb.contact && (
+                <span className="flex items-center gap-1">
+                  <Sparkles className="w-3.5 h-3.5 text-orange-500" /> Member Ambassador
+                </span>
+                {amb.contact ? (
                   <span className="font-mono text-emerald-700">{amb.contact}</span>
+                ) : (
+                  <span className="font-semibold text-emerald-800">ACHSOSA</span>
                 )}
               </div>
             </div>

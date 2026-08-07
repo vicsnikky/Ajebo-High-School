@@ -63,9 +63,10 @@ export interface CompletedProject {
 
 export interface AlumniAmbassador {
   id: string;
+  no?: string | number;
   name: string;
   role: string;
-  gradSet: string;
+  gradSet?: string;
   contact?: string;
 }
 

@@ -174,36 +174,119 @@ export const COMPLETED_PROJECTS_GALLERY = [
 export const ACHSOSA_AMBASSADORS: AlumniAmbassador[] = [
   {
     id: "amb-1",
+    no: "1",
+    name: "Bajegbo Segun",
+    role: "Member Ambassador, ACHSOSA",
+    gradSet: "Member Ambassador"
+  },
+  {
+    id: "amb-2",
+    no: "2",
+    name: "Dr Joseph Alawode",
+    role: "Member Ambassador, ACHSOSA",
+    gradSet: "Member Ambassador"
+  },
+  {
+    id: "amb-3",
+    no: "3",
+    name: "Sheu Adebowale",
+    role: "Member Ambassador, ACHSOSA",
+    gradSet: "Member Ambassador"
+  },
+  {
+    id: "amb-4",
+    no: "4",
+    name: "Alaba Raji",
+    role: "Member Ambassador, ACHSOSA",
+    gradSet: "Member Ambassador"
+  },
+  {
+    id: "amb-5",
+    no: "5",
+    name: "Dr Tunde Anifowose-Kilani",
+    role: "Member Ambassador, ACHSOSA",
+    gradSet: "Member Ambassador"
+  },
+  {
+    id: "amb-6",
+    no: "6",
+    name: "Sotayo Olatayo Johnson",
+    role: "Member Ambassador, ACHSOSA",
+    gradSet: "Member Ambassador"
+  },
+  {
+    id: "amb-7",
+    no: "7",
+    name: "Barr Sina Soyinka",
+    role: "Member Ambassador, ACHSOSA",
+    gradSet: "Member Ambassador"
+  },
+  {
+    id: "amb-8",
+    no: "8",
+    name: "Dr Joseph Kayode Ogunwede",
+    role: "Member Ambassador, ACHSOSA",
+    gradSet: "Member Ambassador"
+  },
+  {
+    id: "amb-9",
+    no: "9",
+    name: "Engr Taiwo Oludotun",
+    role: "Member Ambassador, ACHSOSA",
+    gradSet: "Member Ambassador"
+  },
+  {
+    id: "amb-10",
+    no: "10",
+    name: "Engr Shadrach Ogunseye",
+    role: "Member Ambassador, ACHSOSA",
+    gradSet: "Member Ambassador"
+  },
+  {
+    id: "amb-11",
+    no: "11",
+    name: "Dolamu Akindele",
+    role: "Member Ambassador, ACHSOSA",
+    gradSet: "Member Ambassador"
+  },
+  {
+    id: "amb-12",
+    no: "12",
     name: "Hon. (Dr.) Tella O. Babatunde",
     role: "Grand Patron & Legislative Liaison (OGHA Lawmaker)",
     gradSet: "Class of 1984"
   },
   {
-    id: "amb-2",
+    id: "amb-13",
+    no: "13",
     name: "Dr. Gbenga Adeoye",
     role: "Chairman, Legal & Rebuilding Advisory Committee",
     gradSet: "Class of 1995"
   },
   {
-    id: "amb-3",
+    id: "amb-14",
+    no: "14",
     name: "Eunice Akinwande",
     role: "Director, Agric Science Demo Farm Revamp (Former Asst. Director, Ministry of Agric)",
     gradSet: "Class of 1985"
   },
   {
-    id: "amb-4",
+    id: "amb-15",
+    no: "15",
     name: "Engr. Olumide Ogundipe",
     role: "Head of Structural & Solar Engineering Committee",
     gradSet: "Class of 1992"
   },
   {
-    id: "amb-5",
+    id: "amb-16",
+    no: "16",
     name: "Mrs. Folake Aderibigbe",
     role: "Academic Mentorship & Scholarship Lead (Principal Lecturer)",
     gradSet: "Class of 1988"
   },
   {
-    id: "amb-6",
+    id: "amb-17",
+    no: "17",
     name: "ACHSOSA Secretariat Ambassador",
     role: "Community & Institutional Engagement Coordinator",
     gradSet: "Ajebo Town, Obafemi Owode LGA",
@@ -1403,7 +1486,8 @@ export const ACHSOSA_BOARD_OF_TRUSTEES: BoardOfTrusteesMember[] = [
   { id: "bot-3", no: "3", name: "Dr. Tunde Anifowose-Kelani", role: "Member, Board of Trustees" },
   { id: "bot-4", no: "4", name: "Dr Joseph Kayode Ogunwede", role: "Member, Board of Trustees" },
   { id: "bot-5", no: "5", name: "Chief Ade Adeniji", role: "Member, Board of Trustees" },
-  { id: "bot-6", no: "6", name: "Mr Dolamu Akindele", role: "Member, Board of Trustees" }
+  { id: "bot-6", no: "6", name: "Mr Dolamu Akindele", role: "Member, Board of Trustees" },
+  { id: "bot-7", no: "7", name: "Sola Ogungbade", role: "Member, Board of Trustees" }
 ];
 
 export const ACHSOSA_ELDERS_FORUM: EldersForumMember[] = [

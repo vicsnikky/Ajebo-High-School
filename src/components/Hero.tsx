@@ -28,8 +28,8 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ setActiveTab, onOpenDonate, onOpenRegister }) => {
-  const juniorPrincipal = ADMIN_LEADERS.find(l => l.id === "mrs-karunwi-taiwo-omodunke");
-  const seniorPrincipal = ADMIN_LEADERS.find(l => l.id === "mrs-dawodu-omowonuola");
+  const seniorPrincipal = ADMIN_LEADERS.find(l => l.id === "mrs-karunwi-taiwo-omodunke");
+  const juniorPrincipal = ADMIN_LEADERS.find(l => l.id === "mrs-dawodu-omowonuola");
 
   return (
     <div className="space-y-12 pb-12">
@@ -158,8 +158,8 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab, onOpenDonate, onOpenRe
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-700" /> School Administration
                 </div>
                 <div className="text-slate-600 space-y-1 text-[11px]">
-                  <p><strong>Junior School Principal:</strong> Mrs. Karunwi Taiwo Omodunke (0803 046 3277)</p>
-                  <p><strong>Senior School Principal:</strong> Mrs. Dawodu Omowonuola (0803 258 2065)</p>
+                  <p><strong>Senior School Principal:</strong> Mrs. Karunwi Taiwo Omodunke (0803 046 3277)</p>
+                  <p><strong>Junior School Principal:</strong> Mrs. Dawodu Omowonuola (0803 258 2065)</p>
                 </div>
               </div>
 
@@ -397,7 +397,7 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab, onOpenDonate, onOpenRe
               School Principals
             </h3>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Mrs. Karunwi Taiwo Omodunke (Junior School), Mrs. Dawodu Omowonuola (Senior School), and past school administrators.
+              Mrs. Karunwi Taiwo Omodunke (Senior School), Mrs. Dawodu Omowonuola (Junior School), and past school administrators.
             </p>
             <div className="pt-2 text-xs text-emerald-700 font-medium flex items-center gap-1">
               <span>View School Registry</span>
