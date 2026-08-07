@@ -261,7 +261,7 @@ export const ACHSOSA_AMBASSADORS: AlumniAmbassador[] = [
     no: "13",
     name: "Dr. Gbenga Adeoye",
     role: "Chairman, Legal & Rebuilding Advisory Committee",
-    gradSet: "Class of 1995"
+    gradSet: "1995 Set"
   },
   {
     id: "amb-14",
@@ -367,8 +367,12 @@ export const REMODELLING_FACILITIES: RemodellingFacility[] = [
     category: "Specialist Facility",
     proposedModelDesc: "3D model of Block A Technical Workshop with specialized practical equipment benches, safety partitioning, and adequate lighting for technical drawing and vocational crafts.",
     asBuiltRealityDesc: "As-built technical workshop was an unrendered hollow red-brick structure with broken corrugated sheets and incomplete doors.",
-    status: "As-Built Analysis",
+    status: "Proposed 3D Render Ready",
     iconName: "Wrench",
+    proposedImageUrl: "https://i.ibb.co/7JBZhbcw/Screenshot-20260807-211805-WPS-Office.jpg",
+    proposedImageUrls: [
+      "https://i.ibb.co/7JBZhbcw/Screenshot-20260807-211805-WPS-Office.jpg"
+    ],
     asBuiltImageUrl: "https://i.ibb.co/CKH34KsQ/old-tech.jpg",
     asBuiltImageUrls: [
       "https://i.ibb.co/CKH34KsQ/old-tech.jpg"
@@ -1330,8 +1334,8 @@ export const INITIAL_FORUM_POSTS: ForumPost[] = [
       {
         id: "rep-1",
         authorName: "Dr. Gbenga Adeoye",
-        authorSet: "Class of 1986",
-        content: "Well said, Honorable! The 1986 set is fully aligned. We have already pooled our initial pledge for the ICT center.",
+        authorSet: "Class of 1995",
+        content: "Well said, Honorable! The 1995 set is fully aligned. We have already pooled our initial pledge for the ICT center.",
         date: "2026-07-21"
       },
       {
