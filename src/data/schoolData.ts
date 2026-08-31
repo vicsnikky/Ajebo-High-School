@@ -16,7 +16,8 @@ import {
   BoardOfTrusteesMember,
   EldersForumMember,
   AdviserMember,
-  GrandPatronMember
+  GrandPatronMember,
+  AlumniRegistration
 } from '../types';
 
 export const SCHOOL_ANTHEM = {
@@ -584,8 +585,12 @@ export const SCHOOL_INFO = {
   name: "Ajebo Community High School",
   acronym: "ACHS",
   associationName: "Ajebo Community High School Old Students Association (ACHSOSA)",
-  motto: "IWE KIKO LAISI OKO ATI ADA KOIPE",
-  mottoMeaning: "Education must be combined with hard work and practical life",
+  motto: "“Ìwé kíkó láìsí ọ̀kọ̀ àti àdá kò pé.”",
+  mottoYoruba: "“Ìwé kíkó láìsí ọ̀kọ̀ àti àdá kò pé.”",
+  mottoEnglish: "“Education without farming is incomplete.”",
+  mottoMeaning: "Education without farming is incomplete.",
+  mottoSymbolism: "Here, ọ̀kọ̀ àti àdá (the hoe and cutlass) symbolise agriculture, practical work, and self-reliance.",
+  mottoPhilosophy: "The philosophy behind the school’s educational foundation can be captured in the Yoruba saying, “Ìwé kíkó láìsí ọ̀kọ̀ àti àdá kò pé”—meaning that education without agriculture is incomplete. This reflects the traditional belief that academic knowledge should be complemented by practical skills, particularly agriculture, to prepare young people for productive and self-reliant.",
   location: "Ajebo Town, Obafemi Owode Local Government Area, Ogun State, Nigeria",
   lga: "Obafemi Owode LGA",
   state: "Ogun State",
@@ -596,10 +601,46 @@ export const SCHOOL_INFO = {
   contactPhone: "0708 710 6906 (President: Engr. Adebayo Joseph Joda)",
   rebuildingDriveStatus: "Phase 1 Construction & Infrastructure Modernization",
   badgeDetails: {
-    book: "The Open Book at the top stands for Knowledge.",
-    cutlassHoe: "The Crossed Cutlass (Ada) and Hoe (Oko) with farm mound stands for Agriculture and dignity of labour - true to our motto.",
-    shield: "The Shield stands for the protection and unity of Ajebo community."
+    book: "The Open Book at the top stands for Knowledge, academic scholarship, and intellectual development.",
+    cutlassHoe: "The Crossed Cutlass (Ada) and Hoe (Oko) symbolise agriculture, practical work, hard work, and self-reliance — fulfilling our motto: “Ìwé kíkó láìsí ọ̀kọ̀ àti àdá kò pé.”",
+    shield: "The Shield stands for the protection, resilience, and unity of the entire Ajebo community."
   }
+};
+
+export const HISTORICAL_BACKGROUND = {
+  title: "Historical Background of Ajebo Community High School",
+  mottoYoruba: "“Ìwé kíkó láìsí ọ̀kọ̀ àti àdá kò pé.”",
+  mottoEnglish: "“Education without farming is incomplete.”",
+  mottoPhilosophy: "The philosophy behind the school’s educational foundation can be captured in the Yoruba saying, “Ìwé kíkó láìsí ọ̀kọ̀ àti àdá kò pé”—meaning that education without agriculture is incomplete. This reflects the traditional belief that academic knowledge should be complemented by practical skills, particularly agriculture, to prepare young people for productive and self-reliant.",
+  mottoSymbolism: "Here, ọ̀kọ̀ àti àdá (the hoe and cutlass) symbolise agriculture, practical work, and self-reliance.",
+  paragraphs: [
+    "Ajebo Community High School (ACHS) was founded in 1977 through a communal self-help initiative by the people of Ajebo and the surrounding villages. The establishment of the school was driven by the community’s desire to provide accessible secondary education for its children and to promote the educational development of the area.",
+    "Historically, Ajebo served as a major market and gathering centre for people from neighbouring villages and communities. This strategic position made it a natural centre for social, economic and educational activities. The earlier establishment of the Anglican Central School also reflected the importance of Ajebo as an educational centre serving the surrounding communities.",
+    "The founding of ACHS through communal self-help demonstrated the commitment, unity and determination of the people to take responsibility for the education and future of their children. The school was established not merely as a place of academic learning, but as an institution intended to contribute to the overall development of the community.",
+    "This vision is captured in the Yoruba saying: “Ìwé kíkó láìsí ọ̀kọ̀ àti àdá kò pé” (“Education without agriculture is incomplete”). The saying reflects the traditional belief that academic education should be complemented by practical skills, agriculture, hard work and self-reliance.",
+    "Since its establishment in 1977, Ajebo Community High School has remained an important part of the history and educational development of Ajebo and its neighbouring communities, producing generations of students who have gone on to contribute meaningfully to their families, communities and society.",
+    "Hence, alumni of the school are trained to become entrepreneurs and excellent professionals in their respective fields.",
+    "This hardworking culture reflected in the participation and success of the School in the 1990's during the National JET competition in Nigeria.",
+    "Agriculture that has now become a major focus of government in Nigeria in order to grow our food and export excess to other countries have been the anthem of the school wherein students are trained that education without Agriculture is incomplete.",
+    "The impact of the school can be seen all over the country and around the world with the quality of Professionals that has emerged from the School since it was established in 1977.",
+    "The School has produced Professors, PhD holders in various fields, Engineers, Nurses, Medical Doctors, Surveyors, Passionate Teachers, Accountants, Lawyers, Politicians, Sport Men and women, Traders, Manufacturers and various Captains of industries among others."
+  ],
+  producedProfessions: [
+    "Professors & Academic Scholars",
+    "PhD Holders in Diverse Disciplines",
+    "Civil, Electrical & Structural Engineers",
+    "Registered Nurses & Healthcare Leaders",
+    "Medical Doctors & Specialists",
+    "Licensed Surveyors & Estate Planners",
+    "Passionate Teachers & Principals",
+    "Chartered Accountants & Financial Auditors",
+    "Legal Practitioners & Corporate Lawyers",
+    "Politicians & Honourable Lawmakers",
+    "Sports Men & Women Champions",
+    "Agricultural Producers & Agribusiness CEOs",
+    "Traders, Manufacturers & Industrialists",
+    "Captains of Industries Worldwide"
+  ]
 };
 
 export const NOTABLE_ALUMNI: AlumniProfile[] = [
@@ -761,43 +802,50 @@ export const HISTORY_EVENTS: HistoryEvent[] = [
   {
     year: "October 1977",
     title: "Founding via Communal Self-Help",
-    subtitle: "Community Driven Self-Help Initiative",
-    description: "Founded in October 1977, Ajebo Community High School, Ajebo was established through communal self-help. Visionary local elders and leaders established the institution to bring quality secondary education directly to Ajebo town and surrounding agrarian villages.",
+    subtitle: "Communal Initiative of Ajebo & Surrounding Villages",
+    description: "Ajebo Community High School (ACHS) was founded in 1977 through a communal self-help initiative by the people of Ajebo and the surrounding villages. Historically, Ajebo served as a major market and gathering centre for people from neighbouring villages, making it a natural hub for social, economic and educational development, reinforced by the earlier Anglican Central School.",
     category: "founding"
   },
   {
     year: "1977–1982",
-    title: "Pioneer Era & Volunteer Faculty",
-    subtitle: "Communal Classrooms & Dedicated Teachers",
-    description: "During 1977–1982: Pioneer students, communal classrooms, and dedicated volunteer teachers laid the solid foundation of academic discipline, practical agriculture, and community self-reliance.",
+    title: "Pioneer Era & Agricultural Philosophy",
+    subtitle: "Education Combined with Farming & Self-Reliance",
+    description: "The founding demonstrated the commitment and unity of the community. Guided by the Yoruba vision “Ìwé kíkó láìsí ọ̀kọ̀ àti àdá kò pé” (“Education without agriculture is incomplete”), students received strong academic instruction combined with practical farming, hard work, and self-reliance under dedicated educators.",
     category: "founding"
   },
   {
     year: "1982",
     title: "Graduation of the Foundation Set",
     subtitle: "First Set Graduation Milestone",
-    description: "1982: First Set graduated - the foundation set. The inaugural graduating class proved the success of the communal self-help effort and set a high standard for generations of students to come.",
+    description: "In 1982, the first set (foundation set) graduated. The inaugural graduating class proved the success of the communal self-help effort and set a high standard of academic excellence and enterprise for generations of students to follow.",
     category: "accreditation"
   },
   {
     year: "1983–1984",
     title: "WAEC & GCE O-Level Accreditation",
     subtitle: "National Examination Milestone",
-    description: "Archived records confirm full accreditation to present candidates for the West African Examinations Council (WAEC) and GCE O-Levels. Early cohorts produced prominent public servants like Hon. (Dr.) Tella O. Babatunde (1984 Set).",
+    description: "Archived records confirm full accreditation to present candidates for the West African Examinations Council (WAEC) and GCE O-Levels. Early cohorts went on to become prominent public servants, legal minds, and entrepreneurs.",
     category: "accreditation"
+  },
+  {
+    year: "1990s",
+    title: "National JET Competition Success",
+    subtitle: "Excellence in Science, Tech & Innovation",
+    description: "The hardworking and innovative culture of ACHS reflected in the active participation and outstanding success of the school in the 1990s during the National JET (Junior Engineers, Technicians and Scientists) competition in Nigeria.",
+    category: "leadership"
   },
   {
     year: "2000s–2024",
     title: "Junior & Senior Secondary Integration",
     subtitle: "Leadership & Administration",
-    description: "The school expanded into distinct Junior and Senior secondary arms under the Ogun State Ministry of Education, guided by dedicated administrators like Mr. Okusi and Mrs. Abosede Aderemi Elegbede.",
+    description: "The school expanded into distinct Junior and Senior secondary arms under the Ogun State Ministry of Education, guided by dedicated administrators and principals including Chief A. O. Folarin, Mr. Okusi, and Mrs. Abosede Aderemi Elegbede.",
     category: "leadership"
   },
   {
     year: "Today",
-    title: "Full Secondary School & Thriving Alumni Network",
-    subtitle: "Ogun State Public School & ACHSOSA Rebuilding Drive",
-    description: "Today: A full Junior and Senior Secondary School under Ogun State, with a thriving Old Students' Association (ACHSOSA) actively constructing a modern 16-classroom block, STEM ICT hub, solar grid, and revamped agricultural farm.",
+    title: "Global Impact & ACHSOSA Rebuilding Movement",
+    subtitle: "Captains of Industries & Modern Campus Transformation",
+    description: "The impact of ACHS is felt all over Nigeria and worldwide. The school has produced Professors, PhD holders in various fields, Engineers, Nurses, Medical Doctors, Surveyors, Passionate Teachers, Accountants, Lawyers, Politicians, Sport Men and Women, Traders, Manufacturers and Captains of industries. ACHSOSA is actively transforming the campus with modern classroom blocks, solar power, and revitalized agriculture.",
     category: "rebuilding"
   }
 ];
@@ -1502,7 +1550,7 @@ export const ACHSOSA_ELDERS_FORUM: EldersForumMember[] = [
   { id: "ef-5", no: "5", name: "Dr Gbenga Adeoye", role: "Member, Elders Forum" },
   { id: "ef-6", no: "6", name: "Elijah Adewusi", role: "Member, Elders Forum" },
   { id: "ef-7", no: "7", name: "Funmilayo Obe", role: "Member, Elders Forum" },
-  { id: "ef-8", no: "8", name: "Flashade Olowu", role: "Member, Elders Forum" },
+  { id: "ef-8", no: "8", name: "Folashade Olowu", role: "Member, Elders Forum" },
   { id: "ef-9", no: "9", name: "Gbolahan Olufemi Akanji", role: "Member, Elders Forum" },
   { id: "ef-10", no: "10", name: "Kuburat Omolara Olowokokere", role: "Member, Elders Forum" },
   { id: "ef-11", no: "11", name: "Monilola Enuice Akinwale", role: "Member, Elders Forum" },
@@ -1523,6 +1571,117 @@ export const ACHSOSA_ADVISERS: AdviserMember[] = [
 
 export const ACHSOSA_GRAND_PATRONS: GrandPatronMember[] = [
   { id: "gp-1", no: "1", name: "Chief Adebayo Abiodun Victor", role: "Grand Patron, ACHSOSA" }
+];
+
+export const INITIAL_DIRECTORY_ALUMNI: AlumniRegistration[] = [
+  {
+    id: "dir-1",
+    fullName: "Hon. (Dr.) Tella O. Babatunde",
+    gradSet: "1984 Set",
+    email: "tella.babatunde@ogha.gov.ng",
+    phone: "+234 803 111 2233",
+    occupation: "Honorable Lawmaker, Ogun State House of Assembly (OGHA)",
+    city: "Abeokuta",
+    country: "Nigeria",
+    bio: "Completed GCE O-Level Certificate at ACHS in 1984. Distinguished legislator representing his constituency.",
+    registeredAt: "2026-06-01"
+  },
+  {
+    id: "dir-2",
+    fullName: "Dr. Gbenga Adeoye",
+    gradSet: "1995 Set",
+    email: "adeoye@legalconsult.ng",
+    phone: "+234 802 333 4455",
+    occupation: "Corporate Lawyer & Tax Specialist • Senior Legal Practitioner",
+    city: "Lagos",
+    country: "Nigeria",
+    bio: "Senior legal consultant and Chairman of ACHSOSA Legal & Rebuilding Advisory Committee.",
+    registeredAt: "2026-06-05"
+  },
+  {
+    id: "dir-3",
+    fullName: "Eunice Akinwande",
+    gradSet: "1985 Set",
+    email: "eunice.akinwande@agribusiness.org",
+    phone: "+234 805 666 7788",
+    occupation: "Agronomist & Former Assistant Director, Lagos State Ministry of Agriculture",
+    city: "Ikeja / Lagos",
+    country: "Nigeria",
+    bio: "Agricultural pioneer, agribusiness innovator, and patron of ACHS demonstration farm.",
+    registeredAt: "2026-06-10"
+  },
+  {
+    id: "dir-4",
+    fullName: "Engr. Olumide Ogundipe",
+    gradSet: "1992 Set",
+    email: "ogundipe@apexinfra.ng",
+    phone: "+234 803 999 0011",
+    occupation: "Civil & Structural Engineer • Project Director",
+    city: "Ibadan",
+    country: "Nigeria",
+    bio: "COREN registered structural engineer and technical advisor for new school buildings.",
+    registeredAt: "2026-06-15"
+  },
+  {
+    id: "dir-5",
+    fullName: "Mrs. Folake Aderibigbe",
+    gradSet: "1988 Set",
+    email: "folake.aderibigbe@fce.edu.ng",
+    phone: "+234 806 222 3344",
+    occupation: "Education Specialist & Principal Lecturer",
+    city: "Abeokuta",
+    country: "Nigeria",
+    bio: "Veteran pedagogue dedicated to teacher education and student mentoring across South-West Nigeria.",
+    registeredAt: "2026-06-20"
+  },
+  {
+    id: "dir-6",
+    fullName: "Dr. Tunde Anifowose-Kelani PHF JCI Senator",
+    gradSet: "1982 Set",
+    email: "tunde.kelani@educationconsult.ng",
+    phone: "+234 803 555 7711",
+    occupation: "International Education Consultant",
+    city: "Abuja",
+    country: "Nigeria",
+    bio: "International Education Consultant, PHF JCI Senator, Member Board of Trustees ACHSOSA.",
+    registeredAt: "2026-06-25"
+  },
+  {
+    id: "dir-7",
+    fullName: "Engr Ogunseye Shadrach (PAST PRESIDENT ACHSOSA)",
+    gradSet: "1982 Set",
+    email: "shadrach.ogunseye@civileng.ng",
+    phone: "+234 802 777 9900",
+    occupation: "Civil Engineering",
+    city: "Lagos",
+    country: "Nigeria",
+    bio: "Civil Engineering Specialist, Past President ACHSOSA, Member Board of Trustees.",
+    registeredAt: "2026-06-28"
+  },
+  {
+    id: "dir-8",
+    fullName: "Engr Taiwo Oludotun",
+    gradSet: "1997 Set",
+    email: "taiwo.oludotun@ogunstate.gov.ng",
+    phone: "+234 803 888 1234",
+    occupation: "Commissioner for Forestry, Ogun State • Politician",
+    city: "Ogun",
+    country: "Nigeria",
+    bio: "Honorable Commissioner for Forestry, Ogun State Government, Politician and Engineer.",
+    registeredAt: "2026-07-02"
+  },
+  {
+    id: "dir-9",
+    fullName: "Mr Segun Bajegbo",
+    gradSet: "1984 Set",
+    email: "segun.bajegbo@samaabgroup.com",
+    phone: "+234 803 444 8899",
+    occupation: "CEO, Samaab Global Agricultural Processing Ltd • Vice President, Ogun State Chamber of Commerce Industry Mines and Agriculture",
+    city: "Ogun",
+    country: "Nigeria",
+    bio: "Former Supervisory Counsellor for Works & Infrastructure - OJO LG, Senior Special Adviser to the Deputy Governor - Relaunched of uniform voluntary Organizations in Lagos State Government. CEO, Samaab Global Agricultural Processing Ltd; Vice President, Ogun state Chamber of Commerce Industry Mines and Agriculture.",
+    registeredAt: "2026-07-05"
+  }
 ];
 
 

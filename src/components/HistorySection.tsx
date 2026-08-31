@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HISTORY_EVENTS, SCHOOL_INFO } from '../data/schoolData';
+import { HISTORY_EVENTS, SCHOOL_INFO, HISTORICAL_BACKGROUND } from '../data/schoolData';
 import { TabType } from '../types';
 import { 
   History, 
@@ -16,8 +16,10 @@ import {
   Users,
   MessageSquare,
   Sparkles,
-  Scissors,
-  CheckCircle2
+  CheckCircle2,
+  Trophy,
+  Globe2,
+  Briefcase
 } from 'lucide-react';
 
 interface HistorySectionProps {
@@ -31,7 +33,7 @@ export const HistorySection: React.FC<HistorySectionProps> = ({ setActiveTab }) 
     { id: 'all', label: 'All Historical Milestones' },
     { id: 'founding', label: '1977 Founding & Pioneer Era' },
     { id: 'accreditation', label: '1982–1984 First Set & WAEC' },
-    { id: 'leadership', label: 'Administration & Expansion' },
+    { id: 'leadership', label: 'Administration & JET Competition' },
     { id: 'rebuilding', label: 'Today & ACHSOSA Rebuilding' },
   ];
 
@@ -53,11 +55,11 @@ export const HistorySection: React.FC<HistorySectionProps> = ({ setActiveTab }) 
             </div>
             
             <h1 className="text-3xl sm:text-5xl font-bold font-serif text-white leading-tight">
-              History of <span className="text-emerald-300">Ajebo Community</span> High School
+              Historical Background of <span className="text-emerald-300">Ajebo Community</span> High School
             </h1>
             
             <p className="text-emerald-100 text-sm sm:text-base leading-relaxed">
-              Founded in <strong>October 1977</strong> through communal self-help, Ajebo Community High School, Ajebo was established to provide academic discipline, practical agricultural skills, and character building to children of Obafemi Owode LGA, Ogun State.
+              Founded in <strong>October 1977</strong> through communal self-help, Ajebo Community High School (ACHS) was established to provide accessible secondary education, practical agricultural skills, and character building to children of Ajebo and surrounding communities in Obafemi Owode LGA, Ogun State.
             </p>
           </div>
 
@@ -68,7 +70,7 @@ export const HistorySection: React.FC<HistorySectionProps> = ({ setActiveTab }) 
             <div className="text-emerald-100 space-y-1.5 font-medium">
               <p className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-orange-400" />
-                <span><strong>Founded:</strong> October 1977</span>
+                <span><strong>Founded:</strong> October 1977 (Self-Help Initiative)</span>
               </p>
               <p className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
@@ -80,7 +82,11 @@ export const HistorySection: React.FC<HistorySectionProps> = ({ setActiveTab }) 
               </p>
               <p className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                <span><strong>Status Today:</strong> Full Jr & Sr Secondary School</span>
+                <span><strong>National Honors:</strong> National JET Competition (1990s)</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                <span><strong>Status Today:</strong> Junior & Senior Secondary School</span>
               </p>
             </div>
           </div>
@@ -91,11 +97,127 @@ export const HistorySection: React.FC<HistorySectionProps> = ({ setActiveTab }) 
           <div className="space-y-1">
             <span className="text-xs uppercase tracking-wider font-bold text-orange-400">School Motto (Yoruba)</span>
             <div className="text-lg sm:text-xl font-bold font-mono text-white tracking-wide">
-              "{SCHOOL_INFO.motto}"
+              {SCHOOL_INFO.motto}
             </div>
           </div>
           <div className="text-xs sm:text-sm text-emerald-200 italic bg-slate-900/80 px-4 py-2 rounded-xl border border-emerald-700/60 max-w-md">
-            "{SCHOOL_INFO.mottoMeaning}"
+            “{SCHOOL_INFO.mottoMeaning}”
+          </div>
+        </div>
+      </div>
+
+      {/* Comprehensive Historical Narrative Section */}
+      <div className="bg-white rounded-3xl p-8 sm:p-10 border border-emerald-100 shadow-md space-y-8">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-slate-100 pb-5">
+          <div>
+            <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider">Comprehensive Chronicle</span>
+            <h2 className="text-2xl sm:text-3xl font-bold font-serif text-slate-900 flex items-center gap-2.5 mt-1">
+              <History className="w-7 h-7 text-emerald-700" />
+              <span>Historical Background & Founding Vision</span>
+            </h2>
+          </div>
+          <div className="bg-emerald-50 px-4 py-1.5 rounded-full border border-emerald-200 text-xs text-emerald-900 font-semibold flex items-center gap-1.5">
+            <Calendar className="w-3.5 h-3.5 text-emerald-700" />
+            <span>1977 – Present</span>
+          </div>
+        </div>
+
+        {/* Narrative Paragraphs */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div className="lg:col-span-8 space-y-5 text-slate-700 text-sm sm:text-base leading-relaxed">
+            <div className="bg-slate-50 p-6 rounded-2xl border-l-4 border-emerald-600 border border-slate-200/80 space-y-3">
+              <p className="font-serif text-slate-900 text-base sm:text-lg font-semibold leading-snug">
+                Ajebo Community High School (ACHS) was founded in 1977 through a communal self-help initiative by the people of Ajebo and the surrounding villages.
+              </p>
+              <p className="text-xs sm:text-sm text-slate-600">
+                The establishment of the school was driven by the community’s desire to provide accessible secondary education for its children and to promote the educational development of the area.
+              </p>
+            </div>
+
+            <p>
+              Historically, Ajebo served as a major market and gathering centre for people from neighbouring villages and communities. This strategic position made it a natural centre for social, economic and educational activities. The earlier establishment of the Anglican Central School also reflected the importance of Ajebo as an educational centre serving the surrounding communities.
+            </p>
+
+            <p>
+              The founding of ACHS through communal self-help demonstrated the commitment, unity and determination of the people to take responsibility for the education and future of their children. The school was established not merely as a place of academic learning, but as an institution intended to contribute to the overall development of the community.
+            </p>
+
+            {/* Motto Deep-Dive Card */}
+            <div className="bg-gradient-to-br from-emerald-900 to-slate-900 text-white p-6 sm:p-7 rounded-2xl space-y-4 shadow-md">
+              <div className="flex items-center gap-2 text-orange-400 font-bold text-xs uppercase tracking-wider">
+                <Sprout className="w-4 h-4 text-orange-400" />
+                <span>Foundational Educational Philosophy</span>
+              </div>
+
+              <div className="space-y-2">
+                <div className="text-xl sm:text-2xl font-serif font-bold text-white">
+                  “Ìwé kíkó láìsí ọ̀kọ̀ àti àdá kò pé.”
+                </div>
+                <div className="text-emerald-300 font-medium text-sm sm:text-base italic">
+                  “Education without farming is incomplete.”
+                </div>
+              </div>
+
+              <p className="text-xs sm:text-sm text-emerald-100 leading-relaxed pt-2 border-t border-emerald-800">
+                Here, <strong>ọ̀kọ̀ àti àdá</strong> (the hoe and cutlass) symbolise agriculture, practical work, and self-reliance. The philosophy behind the school’s educational foundation reflects the traditional belief that academic knowledge should be complemented by practical skills, particularly agriculture, to prepare young people for productive and self-reliant lives.
+              </p>
+            </div>
+
+            <p>
+              Since its establishment in 1977, Ajebo Community High School has remained an important part of the history and educational development of Ajebo and its neighbouring communities, producing generations of students who have gone on to contribute meaningfully to their families, communities and society. Hence, alumni of the school are trained to become entrepreneurs and excellent professionals in their respective fields.
+            </p>
+
+            <div className="flex items-start gap-3 bg-amber-50 p-4 rounded-xl border border-amber-200 text-xs sm:text-sm text-amber-950">
+              <Trophy className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+              <div>
+                <strong className="font-semibold text-amber-900">National JET Competition Distinction:</strong> This hardworking culture reflected in the participation and success of the School in the 1990's during the National JET competition in Nigeria.
+              </div>
+            </div>
+
+            <p>
+              Agriculture that has now become a major focus of government in Nigeria in order to grow our food and export excess to other countries has always been the anthem of the school wherein students are trained that education without Agriculture is incomplete.
+            </p>
+
+            <p>
+              The impact of the school can be seen all over the country and around the world with the quality of Professionals that have emerged from the School since it was established in 1977.
+            </p>
+          </div>
+
+          {/* Side Column: Impact & Produced Professions */}
+          <div className="lg:col-span-4 space-y-6">
+            {/* Produced Professions Card */}
+            <div className="bg-emerald-950 text-white p-6 rounded-2xl border border-emerald-800 space-y-4 shadow-md">
+              <div className="flex items-center gap-2 text-orange-400 font-bold text-xs uppercase tracking-wider">
+                <Globe2 className="w-4 h-4 text-orange-400" />
+                <span>Global Impact of ACHS Alumni</span>
+              </div>
+              <h3 className="font-serif font-bold text-lg text-white">
+                Professionals Produced Since 1977
+              </h3>
+              <p className="text-xs text-emerald-200 leading-relaxed">
+                The school has nurtured notable pioneers, industry captains, and public leaders across Nigeria and across the globe:
+              </p>
+
+              <div className="space-y-2 pt-2">
+                {HISTORICAL_BACKGROUND.producedProfessions.map((prof, i) => (
+                  <div key={i} className="flex items-center gap-2 text-xs text-emerald-100 bg-emerald-900/60 px-3 py-2 rounded-lg border border-emerald-800/70">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <span className="font-medium">{prof}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Quick Fact Callout */}
+            <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-3">
+              <div className="flex items-center gap-2 text-emerald-800 font-bold text-xs uppercase tracking-wider">
+                <Briefcase className="w-4 h-4 text-emerald-700" />
+                <span>Communal Self-Reliance</span>
+              </div>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                From its communal roots in 1977 to the modern ACHSOSA rebuilding drive, ACHS continues to stand as a beacon of education, practical industry, and self-help excellence.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -153,9 +275,9 @@ export const HistorySection: React.FC<HistorySectionProps> = ({ setActiveTab }) 
               <div className="w-10 h-10 rounded-xl bg-orange-100 text-orange-800 flex items-center justify-center font-bold">
                 <Sprout className="w-5 h-5 text-orange-600" />
               </div>
-              <h4 className="font-bold text-slate-900 text-sm font-serif">2. Cutlass & Hoe (Ada & Oko)</h4>
+              <h4 className="font-bold text-slate-900 text-sm font-serif">2. Cutlass & Hoe (Ọ̀kọ̀ àti Àdá)</h4>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Stands for <strong>Agriculture</strong> and the dignity of physical labour — living up to our motto (<em>Iwe kiko laisi oko ati ada koipe</em>).
+                Symbolise <strong>agriculture, practical work, and self-reliance</strong> — fulfilling our motto (<em>Ìwé kíkó láìsí ọ̀kọ̀ àti àdá kò pé</em>).
               </p>
             </div>
 

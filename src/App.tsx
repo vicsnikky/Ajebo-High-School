@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { TabType, DonorRecord, AlumniRegistration, ForumPost } from './types';
-import { INITIAL_DONORS, NOTABLE_ALUMNI, INITIAL_FORUM_POSTS } from './data/schoolData';
+import { INITIAL_DONORS, NOTABLE_ALUMNI, INITIAL_FORUM_POSTS, INITIAL_DIRECTORY_ALUMNI } from './data/schoolData';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
@@ -35,71 +35,20 @@ export default function App() {
   // Persistent Registered Alumni Directory
   const [registeredAlumni, setRegisteredAlumni] = useState<AlumniRegistration[]>(() => {
     const saved = localStorage.getItem('achsosa_registered_alumni');
-    if (saved) return JSON.parse(saved);
-    
-    // Seed with notable alumni & default directory records
-    return [
-      {
-        id: "reg-1",
-        fullName: "Hon. (Dr.) Tella O. Babatunde",
-        gradSet: "1984 Set",
-        email: "tella.babatunde@ogha.gov.ng",
-        phone: "+234 803 111 2233",
-        occupation: "Ogun House of Assembly Lawmaker",
-        city: "Abeokuta",
-        country: "Nigeria",
-        bio: "Completed GCE O-Level Certificate at ACHS in 1984.",
-        registeredAt: "2026-06-01"
-      },
-      {
-        id: "reg-2",
-        fullName: "Dr. Gbenga Adeoye",
-        gradSet: "1986 Set",
-        email: "adeoye@legalconsult.ng",
-        phone: "+234 802 333 4455",
-        occupation: "Corporate Lawyer & Tax Specialist",
-        city: "Lagos",
-        country: "Nigeria",
-        bio: "Senior legal consultant and chairman of ACHSOSA legal advisory.",
-        registeredAt: "2026-06-05"
-      },
-      {
-        id: "reg-3",
-        fullName: "Eunice Akinwande",
-        gradSet: "1985 Set",
-        email: "eunice.akinwande@agribusiness.org",
-        phone: "+234 805 666 7788",
-        occupation: "Former Asst. Director, Lagos Ministry of Agric",
-        city: "Ikeja",
-        country: "Nigeria",
-        bio: "Agricultural pioneer and agribusiness consultant.",
-        registeredAt: "2026-06-10"
-      },
-      {
-        id: "reg-4",
-        fullName: "Engr. Olumide Ogundipe",
-        gradSet: "1992 Set",
-        email: "ogundipe@apexinfra.ng",
-        phone: "+234 803 999 0011",
-        occupation: "Structural Engineer",
-        city: "Ibadan",
-        country: "Nigeria",
-        bio: "Lead engineering advisor for the new 16-classroom block.",
-        registeredAt: "2026-06-15"
-      },
-      {
-        id: "reg-5",
-        fullName: "Mrs. Folake Aderibigbe",
-        gradSet: "1988 Set",
-        email: "folake.aderibigbe@fce.edu.ng",
-        phone: "+234 806 222 3344",
-        occupation: "Educational Administrator",
-        city: "Abeokuta",
-        country: "Nigeria",
-        bio: "Lecturer and curriculum developer.",
-        registeredAt: "2026-06-20"
+    if (saved) {
+      try {
+        const parsed: AlumniRegistration[] = JSON.parse(saved);
+        // Merge missing seed items so newly added official directory members appear
+        const existingNames = new Set(parsed.map(a => a.fullName.toLowerCase().trim()));
+        const missingSeed = INITIAL_DIRECTORY_ALUMNI.filter(
+          item => !existingNames.has(item.fullName.toLowerCase().trim())
+        );
+        return [...parsed, ...missingSeed];
+      } catch {
+        return INITIAL_DIRECTORY_ALUMNI;
       }
-    ];
+    }
+    return INITIAL_DIRECTORY_ALUMNI;
   });
 
   // Persistent Forum Posts
