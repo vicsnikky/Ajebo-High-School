@@ -55,11 +55,34 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab, onOpenDonate, onOpenRe
               Welcome to <span className="text-emerald-300 underline decoration-orange-500/80 decoration-4 underline-offset-8">Ajebo Community</span> High School
             </h1>
 
-            {/* Motto Banner */}
-            <div className="bg-emerald-950/80 border border-emerald-700/80 p-3.5 rounded-xl text-xs space-y-1 text-left inline-block max-w-xl shadow-inner">
-              <span className="text-orange-400 font-bold uppercase tracking-wider text-[11px]">School Motto:</span>
-              <div className="text-white font-mono font-bold text-sm sm:text-base">"{SCHOOL_INFO.motto}"</div>
-              <div className="text-emerald-200 text-xs italic">"{SCHOOL_INFO.mottoMeaning}"</div>
+            {/* Motto & Educational Philosophy Banner */}
+            <div className="bg-emerald-950/90 border border-emerald-700 p-4 sm:p-5 rounded-2xl text-left space-y-3 shadow-md max-w-2xl">
+              <div className="flex items-center gap-2 text-orange-400 font-bold uppercase tracking-wider text-xs">
+                <Sprout className="w-4 h-4 text-orange-400 shrink-0" />
+                <span>School motto (Yoruba)</span>
+              </div>
+              
+              <div className="space-y-1">
+                <div className="text-white font-serif font-bold text-lg sm:text-xl leading-snug">
+                  “Ìwé kíkó láìsí ọ̀kọ̀ àti àdá kò pé.”
+                </div>
+                <div className="text-emerald-300 font-medium text-sm sm:text-base italic">
+                  “Education without farming is incomplete.”
+                </div>
+              </div>
+
+              <p className="text-emerald-100 text-xs sm:text-sm leading-relaxed pt-2 border-t border-emerald-800/80">
+                Here, <strong>ọ̀kọ̀ àti àdá</strong> (the hoe and cutlass) symbolise agriculture, practical work, and self-reliance.
+              </p>
+
+              <div className="bg-slate-900/80 p-3 rounded-xl border border-emerald-700/60 text-xs text-emerald-100/90 leading-relaxed space-y-1.5">
+                <p>
+                  The philosophy behind the school’s educational foundation can be captured in the Yoruba saying, <em>“Ìwé kíkó láìsí ọ̀kọ̀ àti àdá kò pé”</em>—meaning that education without agriculture is incomplete.
+                </p>
+                <p>
+                  This reflects the traditional belief that academic knowledge should be complemented by practical skills, particularly agriculture, to prepare young people for productive and self-reliant.
+                </p>
+              </div>
             </div>
 
             {/* Paragraph summary */}
@@ -308,6 +331,128 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab, onOpenDonate, onOpenRe
               <span>School Motto: <strong>"{SCHOOL_INFO.motto}"</strong> ({SCHOOL_INFO.mottoMeaning})</span>
             </div>
             <span className="font-mono text-emerald-300">Ajebo Community High School • Est. Oct 1977</span>
+          </div>
+        </div>
+      </section>
+
+      {/* FRONT PAGE DEDICATED HISTORY SECTION */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-emerald-100 shadow-xl space-y-8">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-100 pb-5">
+            <div>
+              <span className="text-xs font-bold text-orange-600 uppercase tracking-wider flex items-center gap-1.5">
+                <History className="w-4 h-4 text-orange-500" /> History
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-bold font-serif text-slate-900 mt-1">
+                Historical Background of Ajebo Community High School
+              </h2>
+            </div>
+            <span className="bg-emerald-50 text-emerald-900 border border-emerald-200 text-xs font-semibold px-4 py-1.5 rounded-full">
+              Founded October 1977
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div className="lg:col-span-8 space-y-5 text-slate-700 text-sm sm:text-base leading-relaxed">
+              <p>
+                Ajebo Community High School (ACHS) was founded in 1977 through a communal self-help initiative by the people of Ajebo and the surrounding villages. The establishment of the school was driven by the community’s desire to provide accessible secondary education for its children and to promote the educational development of the area.
+              </p>
+
+              <p>
+                Historically, Ajebo served as a major market and gathering centre for people from neighbouring villages and communities. This strategic position made it a natural centre for social, economic and educational activities.
+              </p>
+
+              <p>
+                The earlier establishment of the Anglican Central School also reflected the importance of Ajebo as an educational centre serving the surrounding communities.
+              </p>
+
+              <p>
+                The founding of ACHS through communal self-help demonstrated the commitment, unity and determination of the people to take responsibility for the education and future of their children. The school was established not merely as a place of academic learning, but as an institution intended to contribute to the overall development of the community.
+              </p>
+
+              {/* Motto callout within History */}
+              <div className="bg-emerald-950 text-white p-6 rounded-2xl border border-emerald-800 space-y-3 shadow-inner my-2">
+                <span className="text-orange-400 font-bold uppercase tracking-wider text-xs block">
+                  This vision is captured in the Yoruba saying:
+                </span>
+                <div className="text-xl sm:text-2xl font-serif font-bold text-white">
+                  “Ìwé kíkó láìsí ọ̀kọ̀ àti àdá kò pé.”
+                </div>
+                <div className="text-emerald-300 font-medium text-sm sm:text-base italic">
+                  “Education without farming is incomplete.”
+                </div>
+                <p className="text-xs sm:text-sm text-emerald-100/90 pt-2 border-t border-emerald-800/80 leading-relaxed">
+                  The saying reflects the traditional belief that academic education should be complemented by practical skills, agriculture, hard work and self-reliance.
+                </p>
+              </div>
+
+              <p>
+                Since its establishment in 1977, Ajebo Community High School has remained an important part of the history and educational development of Ajebo and its neighbouring communities, producing generations of students who have gone on to contribute meaningfully to their families, communities and society.
+              </p>
+
+              <p>
+                Hence, alumni of the school are trained to become entrepreneurs and excellent professionals in their respective fields.
+              </p>
+
+              <p className="bg-amber-50 p-4 rounded-xl border border-amber-200 text-amber-950 font-medium text-xs sm:text-sm">
+                This hardworking culture reflected in the participation and success of the School in the 1990's during the National JET competition in Nigeria.
+              </p>
+
+              <p>
+                Agriculture that has now become a major focus of government in Nigeria in order to grow our food and export excess to other countries have been the anthem of the school wherein students are trained that education without Agriculture is incomplete.
+              </p>
+
+              <p>
+                The impact of the school can be seen all over the country and around the world with the quality of Professionals that has emerged from the School since it was established in 1977.
+              </p>
+
+              <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200 text-slate-800 text-xs sm:text-sm leading-relaxed space-y-2">
+                <span className="font-bold text-slate-900 block font-serif text-sm sm:text-base">
+                  Distinguished Professionals Produced:
+                </span>
+                <p>
+                  The School has produced Professors, PhD holders in various fields, Engineers, Nurses, Medical Doctors, Surveyors, Passionate Teachers, Accountants, Lawyers, Politicians, Sport Men and women, Traders, Manufacturers and various Captains of industries among others.
+                </p>
+              </div>
+            </div>
+
+            {/* Side Card: Summary Pillars */}
+            <div className="lg:col-span-4 space-y-5">
+              <div className="bg-gradient-to-br from-emerald-900 to-slate-900 text-white p-6 rounded-2xl border border-emerald-700 space-y-4 shadow-md">
+                <div className="flex items-center gap-2 text-orange-400 font-bold uppercase tracking-wider text-xs">
+                  <Sprout className="w-4 h-4 text-orange-400" />
+                  <span>Foundational Pillars</span>
+                </div>
+                <div className="space-y-3 text-xs text-emerald-100">
+                  <div className="flex items-start gap-2.5 bg-emerald-950/60 p-3 rounded-xl border border-emerald-800">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span><strong>1977 Communal Self-Help:</strong> Founded by Ajebo and surrounding villages.</span>
+                  </div>
+                  <div className="flex items-start gap-2.5 bg-emerald-950/60 p-3 rounded-xl border border-emerald-800">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span><strong>Agricultural Philosophy:</strong> Education combined with farming and enterprise.</span>
+                  </div>
+                  <div className="flex items-start gap-2.5 bg-emerald-950/60 p-3 rounded-xl border border-emerald-800">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span><strong>1990s National JET Success:</strong> National science & engineering recognition.</span>
+                  </div>
+                  <div className="flex items-start gap-2.5 bg-emerald-950/60 p-3 rounded-xl border border-emerald-800">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span><strong>Global Impact:</strong> Leaders across law, medicine, politics & industries.</span>
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                  <button
+                    onClick={() => setActiveTab('history')}
+                    className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold text-xs py-2.5 rounded-xl transition flex items-center justify-center gap-1.5 shadow-xs"
+                  >
+                    <span>View Chronological Timeline</span>
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
