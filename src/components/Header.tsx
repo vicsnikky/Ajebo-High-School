@@ -18,7 +18,8 @@ import {
   Sparkles,
   MapPin,
   GraduationCap,
-  Crown
+  Crown,
+  Mail
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -63,6 +64,14 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
 
           <div className="flex items-center gap-3">
+            <a 
+              href={`mailto:${SCHOOL_INFO.contactEmail}`}
+              className="text-emerald-200 hover:text-white transition hidden lg:inline-flex items-center gap-1.5 text-xs font-mono"
+              title="Official School Email"
+            >
+              <Mail className="w-3.5 h-3.5 text-orange-400" />
+              <span>{SCHOOL_INFO.contactEmail}</span>
+            </a>
             <span className="text-emerald-200 text-xs hidden md:inline flex items-center gap-1">
               <Sparkles className="w-3 h-3 text-orange-400" /> Infrastructure Rebuilding Drive Supported by ACHSOSA Alumni
             </span>

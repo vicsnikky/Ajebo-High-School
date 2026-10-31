@@ -69,7 +69,12 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenDonate, onOp
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-orange-400 shrink-0" />
-              <span>{SCHOOL_INFO.contactEmail}</span>
+              <a 
+                href={`mailto:${SCHOOL_INFO.contactEmail}`}
+                className="hover:text-white transition underline decoration-emerald-500/50"
+              >
+                {SCHOOL_INFO.contactEmail}
+              </a>
             </div>
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-orange-400 shrink-0" />

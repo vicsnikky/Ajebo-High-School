@@ -80,7 +80,7 @@ export const ExcoSection: React.FC<ExcoSectionProps> = ({
               </p>
               <p className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                <span><strong>Custom Email Domain:</strong> Ready for custom URL</span>
+                <span><strong>Official Email:</strong> info@ajebocommunityhighschool.com</span>
               </p>
             </div>
           </div>
@@ -100,12 +100,12 @@ export const ExcoSection: React.FC<ExcoSectionProps> = ({
         </div>
       </div>
 
-      {/* Domain Readiness Notice */}
-      <div className="bg-blue-50 border border-blue-200 rounded-2xl p-4 text-xs text-blue-950 flex items-center gap-3">
-        <Globe className="w-5 h-5 text-blue-700 shrink-0" />
+      {/* Official Domain Email Notice */}
+      <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-4 text-xs text-emerald-950 flex items-center gap-3">
+        <Globe className="w-5 h-5 text-emerald-700 shrink-0" />
         <div>
-          <strong className="text-blue-900 font-bold block">Custom Domain Email Setup Ready</strong>
-          <span className="text-slate-700">Official email addresses for all 17 EXCO officers will be matched and configured once you provide the preferred domain URL.</span>
+          <strong className="text-emerald-950 font-bold block">Official School & Alumni Email Address</strong>
+          <span className="text-slate-700">Official general inquiries, administration, and alumni correspondence: <a href="mailto:info@ajebocommunityhighschool.com" className="font-semibold text-emerald-800 underline decoration-emerald-500">info@ajebocommunityhighschool.com</a></span>
         </div>
       </div>
 

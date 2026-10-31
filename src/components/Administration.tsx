@@ -15,7 +15,8 @@ import {
   Maximize2,
   X,
   ExternalLink,
-  Eye
+  Eye,
+  Mail
 } from 'lucide-react';
 import { TabType } from '../types';
 
@@ -275,6 +276,24 @@ export const Administration: React.FC<AdministrationProps> = ({ setActiveTab }) 
               <span className="font-semibold text-emerald-800">Ajebo, Ogun State</span>
             </div>
           </div>
+        </div>
+
+        {/* Official Administrative Correspondence Email */}
+        <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-4 sm:p-5 text-xs text-emerald-950 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xs">
+          <div className="flex items-center gap-3">
+            <Mail className="w-5 h-5 text-emerald-700 shrink-0" />
+            <div>
+              <strong className="text-emerald-950 font-bold block text-sm font-serif">Official School Inquiries & Correspondence</strong>
+              <span className="text-slate-600">For academic records, student credentials, and official institutional communication:</span>
+            </div>
+          </div>
+          <a 
+            href={`mailto:${SCHOOL_INFO.contactEmail}`}
+            className="inline-flex items-center gap-2 bg-emerald-800 hover:bg-emerald-700 text-white font-semibold text-xs px-4 py-2.5 rounded-xl transition shadow-xs shrink-0"
+          >
+            <Mail className="w-4 h-4 text-orange-400" />
+            <span>{SCHOOL_INFO.contactEmail}</span>
+          </a>
         </div>
 
         {/* RENOVATED SENIOR PRINCIPAL'S OFFICE GALLERY SHOWCASE */}
